@@ -1,0 +1,15 @@
+.header {
+  .header__nav {
+    .header__links {
+      .header__links-item {
+      }
+    }
+  }
+
+  .header__access {
+    .header__access-link {
+    }
+    .header__access-button {
+    }
+  }
+}
