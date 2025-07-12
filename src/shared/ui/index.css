@@ -1,3 +1,11 @@
+:root {
+  --main-purple: #6a0bff;
+  --main-purple-hover: #5509cc;
+  --main-purple-active: #400799;
+  --button-disabled: #d1d1d1;
+  --black-text: #191919;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,35 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Manrope", sans-serif;
+}
+
 .container {
   max-width: 1216px;
   margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--main-purple);
+  height: 48px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--main-purple-hover);
+  }
+  &:active {
+    background-color: var(--main-purple-active);
+  }
+  &:disabled {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+  }
 }
