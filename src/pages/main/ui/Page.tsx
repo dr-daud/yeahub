@@ -1,3 +1,11 @@
+import TopQuestions from "../../../widgets/top-questions/ui/TopQuestions";
+
 const MainPage = () => {
-  return <main></main>;
+  return (
+    <main>
+      <TopQuestions />
+    </main>
+  );
 };
+
+export default MainPage;

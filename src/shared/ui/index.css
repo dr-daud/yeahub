@@ -2,8 +2,13 @@
   --main-purple: #6a0bff;
   --main-purple-hover: #5509cc;
   --main-purple-active: #400799;
+  --light-purple: #f0e7ff;
+  --light-purple-hover: #e1ceff;
+  --light-purple-active: #c39dff;
+  --purple-icon-background: #a66dff;
   --button-disabled: #d1d1d1;
   --black-text: #191919;
+  --background-color-main: #f8f8f8;
 }
 
 * {
@@ -16,6 +21,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  background-color: var(--background-color-main);
 }
 
 .container {

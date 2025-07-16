@@ -3,6 +3,7 @@
   .header__flex {
     display: flex;
     justify-content: space-between;
+    padding: 8px 0;
     .header__nav {
       .header__links {
         display: flex;
