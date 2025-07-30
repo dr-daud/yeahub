@@ -1,0 +1,76 @@
+.simulator-promo {
+  padding: 130px 0;
+
+  .simulator-promo__flex-container {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 40px 0;
+
+    .simulator-promo__questions-list-wrap {
+      max-width: 598px;
+      background-color: var(--yellow-main);
+      padding: 25px 24px 0 24px;
+      border-radius: 24px;
+
+      .simulator-promo__questions-list {
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 16px 16px 0 0;
+
+        .simulator-promo__img-wrap {
+          padding: 24px;
+          margin-top: 24px;
+          box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
+          border-radius: 10px;
+
+          .simulator-promo__wrap {
+            width: 367px;
+          }
+        }
+      }
+    }
+
+    .simulator-promo__convenient-simulator {
+      padding: 33.5px 40px 0 0;
+
+      .simulator-promo__subtitle {
+        margin-top: 16px;
+      }
+
+      .simulator-promo__start-learning {
+        display: flex;
+        margin-top: 60px;
+
+        .simulator-promo__img-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 45px;
+          width: 43px;
+          border-radius: 8px;
+          background-color: var(--yellow-700);
+        }
+
+        .simulator-promo__text {
+          margin-top: 16px;
+        }
+
+        .simulator-promo__graph-up {
+          border-right: 1px solid #bababa;
+          padding-right: 20px;
+        }
+
+        .simulator-promo__structure {
+          padding-left: 20px;
+        }
+      }
+
+      .simulator-promo__button {
+        margin-top: 40px;
+        width: 240px;
+      }
+    }
+  }
+}

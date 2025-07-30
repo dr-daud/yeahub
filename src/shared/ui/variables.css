@@ -1,0 +1,25 @@
+h1 {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+.body3 {
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+}
+
+.body5-med {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}

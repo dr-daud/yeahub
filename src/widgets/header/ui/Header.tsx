@@ -10,7 +10,7 @@ const Header = () => {
         <nav className={styles.header__nav}>
           <ul className={styles.header__links}>
             <li className={styles["header__link-item"]}>
-              <img src={yeahub_logo} alt="" />
+              <img src={yeahub_logo} alt="logo" />
             </li>
             <li className={styles["header__link-item"]}>База вопросов</li>
             <li className={styles["header__link-item"]}>Тренажер</li>

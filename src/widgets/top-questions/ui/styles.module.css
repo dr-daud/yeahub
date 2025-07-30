@@ -28,16 +28,9 @@
       }
       .top-questions__title {
         margin-top: 4px;
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 115%;
-        text-transform: uppercase;
       }
       .top-questions__text {
         margin-top: 16px;
-        font-size: 16px;
-        line-height: 130%;
-        font-weight: 400;
       }
 
       .top-questions__button {
@@ -116,9 +109,6 @@
 
       .top-questions__card-title {
         margin-top: 40px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 120%;
         text-transform: uppercase;
       }
 

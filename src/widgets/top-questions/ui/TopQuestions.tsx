@@ -17,7 +17,7 @@ const TopQuestions = () => {
             <h1 className={styles["top-questions__title"]}>
               YEAHUB помогает расти и достигать целей
             </h1>
-            <p className={styles["top-questions__text"]}>
+            <p className={`${"body3"} ${styles["top-questions__text"]}`}>
               Развивайте и улучшайте свои навыки на одной платформе: изучайте
               новое, готовьтесь к собеседованиям, погружайтесь в нюансы или
               обновляйте знания — YeaHub поможет справиться с любой задачей
@@ -56,9 +56,13 @@ const TopQuestions = () => {
                   className={styles["top-questions__card-icon"]}
                 />
               </div>
-              <h2 className={styles["top-questions__card-title"]}>
+              <p
+                className={`${"body5-med"} ${
+                  styles["top-questions__card-title"]
+                }`}
+              >
                 {card.title}
-              </h2>
+              </p>
               <p className={styles["top-questions__card-description"]}>
                 {card.description}
               </p>
