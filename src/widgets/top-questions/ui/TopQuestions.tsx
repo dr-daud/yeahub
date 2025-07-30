@@ -49,11 +49,15 @@ const TopQuestions = () => {
         <div className={styles["top-questions__bottom"]}>
           {cards.map((card, i) => (
             <div className={styles["top-questions__card-wrap"]} key={i}>
-              <div className={styles["top-questions__card-icon-wrap"]}>
+              <div
+                className={`${
+                  styles["top-questions__card-icon-wrap"]
+                } ${"icon-wrap"}`}
+              >
                 <img
                   src={card.icon}
                   alt="icon"
-                  className={styles["top-questions__card-icon"]}
+                  className={`${styles["top-questions__card-icon"]} ${"icon"}`}
                 />
               </div>
               <p

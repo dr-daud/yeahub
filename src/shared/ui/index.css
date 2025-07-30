@@ -4,7 +4,7 @@
   --main-purple: #6a0bff;
   --main-purple-hover: #5509cc;
   --main-purple-active: #400799;
-  --light-purple: #f0e7ff;
+  --purple-100: #f0e7ff;
   --light-purple-hover: #e1ceff;
   --light-purple-active: #c39dff;
   --purple-icon-background: #a66dff;
@@ -13,6 +13,7 @@
   --background-color-main: #f8f8f8;
   --yellow-main: #fffcf2;
   --yellow-700: #ffda85;
+  --black-50: #e8e8e8;
 }
 
 * {
@@ -55,4 +56,13 @@ body {
     background-color: var(--button-disabled);
     cursor: not-allowed;
   }
+}
+
+.icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 45px;
+  border-radius: 8px;
 }

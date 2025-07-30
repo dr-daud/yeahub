@@ -31,7 +31,11 @@ const SimulatorPromo = () => {
           </h4>
           <div className={styles["simulator-promo__start-learning"]}>
             <div className={styles["simulator-promo__graph-up"]}>
-              <div className={styles["simulator-promo__img-wrap"]}>
+              <div
+                className={`${
+                  styles["simulator-promo__icon-wrap"]
+                } ${"icon-wrap"}`}
+              >
                 <img src={graphUp} alt="graph up" />
               </div>
               <p className={`${"body3"} ${styles["simulator-promo__text"]}`}>
@@ -41,7 +45,11 @@ const SimulatorPromo = () => {
               </p>
             </div>
             <div className={styles["simulator-promo__structure"]}>
-              <div className={styles["simulator-promo__img-wrap"]}>
+              <div
+                className={`${
+                  styles["simulator-promo__icon-wrap"]
+                } ${"icon-wrap"}`}
+              >
                 <img src={structure} alt="structure" />
               </div>
               <p className={`${"body3"} ${styles["simulator-promo__text"]}`}>

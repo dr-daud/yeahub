@@ -43,13 +43,7 @@
         display: flex;
         margin-top: 60px;
 
-        .simulator-promo__img-wrap {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 45px;
-          width: 43px;
-          border-radius: 8px;
+        .simulator-promo__icon-wrap {
           background-color: var(--yellow-700);
         }
 
