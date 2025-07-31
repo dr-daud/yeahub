@@ -1,7 +1,7 @@
 import figmaIcons from "../assets/figma-icons.png";
 import progress from "../assets/progress.png";
 import user from "../assets/user.png";
-import { cards } from "../model/consts";
+import { cards } from "../model/constants";
 
 import styles from "./styles.module.css";
 

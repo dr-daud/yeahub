@@ -5,6 +5,7 @@
   --main-purple-hover: #5509cc;
   --main-purple-active: #400799;
   --purple-100: #f0e7ff;
+  --dark-purple: #18003e;
   --light-purple-hover: #e1ceff;
   --light-purple-active: #c39dff;
   --purple-500: #a66dff;
@@ -15,6 +16,7 @@
   --yellow-700: #ffda85;
   --black-50: #e8e8e8;
   --black-200: #bababa;
+  --black-400: #8c8c8c;
 }
 
 * {
