@@ -91,7 +91,7 @@
         background-color: var(--purple-100);
 
         .top-questions__card-icon-wrap {
-          background-color: var(--purple-icon-background);
+          background-color: var(--purple-500);
         }
       }
 

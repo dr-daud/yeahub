@@ -1,0 +1,63 @@
+.mode {
+  padding: 130px 0;
+
+  .mode__title {
+    text-align: center;
+  }
+
+  .mode__flex {
+    display: flex;
+    gap: 123px;
+    margin-top: 45px;
+
+    .mode__left {
+      .mode__screenshot {
+        width: 701px;
+      }
+    }
+
+    .mode__right {
+      .card {
+        position: relative;
+        padding: 24px;
+        border-radius: 12px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 107px;
+          height: 84px;
+          top: 70px;
+          left: -117px;
+          background: url(../assets/line.png) no-repeat center / cover;
+        }
+
+        .card__icon-top {
+          background-color: var(--purple-500);
+        }
+
+        .card__icon-bottom {
+          background-color: var(--yellow-700);
+        }
+
+        .card__text {
+          margin-top: 24px;
+        }
+      }
+
+      .top {
+        background-color: var(--purple-100);
+      }
+
+      .bottom {
+        background-color: var(--yellow-main);
+        margin-top: 26px;
+      }
+
+      .mode__text {
+        margin-top: 21px;
+      }
+    }
+  }
+}
