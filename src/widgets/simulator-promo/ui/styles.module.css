@@ -52,7 +52,7 @@
         }
 
         .simulator-promo__graph-up {
-          border-right: 1px solid #bababa;
+          border-right: 1px solid var(--black-200);
           padding-right: 20px;
         }
 
