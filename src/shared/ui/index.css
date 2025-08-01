@@ -2,7 +2,7 @@
 
 :root {
   --main-purple: #6a0bff;
-  --main-purple-hover: #5509cc;
+  --purple-800: #5509cc;
   --main-purple-active: #400799;
   --purple-100: #f0e7ff;
   --dark-purple: #18003e;
@@ -17,6 +17,7 @@
   --black-50: #e8e8e8;
   --black-200: #bababa;
   --black-400: #8c8c8c;
+  --black-600: #5e5e5e;
 }
 
 * {
@@ -35,29 +36,9 @@ body {
 .container {
   max-width: 1216px;
   margin: 0 auto;
-}
 
-.button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: var(--main-purple);
-  height: 48px;
-  border-radius: 12px;
-  color: #fff;
-  font-size: 18px;
-  line-height: 100%;
-  font-weight: 500;
-
-  &:hover {
-    background-color: var(--main-purple-hover);
-  }
-  &:active {
-    background-color: var(--main-purple-active);
-  }
-  &:disabled {
-    background-color: var(--button-disabled);
-    cursor: not-allowed;
+  @media (max-width: 1260px) {
+    max-width: 708px;
   }
 }
 

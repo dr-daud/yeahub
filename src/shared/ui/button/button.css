@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--main-purple);
+  height: 48px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--purple-800);
+  }
+  &:active {
+    background-color: var(--main-purple-active);
+  }
+  &:disabled {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+  }
+}

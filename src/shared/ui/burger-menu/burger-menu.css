@@ -1,0 +1,38 @@
+.burger {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  gap: 4.5px;
+  height: 32px;
+  width: 32px;
+  padding: 8px 4px;
+
+  @media (max-width: 1260px) {
+    display: flex;
+  }
+
+  .burger__line {
+    width: 23px;
+    height: 2px;
+    background-color: var(--black-600);
+    border-radius: 2px;
+  }
+
+  .burger__line--top {
+    display: none;
+  }
+
+  .burger__line--middle {
+    position: absolute;
+    top: 12px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+
+  .burger__line--bottom {
+    position: absolute;
+    top: 12px;
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+}

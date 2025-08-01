@@ -22,6 +22,7 @@ const TopQuestions = () => {
               новое, готовьтесь к собеседованиям, погружайтесь в нюансы или
               обновляйте знания — YeaHub поможет справиться с любой задачей
             </p>
+
             <button
               className={`${"button"} ${styles["top-questions__button"]}`}
             >

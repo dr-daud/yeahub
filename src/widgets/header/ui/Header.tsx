@@ -1,9 +1,17 @@
+import { useState } from "react";
 import yeahub_logo from "../../../shared/assets/yeahub_logo.svg";
 
 import styles from "./styles.module.css";
 import "../../../shared/ui/index.css";
+import arrow from "../assets/icons/Alt Arrow Down.svg";
+import BurgerMenu from "../../../shared/ui/burger-menu/BurgerMenu";
+import Button from "../../../shared/ui/button/Button";
+import AccessModal from "../../access-modal/ui/AccessModal";
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdowOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={`${"container"} ${styles.header__flex}`}>
@@ -14,16 +22,32 @@ const Header = () => {
             </li>
             <li className={styles["header__link-item"]}>База вопросов</li>
             <li className={styles["header__link-item"]}>Тренажер</li>
+            <li className={styles.dropdown}>
+              <div
+                className={styles["dropdown__btn-wrap"]}
+                onClick={() => setIsDropdowOpen(!isDropdownOpen)}
+              >
+                <button className={styles.dropdown__btn}>Подготовка</button>
+                <img src={arrow} alt="arrow" />
+              </div>
+              {isDropdownOpen && (
+                <div className={styles.dropdown__inner}>
+                  <a href="" className={styles.dropdown__link}>
+                    База вопросов
+                  </a>
+                  <a href="" className={styles.dropdown__link}>
+                    Тренажер
+                  </a>
+                </div>
+              )}
+            </li>
           </ul>
         </nav>
         <div className={styles.header__access}>
-          <a href="" className={styles["header__access-link"]}>
-            вход
-          </a>
-          <button className={`${"button"} ${styles["header__access-button"]}`}>
-            Регистрация
-          </button>
+          <Button style={{ width: "172px" }}>Регистрация</Button>
         </div>
+        <BurgerMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        {isModalOpen && <AccessModal setIsModalOpen={setIsModalOpen} />}
       </div>
     </header>
   );
