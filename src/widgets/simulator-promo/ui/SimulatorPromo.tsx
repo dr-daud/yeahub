@@ -9,7 +9,7 @@ const SimulatorPromo = () => {
     <section className={styles["simulator-promo"]}>
       <div
         className={`${"container"} ${
-          styles["simulator-promo__flex-container"]
+          styles["simulator-promo__grid-container"]
         }`}
       >
         <div className={styles["simulator-promo__questions-list-wrap"]}>
@@ -19,16 +19,18 @@ const SimulatorPromo = () => {
               <img
                 src={questionsList}
                 alt="questionslist"
-                className={styles["simulator-promo__wrap"]}
+                className={styles["simulator-promo__img"]}
               />
             </div>
           </div>
         </div>
-        <div className={styles["simulator-promo__convenient-simulator"]}>
+        <div className={styles["simulator-promo__title-wrap"]}>
           <h2>Удобный тренажёр</h2>
           <h4 className={`${"body3"} ${styles["simulator-promo__subtitle"]}`}>
             Практикуйте изученные темы в нашем тренажёре.
           </h4>
+        </div>
+        <div className={styles["simulator-promo__card-wrap"]}>
           <div className={styles["simulator-promo__start-learning"]}>
             <div className={styles["simulator-promo__graph-up"]}>
               <div
