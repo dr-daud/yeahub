@@ -20,7 +20,8 @@ const TopQuestions = () => {
             <p className={`${"body3"} ${styles["top-questions__text"]}`}>
               Развивайте и улучшайте свои навыки на одной платформе: изучайте
               новое, готовьтесь к собеседованиям, погружайтесь в нюансы или
-              обновляйте знания — YeaHub поможет справиться с любой задачей
+              обновляйте знания — YeaHub поможет справиться с любой <br />
+              задачей
             </p>
 
             <button
@@ -68,7 +69,11 @@ const TopQuestions = () => {
               >
                 {card.title}
               </p>
-              <p className={styles["top-questions__card-description"]}>
+              <p
+                className={`${"body3"} ${
+                  styles["top-questions__card-description"]
+                }`}
+              >
                 {card.description}
               </p>
             </div>

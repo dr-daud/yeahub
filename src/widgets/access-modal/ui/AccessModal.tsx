@@ -18,8 +18,8 @@ const AccessModal = ({ setIsModalOpen }: Props) => {
   useOnClickOutside(ref, closeModal);
 
   return (
-    <div className="overlay" ref={ref}>
-      <div className="modal">
+    <div className="overlay">
+      <div className="modal" ref={ref}>
         <EnterLink />
         <Button style={{ width: "172px" }}>Регистрация</Button>
       </div>

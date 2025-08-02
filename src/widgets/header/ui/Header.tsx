@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import yeahub_logo from "../../../shared/assets/yeahub_logo.svg";
 
 import styles from "./styles.module.css";
@@ -7,10 +7,18 @@ import arrow from "../assets/icons/Alt Arrow Down.svg";
 import BurgerMenu from "../../../shared/ui/burger-menu/BurgerMenu";
 import Button from "../../../shared/ui/button/Button";
 import AccessModal from "../../access-modal/ui/AccessModal";
+import { useOnClickOutside } from "../../../shared/hooks/useOnClickOutside";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdowOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const closeDropdown = () => {
+    setIsDropdowOpen(false);
+  };
+
+  useOnClickOutside(ref, closeDropdown);
 
   return (
     <header className={styles.header}>
@@ -31,7 +39,7 @@ const Header = () => {
                 <img src={arrow} alt="arrow" />
               </div>
               {isDropdownOpen && (
-                <div className={styles.dropdown__inner}>
+                <div className={styles.dropdown__inner} ref={ref}>
                   <a href="" className={styles.dropdown__link}>
                     База вопросов
                   </a>
