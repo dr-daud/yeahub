@@ -56,11 +56,9 @@ const Prepare = () => {
               </p>
             </div>
           </div>
-          <div className={styles.prepare__button}>
-            <Button style={{ width: "256px", marginTop: "26px" }}>
-              Пройти собеседование
-            </Button>
-          </div>
+          <Button className={styles.prepare__button}>
+            Пройти собеседование
+          </Button>
         </div>
       </div>
     </section>
