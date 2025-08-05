@@ -17,7 +17,6 @@ const Mode = () => {
         </div>
         <div className={styles.mode__right}>
           <div className={`${styles["card"]} ${styles["top"]}`}>
-            {/* <div className={styles.mode__line}></div> */}
             <div className={`${"icon-wrap"} ${styles["card__icon-top"]}`}>
               <img src={student} alt="srudent icon" />
             </div>
@@ -26,7 +25,6 @@ const Mode = () => {
             </p>
           </div>
           <div className={`${styles["card"]} ${styles["bottom"]}`}>
-            {/* <div className={styles.mode__line}></div> */}
             <div className={`${"icon-wrap"} ${styles["card__icon-bottom"]}`}>
               <img src={bookMark} alt="bookmark icon" />
             </div>

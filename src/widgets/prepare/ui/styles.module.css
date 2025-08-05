@@ -9,6 +9,7 @@
 
   @media (max-width: 730px) {
     padding: 24px 16px 42px 16px;
+    margin: 0;
   }
   .prepare__top {
     display: flex;
@@ -117,7 +118,7 @@
           max-width: 579px;
         }
         @media (max-width: 730px) {
-          max-width: 296px;
+          max-width: 280px;
         }
       }
       .prepare__filters-flex {

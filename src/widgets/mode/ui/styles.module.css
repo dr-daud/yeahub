@@ -1,12 +1,20 @@
 .mode {
   padding: 130px 0;
 
+  @media (max-width: 730px) {
+    padding: 40px 0;
+  }
+
   .mode__title {
     text-align: center;
 
     @media (max-width: 1260px) {
       max-width: 526px;
       margin: 0 auto;
+    }
+
+    @media (max-width: 730px) {
+      max-width: 400px;
     }
   }
 
@@ -21,10 +29,20 @@
       gap: 84px;
     }
 
+    @media (max-width: 730px) {
+      margin-top: 16px;
+      gap: 16px;
+      align-items: center;
+    }
+
     .mode__left {
       position: relative;
       .mode__screenshot {
         width: 701px;
+
+        @media (max-width: 730px) {
+          width: 328px;
+        }
       }
       @media (max-width: 1260px) {
         &::before {
@@ -35,6 +53,10 @@
           background-color: var(--black-200);
           bottom: -85px;
           left: 25%;
+
+          @media (max-width: 730px) {
+            display: none;
+          }
         }
         &::after {
           content: "";
@@ -44,6 +66,10 @@
           background-color: var(--black-200);
           bottom: -124px;
           right: 25%;
+
+          @media (max-width: 730px) {
+            display: none;
+          }
         }
       }
     }
@@ -53,6 +79,10 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 20px;
+      }
+
+      @media (max-width: 730px) {
+        justify-content: center;
       }
       .card {
         position: relative;
@@ -67,7 +97,15 @@
 
           &:nth-child(2) {
             margin-top: 40px;
+
+            @media (max-width: 730px) {
+              margin-top: 16px;
+            }
           }
+        }
+
+        @media (max-width: 730px) {
+          max-width: 328px;
         }
 
         &::before {
@@ -82,13 +120,6 @@
 
           @media (max-width: 1260px) {
             display: none;
-            /* background: none;
-            background-color: var(--black-200);
-            width: 2px;
-            height: 116px;
-            top: -95px;
-            left: 50%;
-            z-index: -1; */
           }
         }
 
@@ -102,22 +133,16 @@
 
         .card__text {
           margin-top: 24px;
+
+          @media (max-width: 730px) {
+            font-size: 14px;
+          }
         }
       }
 
       .top {
         background-color: var(--purple-100);
       }
-
-      /* .mode__line {
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        height: 116px;
-        width: 2px;
-        z-index: -1;
-        background-color: var(--black-200);
-      } */
 
       .bottom {
         background-color: var(--yellow-main);
@@ -132,6 +157,12 @@
           bottom: 5px;
           max-width: 344px;
           flex-shrink: 0;
+        }
+
+        @media (max-width: 730px) {
+          position: static;
+          margin-top: 16px;
+          max-width: 328px;
         }
       }
     }
