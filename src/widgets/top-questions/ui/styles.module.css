@@ -180,6 +180,9 @@
       .top-questions__card-description {
         margin-top: 8px;
         color: #474747;
+        @media (max-width: 1260px) {
+          font-size: 14px;
+        }
       }
     }
   }

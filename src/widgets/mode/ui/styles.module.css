@@ -125,6 +125,7 @@
       }
 
       .mode__text {
+        font-weight: 400;
         margin-top: 21px;
         @media (max-width: 1260px) {
           position: absolute;
