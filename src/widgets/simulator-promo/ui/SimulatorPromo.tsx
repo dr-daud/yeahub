@@ -29,6 +29,11 @@ const SimulatorPromo = () => {
           <h4 className={`${"body3"} ${styles["simulator-promo__subtitle"]}`}>
             Практикуйте изученные темы в нашем тренажёре.
           </h4>
+          <h4
+            className={`${"body3"} ${styles["simulator-promo__subtitle_mob"]}`}
+          >
+            В YeaHub каждый найдёт новые возможности для обучения.
+          </h4>
         </div>
         <div className={styles["simulator-promo__card-wrap"]}>
           <div className={styles["simulator-promo__start-learning"]}>
@@ -41,9 +46,8 @@ const SimulatorPromo = () => {
                 <img src={graphUp} alt="graph up" />
               </div>
               <p className={`${"body3"} ${styles["simulator-promo__text"]}`}>
-                Наш тренажёр предоставляет <br />
-                уникальный шанс углубить свои <br />
-                знания и поднять их на новый уровень
+                Наш тренажёр предоставляет уникальный шанс углубить свои знания
+                и поднять их на новый уровень
               </p>
             </div>
             <div className={styles["simulator-promo__structure"]}>
@@ -55,8 +59,8 @@ const SimulatorPromo = () => {
                 <img src={structure} alt="structure" />
               </div>
               <p className={`${"body3"} ${styles["simulator-promo__text"]}`}>
-                Изучение технологий <br />
-                ещё никогда не было таким <br /> доступным и эффективным
+                Изучение технологий ещё никогда не было таким доступным и
+                эффективным
               </p>
             </div>
           </div>

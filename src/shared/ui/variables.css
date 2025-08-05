@@ -22,6 +22,10 @@ h2 {
   @media (max-width: 1260px) {
     font-size: 34px;
   }
+
+  @media (max-width: 730px) {
+    font-size: 20px;
+  }
 }
 
 .body1 {

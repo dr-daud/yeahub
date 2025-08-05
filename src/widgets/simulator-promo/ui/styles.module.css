@@ -4,6 +4,10 @@
     padding: 80px 0 94px 0;
   }
 
+  @media (max-width: 730px) {
+    padding: 40px 0;
+  }
+
   .simulator-promo__grid-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -16,6 +20,11 @@
     @media (max-width: 1260px) {
       grid-template-rows: auto auto auto;
       grid-template-columns: auto;
+    }
+
+    @media (max-width: 730px) {
+      border-radius: 12px;
+      padding: 24px 0;
     }
 
     .simulator-promo__questions-list-wrap {
@@ -31,10 +40,21 @@
         margin-top: 24px;
       }
 
+      @media (max-width: 730px) {
+        width: 328px;
+        margin-top: 16px;
+        padding: 16px 16px 0 16px;
+        border-radius: 8px;
+      }
+
       .simulator-promo__questions-list {
         background-color: #fff;
         padding: 24px;
         border-radius: 16px 16px 0 0;
+
+        @media (max-width: 730px) {
+          padding: 10px;
+        }
 
         .simulator-promo__img-wrap {
           padding: 24px;
@@ -42,8 +62,15 @@
           box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
           border-radius: 10px;
 
+          @media (max-width: 730px) {
+            margin-top: 12px;
+          }
+
           .simulator-promo__img {
             width: 367px;
+            @media (max-width: 730px) {
+              width: 205px;
+            }
           }
         }
       }
@@ -55,8 +82,26 @@
         justify-self: center;
         padding-top: 0;
       }
+
+      h2 {
+        @media (max-width: 730px) {
+          text-align: center;
+        }
+      }
       .simulator-promo__subtitle {
         margin-top: 16px;
+        @media (max-width: 730px) {
+          display: none;
+        }
+      }
+      .simulator-promo__subtitle_mob {
+        display: none;
+        @media (max-width: 730px) {
+          display: block;
+          margin-top: 16px;
+          font-size: 14px;
+          text-align: center;
+        }
       }
     }
     .simulator-promo__card-wrap {
@@ -74,6 +119,12 @@
           margin-top: 24px;
         }
 
+        @media (max-width: 730px) {
+          margin-top: 0;
+          flex-direction: column;
+          padding: 24px 16px 0 16px;
+        }
+
         .simulator-promo__icon-wrap {
           background-color: var(--yellow-700);
         }
@@ -89,10 +140,19 @@
           @media (max-width: 1260px) {
             border: none;
           }
+
+          @media (max-width: 730px) {
+            padding-right: 0;
+          }
         }
 
         .simulator-promo__structure {
           padding-left: 20px;
+
+          @media (max-width: 730px) {
+            padding-left: 0;
+            margin-top: 16px;
+          }
         }
       }
     }
