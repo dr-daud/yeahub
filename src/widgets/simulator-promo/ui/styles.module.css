@@ -64,6 +64,7 @@
       align-self: start;
 
       @media (max-width: 1260px) {
+        padding-right: 0;
         justify-self: center;
       }
       .simulator-promo__start-learning {

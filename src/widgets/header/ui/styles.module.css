@@ -9,6 +9,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 0;
+
+    @media (max-width: 730px) {
+      padding: 10px 0;
+    }
     .header__nav {
       .header__links {
         display: flex;
@@ -27,6 +31,20 @@
             }
             &:nth-child(3) {
               display: none;
+            }
+          }
+
+          .header__small-logo {
+            display: none;
+          }
+
+          @media (max-width: 730px) {
+            .header__logo {
+              display: none;
+            }
+
+            .header__small-logo {
+              display: inline;
             }
           }
         }

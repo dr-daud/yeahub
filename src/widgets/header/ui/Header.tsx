@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import yeahub_logo from "../../../shared/assets/yeahub_logo.svg";
+import yeahub_logo_small from "../../../shared/assets/yeahub_small_logo.svg";
 
 import styles from "./styles.module.css";
 import "../../../shared/ui/index.css";
@@ -26,7 +27,16 @@ const Header = () => {
         <nav className={styles.header__nav}>
           <ul className={styles.header__links}>
             <li className={styles["header__link-item"]}>
-              <img src={yeahub_logo} alt="logo" />
+              <img
+                src={yeahub_logo}
+                alt="logo"
+                className={styles.header__logo}
+              />
+              <img
+                src={yeahub_logo_small}
+                alt="logo"
+                className={styles["header__small-logo"]}
+              />
             </li>
             <li className={styles["header__link-item"]}>База вопросов</li>
             <li className={styles["header__link-item"]}>Тренажер</li>

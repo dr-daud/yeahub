@@ -41,6 +41,10 @@ body {
   @media (max-width: 1260px) {
     max-width: 708px;
   }
+
+  @media (max-width: 730px) {
+    max-width: 360px;
+  }
 }
 
 .icon-wrap {
