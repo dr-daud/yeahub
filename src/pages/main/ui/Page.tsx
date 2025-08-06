@@ -1,4 +1,3 @@
-import Footer from "../../../widgets/footer/ui/Footer";
 import Mode from "../../../widgets/mode/ui/Mode";
 import Prepare from "../../../widgets/prepare/ui/Prepare";
 import SimulatorPromo from "../../../widgets/simulator-promo/ui/SimulatorPromo";
@@ -13,7 +12,6 @@ const MainPage = () => {
       <Prepare />
       <Mode />
       <Track />
-      <Footer />
     </main>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Button from "../../../shared/ui/button/Button";
 import figmaIcons from "../assets/figma-icons.png";
 import progress from "../assets/progress.png";
@@ -25,7 +26,7 @@ const TopQuestions = () => {
             </p>
 
             <Button className={`${styles["top-questions__button"]}`}>
-              Присоединиться
+              <Link to="/quiz">Присоединиться</Link>
             </Button>
           </div>
           <div className={styles["top-questions__right"]}>

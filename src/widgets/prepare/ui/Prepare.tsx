@@ -4,6 +4,7 @@ import accordeon from "../assets/question accordeon.png";
 import filtersScreen from "../assets/filters example.png";
 import filterIcon from "../assets/icons/Filter.svg";
 import Button from "../../../shared/ui/button/Button";
+import { Link } from "react-router";
 
 const Prepare = () => {
   return (
@@ -57,7 +58,7 @@ const Prepare = () => {
             </div>
           </div>
           <Button className={styles.prepare__button}>
-            Пройти собеседование
+            <Link to="/quiz">Пройти собеседование</Link>
           </Button>
         </div>
       </div>

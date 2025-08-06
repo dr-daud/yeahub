@@ -1,7 +1,7 @@
 import "./button.css";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
+  children: React.ReactNode;
 }
 
 const Button = ({ children, className, ...props }: Props) => {

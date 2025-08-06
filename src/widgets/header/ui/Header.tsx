@@ -62,6 +62,9 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.header__access}>
+          <a href="" className={styles["header__access-link"]}>
+            вход
+          </a>
           <Button style={{ width: "172px" }}>Регистрация</Button>
         </div>
         <BurgerMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />

@@ -20,4 +20,8 @@
     background-color: var(--button-disabled);
     cursor: not-allowed;
   }
+
+  a {
+    color: #fff;
+  }
 }

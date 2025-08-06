@@ -3,6 +3,7 @@ import "../../../shared/ui/index.css";
 import questionsList from "../assets/question_list.jpg";
 import graphUp from "../assets/icons/Graph Up.svg";
 import structure from "../assets/icons/Structure.svg";
+import { Link } from "react-router";
 
 const SimulatorPromo = () => {
   return (
@@ -67,7 +68,7 @@ const SimulatorPromo = () => {
           <button
             className={`${"button"} ${styles["simulator-promo__button"]}`}
           >
-            Начать обучение
+            <Link to="/quiz">Начать обучение</Link>
           </button>
         </div>
       </div>

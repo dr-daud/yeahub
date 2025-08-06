@@ -1,12 +1,18 @@
 import { Outlet } from "react-router-dom";
 
 import Header from "../../widgets/header/ui/Header";
+import Footer from "../../widgets/footer/ui/Footer";
+import Breadcrumbs from "../../widgets/breadcrumbs/ui/Breadcrumbs";
 
 const BaseLayout = () => {
   return (
     <div>
       <Header />
+      <div className="container">
+        <Breadcrumbs />
+      </div>
       <Outlet />
+      <Footer />
     </div>
   );
 };
