@@ -1,0 +1,13 @@
+.specializations {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .specializations__title {
+    color: var(--black-700);
+  }
+
+  .specializations__button {
+    width: 204px;
+    align-self: flex-end;
+  }
+}

@@ -1,14 +1,19 @@
-import { useSpecializationsQuery } from "../../../entities/specializations/api";
+import { useState } from "react";
+import Specializations from "../../../entities/specializations/ui/Specializations";
 import "./quiz-section.css";
+import Skills from "../../../entities/skills/ui/Skills";
 
 const QuizSection = () => {
-  const { data } = useSpecializationsQuery({ page: 1, limit: 10 });
-  console.log(data);
+  const [currentStep, setCurrentStep] = useState(1);
 
   return (
     <section className="quiz">
       <div className="container quiz__wrap">
         <h4 className="quiz__title body6-med">Собеседование</h4>
+        {currentStep === 1 ? (
+          <Specializations setCurrentStep={setCurrentStep} />
+        ) : null}
+        <Skills />
         <div className="quiz__inner-wrap">
           <div className="quiz__categories">
             <p className="quiz__categories-title body2">Категории вопросов</p>

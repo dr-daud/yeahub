@@ -2,7 +2,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: var(--main-purple);
+  background-color: var(--purple-700);
   height: 48px;
   border-radius: 12px;
   color: #fff;
