@@ -1,0 +1,20 @@
+.skills {
+  max-width: 621px;
+  .skills__title {
+    color: var(--black-700);
+  }
+  .skills__flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .skills__wrap {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .skills__img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

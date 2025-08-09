@@ -1,0 +1,10 @@
+.settings {
+  .settings__title {
+    color: var(--black-700);
+  }
+
+  .settings__mode,
+  .settings__quantity {
+    margin-top: 24px;
+  }
+}

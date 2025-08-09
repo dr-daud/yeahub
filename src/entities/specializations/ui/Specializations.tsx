@@ -1,21 +1,25 @@
-import { useState } from "react";
 import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import { useSpecializationsQuery } from "../api/api";
 import Button from "../../../shared/ui/button/Button";
 import "./specializations.css";
 import { useLazySkillsQuery } from "../../skills/api/api";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../../../app/appStore";
+import { setSpec } from "../model/specializationsSlice";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
 }
 
 const Specializations = ({ setCurrentStep }: Props) => {
-  const [spec, setSpec] = useState<number | null>(null);
   const { data } = useSpecializationsQuery({ page: 1, limit: 19 });
-  const [trigger, { data: skills }] = useLazySkillsQuery();
-  console.log(skills);
+  const [trigger] = useLazySkillsQuery();
+  const { spec } = useSelector(
+    (state: RootState) => state.specializationsReducer
+  );
+  const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const handleClick = async () => {
     setCurrentStep(2);
     trigger({ page: 1, limit: 10, specializations: spec });
   };
@@ -26,7 +30,7 @@ const Specializations = ({ setCurrentStep }: Props) => {
       <div>
         {data?.data.map((arr) => (
           <TransparentFrame
-            onClick={() => setSpec(arr.id)}
+            onClick={() => dispatch(setSpec(arr.id))}
             key={arr.id}
             className={arr.id === spec ? "active" : ""}
           >
