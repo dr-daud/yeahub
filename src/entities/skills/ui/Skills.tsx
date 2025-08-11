@@ -3,8 +3,9 @@ import TransparentFrame from "../../../shared/ui/transparent-frame/ui/Transparen
 import { useSkillsQuery } from "../api/api";
 import type { RootState } from "../../../app/appStore";
 import "./skills.css";
+import type { Props } from "../model/types";
 
-const Skills = () => {
+const Skills = ({ skills, handleClick }: Props) => {
   const { spec } = useSelector(
     (state: RootState) => state.specializationsReducer
   );
@@ -19,7 +20,11 @@ const Skills = () => {
       <p className="skills__title body2">Категории вопросов</p>
       <div className="skills__flex">
         {data?.data?.map((skill) => (
-          <TransparentFrame>
+          <TransparentFrame
+            onClick={() => handleClick(skill.id)}
+            key={skill.id}
+            className={skills.includes(skill.id) ? "active" : undefined}
+          >
             <div className="skills__wrap">
               {skill.imageSrc ? (
                 <img src={skill.imageSrc} alt="icon" className="skills__img" />

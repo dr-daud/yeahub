@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Specializations from "../../../../entities/specializations/ui/Specializations";
 import "./quiz-section.css";
-import Skills from "../../../../entities/skills/ui/Skills";
 import DetailedSettings from "../detailed-settings/DetailedSettings";
+import Button from "../../../../shared/ui/button/Button";
+import arrow from "../../assets/Arrow-Right.svg";
+import SkillsSelector from "../../../../features/quiz-settings/skills-selector/ui/SkillsSelector";
 
 const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -14,10 +16,15 @@ const QuizSection = () => {
         {currentStep === 1 ? (
           <Specializations setCurrentStep={setCurrentStep} />
         ) : (
-          <div className="quiz__flex">
-            <Skills />
-            <DetailedSettings />
-          </div>
+          <>
+            <div className="quiz__flex">
+              <SkillsSelector />
+              <DetailedSettings />
+            </div>
+            <Button className="quiz__button">
+              {"Начать"} <img src={arrow} alt="arrow" />
+            </Button>
+          </>
         )}
       </div>
     </section>

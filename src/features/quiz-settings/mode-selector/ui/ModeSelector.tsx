@@ -6,8 +6,8 @@ const ModeSelector = () => {
   return (
     <div className="mode">
       <p className="black700-title body2">Выберите режим</p>
-      {MODE.map((mode) => (
-        <TransparentFrame>{mode}</TransparentFrame>
+      {MODE.map((mode, index) => (
+        <TransparentFrame key={index}>{mode}</TransparentFrame>
       ))}
     </div>
   );

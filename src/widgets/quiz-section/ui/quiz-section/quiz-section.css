@@ -12,5 +12,15 @@
       margin-top: 24px;
       gap: 138px;
     }
+
+    .quiz__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: self-end;
+      gap: 8px;
+      margin-top: 48px;
+      width: 170px;
+    }
   }
 }

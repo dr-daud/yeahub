@@ -23,11 +23,11 @@ const QuantitySelector = () => {
     <div className="quantity">
       <p className="black700-title body2">Количество вопросов</p>
       <TransparentFrame className="quantity__wrap">
-        <button onClick={handleMinus} className="quantity__button">
+        <button onClick={handleMinus} className="qunatity__button">
           <img src={minus} alt="minus" />
         </button>
         {quanyity}
-        <button onClick={handlePlus} className="quantity__button">
+        <button onClick={handlePlus} className="qunatity__button">
           <img src={plus} alt="plus" />
         </button>
       </TransparentFrame>

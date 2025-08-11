@@ -12,3 +12,8 @@ export type TSkillsArgs = {
   limit: number;
   specializations: number | null;
 };
+
+export interface Props {
+  skills: number[];
+  handleClick: (skill: number) => void;
+}
