@@ -61,3 +61,7 @@ h2 {
   font-weight: 500;
   line-height: 120%;
 }
+
+.black700-title {
+  color: var(--black-700);
+}

@@ -1,7 +1,7 @@
 .specializations {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  margin-top: 24px;
   .specializations__title {
     color: var(--black-700);
   }

@@ -1,0 +1,14 @@
+.quantity {
+  margin-top: 24px;
+  .quantity__wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 115px;
+
+    .qunatity__button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
