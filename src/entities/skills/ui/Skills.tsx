@@ -23,7 +23,7 @@ const Skills = ({ skills, handleClick }: Props) => {
           <TransparentFrame
             onClick={() => handleClick(skill.id)}
             key={skill.id}
-            className={skills.includes(skill.id) ? "active" : undefined}
+            className={skills.includes(skill.id) ? "active" : ""}
           >
             <div className="skills__wrap">
               {skill.imageSrc ? (
