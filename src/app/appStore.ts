@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { baseApi } from "../shared/api/baseApi";
 import specializationsReducer from "../entities/specializations/model/specializationsSlice";
+import questionsReducer from "../entities/questions/model/questionsSlice";
 import {
   useDispatch,
   useSelector,
@@ -11,6 +12,7 @@ const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
     specializationsReducer,
+    questionsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),

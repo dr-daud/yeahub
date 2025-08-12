@@ -1,0 +1,27 @@
+.questions {
+  .questions__wrap {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
+
+    .questions__nav {
+      display: flex;
+      justify-content: space-between;
+
+      .questions__button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: var(--purple-700);
+      }
+    }
+
+    .questions__main {
+      margin-top: 24px;
+    }
+  }
+}

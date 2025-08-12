@@ -21,9 +21,9 @@ const Skills = ({ skills, handleClick }: Props) => {
       <div className="skills__flex">
         {data?.data?.map((skill) => (
           <TransparentFrame
-            onClick={() => handleClick(skill.id)}
+            onClick={() => handleClick(String(skill.id))}
             key={skill.id}
-            className={skills.includes(skill.id) ? "active" : ""}
+            className={skills.includes(String(skill.id)) ? "active" : ""}
           >
             <div className="skills__wrap">
               {skill.imageSrc ? (

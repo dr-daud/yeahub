@@ -14,6 +14,6 @@ export type TSkillsArgs = {
 };
 
 export interface Props {
-  skills: number[];
-  handleClick: (skill: number) => void;
+  skills: string[];
+  handleClick: (skill: string) => void;
 }

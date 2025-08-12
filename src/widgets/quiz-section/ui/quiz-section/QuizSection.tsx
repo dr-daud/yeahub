@@ -5,6 +5,7 @@ import DetailedSettings from "../detailed-settings/DetailedSettings";
 import Button from "../../../../shared/ui/button/Button";
 import arrow from "../../assets/Arrow-Right.svg";
 import SkillsSelector from "../../../../features/quiz-settings/skills-selector/ui/SkillsSelector";
+import { Link } from "react-router";
 
 const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -21,9 +22,11 @@ const QuizSection = () => {
               <SkillsSelector />
               <DetailedSettings />
             </div>
-            <Button className="quiz__button">
-              {"Начать"} <img src={arrow} alt="arrow" />
-            </Button>
+            <Link to="/questions">
+              <Button className="quiz__button">
+                {"Начать"} <img src={arrow} alt="arrow" />
+              </Button>
+            </Link>
           </>
         )}
       </div>
