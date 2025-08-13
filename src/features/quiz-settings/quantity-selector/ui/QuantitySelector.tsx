@@ -1,21 +1,24 @@
-import { useState } from "react";
 import TransparentFrame from "../../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import "./quantity-selector.css";
 import minus from "../assets/Minus.svg";
 import plus from "../assets/Plus.svg";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../../../../app/appStore";
+import { addLimit } from "../../../../entities/questions/model/questionsSlice";
 
 const QuantitySelector = () => {
-  const [quanyity, setQuantity] = useState(35);
+  const { limit } = useSelector((state: RootState) => state.questionsReducer);
+  const dispatch = useDispatch();
 
   const handlePlus = () => {
-    if (quanyity < 100) {
-      setQuantity(quanyity + 1);
+    if (limit < 100) {
+      dispatch(addLimit(limit));
     }
   };
 
   const handleMinus = () => {
-    if (quanyity > 1) {
-      setQuantity(quanyity - 1);
+    if (limit > 1) {
+      dispatch(addLimit(limit));
     }
   };
 
@@ -26,7 +29,7 @@ const QuantitySelector = () => {
         <button onClick={handleMinus} className="qunatity__button">
           <img src={minus} alt="minus" />
         </button>
-        {quanyity}
+        {limit}
         <button onClick={handlePlus} className="qunatity__button">
           <img src={plus} alt="plus" />
         </button>
