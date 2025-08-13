@@ -4,11 +4,11 @@ import type { RootState } from "../../../../app/appStore";
 import {
   addSkills,
   removeSkills,
-} from "../../../../entities/questions/model/questionsSlice";
+} from "../../../../entities/skills/model/skillsSlice";
 
 const SkillsSelector = () => {
   const dispatch = useDispatch();
-  const { skills } = useSelector((state: RootState) => state.questionsReducer);
+  const { skills } = useSelector((state: RootState) => state.skillsReducer);
 
   const handleClick = (id: string) => {
     if (skills?.includes(id)) {
