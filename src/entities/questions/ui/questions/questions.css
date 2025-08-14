@@ -21,22 +21,36 @@
     }
 
     .questions__main {
-      margin-top: 24px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      gap: 20px;
+      margin-top: 24px;
+      padding-bottom: 24px;
+      align-items: stretch;
+      border-bottom: 1px solid var(--black-100);
 
-      .questions__title {
+      .questions__inner {
         display: flex;
-        align-items: center;
-        gap: 8px;
-        &::before {
-          content: "";
-          display: block;
-          width: 8px;
-          height: 8px;
-          border-radius: 100%;
-          background-color: var(--brand);
+        flex-direction: column;
+        justify-content: space-between;
+        .questions__title {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          &::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: var(--brand);
+          }
+        }
+
+        .questions__link {
+          display: inline-block;
+          margin-top: 16px;
         }
       }
 

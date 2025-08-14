@@ -1,11 +1,12 @@
 import "./questions.css";
-import left from "../assets/chevrone_Left.svg";
-import right from "../assets/chevrone_right.svg";
-import { useQuestionsQuery } from "../api/api";
+import left from "../../assets/chevrone_Left.svg";
+import right from "../../assets/chevrone_right.svg";
+import { useQuestionsQuery } from "../../api/api";
 import { useSelector } from "react-redux";
-import type { RootState } from "../../../app/appStore";
+import type { RootState } from "../../../../app/appStore";
 import { useState } from "react";
-import Image from "../../../shared/ui/image/Image";
+import Image from "../../../../shared/ui/image/Image";
+import Mark from "../mark/mark";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -30,8 +31,6 @@ const Questions = () => {
 
   const currentData = data && data.questions[currentQuestion];
 
-  console.log(currentData?.title);
-
   return (
     <section className="questions">
       <div className="container questions__wrap">
@@ -51,7 +50,17 @@ const Questions = () => {
           </button>
         </div>
         <div className="questions__main">
-          <div className="body5-med questions__title">{currentData?.title}</div>
+          <div className="questions__inner">
+            <div>
+              <div className="body5-med questions__title">
+                {currentData?.title}
+              </div>
+              <a href="" className="body2 questions__link">
+                Посмотреть ответ
+              </a>
+            </div>
+            <Mark />
+          </div>
           <div className="questions__img">
             <Image image={currentData?.imageSrc} />
           </div>

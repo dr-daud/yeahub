@@ -1,4 +1,4 @@
-import Questions from "../../entities/questions/ui/Questions";
+import Questions from "../../entities/questions/ui/questions/Questions";
 
 const QuestionsPage = () => {
   return <Questions />;
