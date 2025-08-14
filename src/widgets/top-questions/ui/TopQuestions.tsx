@@ -25,9 +25,11 @@ const TopQuestions = () => {
               обновляйте знания — YeaHub поможет справиться с любой задачей
             </p>
 
-            <Button className={`${styles["top-questions__button"]}`}>
-              <Link to="/quiz">Присоединиться</Link>
-            </Button>
+            <Link to="/quiz">
+              <Button className={`${styles["top-questions__button"]}`}>
+                Присоединиться{" "}
+              </Button>
+            </Link>
           </div>
           <div className={styles["top-questions__right"]}>
             <img

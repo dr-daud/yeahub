@@ -5,8 +5,9 @@ const skillsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     skills: build.query<TSkills, TSkillsArgs>({
       query: ({ page, limit, specializations }) => ({
-        url: `skills?page=${page}&limit=${limit}&specializations=${specializations}`,
+        url: "skills",
         method: "GET",
+        params: { page, limit, specializations },
       }),
     }),
   }),

@@ -65,11 +65,13 @@ const SimulatorPromo = () => {
               </p>
             </div>
           </div>
-          <button
-            className={`${"button"} ${styles["simulator-promo__button"]}`}
-          >
-            <Link to="/quiz">Начать обучение</Link>
-          </button>
+          <Link to="/quiz">
+            <button
+              className={`${"button"} ${styles["simulator-promo__button"]}`}
+            >
+              Начать обучение
+            </button>
+          </Link>
         </div>
       </div>
     </section>

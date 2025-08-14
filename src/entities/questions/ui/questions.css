@@ -22,6 +22,28 @@
 
     .questions__main {
       margin-top: 24px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .questions__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &::before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: var(--brand);
+        }
+      }
+
+      .questions__img {
+        min-height: 100px;
+        min-width: 622px;
+      }
     }
   }
 }
