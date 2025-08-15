@@ -23,7 +23,11 @@
   --black-400: #8c8c8c;
   --black-600: #5e5e5e;
   --black-700: #474747;
+  --red-25: #ffecf5;
   --red-100: #fdd8e1;
+  --red-200: #fbb1c4;
+  --red-300: #f98ba6;
+  --red-600: #f3164e;
 }
 
 * {

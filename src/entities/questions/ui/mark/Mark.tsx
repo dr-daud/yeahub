@@ -26,7 +26,7 @@ export const PositiveMark = ({ active, ...props }: Props) => {
 
 export const NegativeMark = ({ active, ...props }: Props) => {
   return (
-    <button className={active ? "mark__down" : "active mark__down"} {...props}>
+    <button className={active ? "mark__up" : "active mark__up"} {...props}>
       <svg
         width="24"
         height="24"

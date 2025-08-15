@@ -46,6 +46,12 @@ h2 {
   font-weight: 400;
 }
 
+.body3-strong {
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 600;
+}
+
 .body5-med {
   font-weight: 500;
   font-size: 20px;

@@ -9,7 +9,7 @@ import Image from "../../../../shared/ui/image/Image";
 import { NegativeMark, PositiveMark } from "../mark/Mark";
 
 const Questions = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [learnt, setLearnt] = useState<number[]>([]);
 
   const { skills, limit, complexityArr, specialization } = useSelector(
@@ -42,6 +42,9 @@ const Questions = () => {
     setLearnt(learnt.filter((el) => el !== id));
   };
 
+  const isNextQuestion =
+    !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount);
+
   return (
     <section className="questions">
       <div className="container questions__wrap">
@@ -49,12 +52,14 @@ const Questions = () => {
           <button
             className="questions__button"
             onClick={() => setCurrentQuestion(currentQuestion - 1)}
+            disabled={currentQuestion == 0}
           >
             <img src={left} alt="left arrow" /> Назад
           </button>
           <button
             className="questions__button"
             onClick={() => setCurrentQuestion(currentQuestion + 1)}
+            disabled={isNextQuestion}
           >
             Далее
             <img src={right} alt="right arrow" />
@@ -70,7 +75,7 @@ const Questions = () => {
                 Посмотреть ответ
               </a>
             </div>
-            <div className="mark">
+            <div className="questions__mark">
               <NegativeMark
                 active={
                   currentData?.id ? learnt.includes(currentData?.id) : false
@@ -88,6 +93,11 @@ const Questions = () => {
           <div className="questions__img">
             <Image image={currentData?.imageSrc} />
           </div>
+        </div>
+        <div className="questions__btn-wrap">
+          <button className="questions__complete-btn .body3-strong">
+            Завершить
+          </button>
         </div>
       </div>
     </section>

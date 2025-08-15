@@ -1,4 +1,5 @@
 .questions {
+  padding-bottom: 130px;
   .questions__wrap {
     margin-top: 24px;
     padding: 24px;
@@ -17,6 +18,11 @@
         background-color: transparent;
         border: none;
         color: var(--purple-700);
+
+        &:disabled {
+          color: grey;
+          cursor: not-allowed;
+        }
       }
     }
 
@@ -34,6 +40,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .questions__mark {
+          display: flex;
+          gap: 8px;
+        }
         .questions__title {
           display: flex;
           align-items: center;
@@ -57,6 +68,31 @@
       .questions__img {
         min-height: 100px;
         min-width: 622px;
+      }
+    }
+    .questions__btn-wrap {
+      padding-top: 24px;
+      display: flex;
+      justify-content: end;
+      .questions__complete-btn {
+        cursor: pointer;
+        border: none;
+        padding: 15px 42px;
+        border-radius: 12px;
+        background-color: var(--red-100);
+        color: var(--red-600);
+
+        &:hover {
+          background-color: var(--red-200);
+        }
+
+        &:active {
+          background-color: var(--red-300);
+        }
+
+        &:disabled {
+          background-color: var(--red-25);
+        }
       }
     }
   }
