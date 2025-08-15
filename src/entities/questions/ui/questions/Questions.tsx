@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../../../../app/appStore";
 import { useState } from "react";
 import Image from "../../../../shared/ui/image/Image";
-import Mark from "../mark/mark";
+import { NegativeMark, PositiveMark } from "../mark/Mark";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [learnt, setLearnt] = useState<number[]>([]);
 
   const { skills, limit, complexityArr, specialization } = useSelector(
     (state: RootState) => ({
@@ -30,6 +31,16 @@ const Questions = () => {
   });
 
   const currentData = data && data.questions[currentQuestion];
+
+  const addLearnt = (id?: number) => {
+    if (!id) return;
+    if (learnt.includes(id)) return;
+    setLearnt((prev) => [...prev, id]);
+  };
+
+  const removeLearnt = (id?: number) => {
+    setLearnt(learnt.filter((el) => el !== id));
+  };
 
   return (
     <section className="questions">
@@ -59,7 +70,20 @@ const Questions = () => {
                 Посмотреть ответ
               </a>
             </div>
-            <Mark />
+            <div className="mark">
+              <NegativeMark
+                active={
+                  currentData?.id ? learnt.includes(currentData?.id) : false
+                }
+                onClick={() => removeLearnt(currentData?.id)}
+              />
+              <PositiveMark
+                active={
+                  currentData?.id ? learnt.includes(currentData?.id) : false
+                }
+                onClick={() => addLearnt(currentData?.id)}
+              />
+            </div>
           </div>
           <div className="questions__img">
             <Image image={currentData?.imageSrc} />

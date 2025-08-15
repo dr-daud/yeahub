@@ -42,11 +42,11 @@
         }
 
         &:hover {
-          background-color: var(--light-purple-hover);
+          background-color: var(--purple-200);
         }
 
         &:active {
-          background-color: var(--light-purple-active);
+          background-color: var(--purple-400);
         }
       }
       .top-questions__title {

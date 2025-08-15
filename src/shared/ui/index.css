@@ -1,16 +1,16 @@
 @import url(./variables.css);
 
 :root {
+  --purple-100: #f0e7ff;
+  --purple-200: #e1ceff;
+  --purple-300: #d2b6ff;
+  --purple-400: #c39dff;
+  --purple-500: #a66dff;
   --purple-700: #6a0bff;
   --purple-800: #5509cc;
+  --purple-900: #400799;
+  --purple-1000: #18003e;
   --brand: #5533ff;
-  --main-purple-active: #400799;
-  --purple-100: #f0e7ff;
-  --purple-300: #d2b6ff;
-  --dark-purple: #18003e;
-  --light-purple-hover: #e1ceff;
-  --light-purple-active: #c39dff;
-  --purple-500: #a66dff;
   --button-disabled: #d1d1d1;
   --black-text: #191919;
   --background-color-main: #f8f8f8;
@@ -23,6 +23,7 @@
   --black-400: #8c8c8c;
   --black-600: #5e5e5e;
   --black-700: #474747;
+  --red-100: #fdd8e1;
 }
 
 * {

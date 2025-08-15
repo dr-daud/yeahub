@@ -14,7 +14,7 @@
     background-color: var(--purple-800);
   }
   &:active {
-    background-color: var(--main-purple-active);
+    background-color: var(--purple-900);
   }
   &:disabled {
     background-color: var(--button-disabled);
