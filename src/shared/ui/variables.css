@@ -62,6 +62,12 @@ h2 {
   }
 }
 
+.body5-strong {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
 .body6-med {
   font-size: 24px;
   font-weight: 500;

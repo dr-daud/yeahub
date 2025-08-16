@@ -1,0 +1,29 @@
+.unites {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
+
+  .unites__desr {
+    color: var(--black-600);
+    margin-top: 12px;
+  }
+
+  .unites__wrap {
+    margin-top: 16px;
+    max-width: 350px;
+    .unites__inner {
+      display: flex;
+      align-items: start;
+      gap: 14px;
+
+      &:nth-child(2) {
+        margin-top: 12px;
+      }
+
+      .unites__link {
+        color: var(--purple-700);
+      }
+    }
+  }
+}

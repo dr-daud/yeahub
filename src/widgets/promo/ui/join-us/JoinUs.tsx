@@ -8,7 +8,7 @@ const JoinUs = () => {
     <div className="join-us">
       <div className="join-us__wrap">
         <img src={check} alt="check mark" />
-        <div className="join-us__title">Развивайтесь с нами!</div>
+        <div className="body5-strong join-us__title">Развивайтесь с нами!</div>
       </div>
       <div className="join-us__descr body2">
         Станьте членом сообщества YeaHub и получите полный доступ ко всем

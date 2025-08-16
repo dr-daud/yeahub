@@ -1,12 +1,26 @@
+import { UNITESLINKS } from "../../constants/constants";
+import "./unites.css";
+
 const Unites = () => {
   return (
     <div className="unites">
-      <div className="unites__title">YeaHub объединяет IT-специалистов</div>
-      <div className="unites__desr">
+      <div className="body5-strong unites__title">
+        YeaHub объединяет IT-специалистов
+      </div>
+      <div className="body2 unites__desr">
         Подпишитесь на наш канал и станьте частью IT-сообщества, которое растёт
         вместе с вами.
       </div>
-      <div></div>
+      <div className="unites__wrap">
+        {UNITESLINKS.map((link) => (
+          <div className="unites__inner">
+            <img src={link.icon} alt="" />
+            <a href="" className="unites__link">
+              {link.text}
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
