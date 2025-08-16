@@ -1,0 +1,21 @@
+.card {
+  flex: 0 0 calc(49%);
+  display: flex;
+  padding: 10px 0 12px 0;
+  gap: 20px;
+  border-bottom: 1px solid var(--black-50);
+  .card__img {
+    min-width: 154px;
+  }
+
+  .card__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 6px;
+
+    .card__mark {
+      flex-grow: 0;
+    }
+  }
+}

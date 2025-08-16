@@ -1,5 +1,5 @@
 import Promo from "../../widgets/promo/ui/promo/Promo";
-import LearntQuestions from "../../widgets/learnt-questions-list/ui/LearntQuestions";
+import LearntQuestions from "../../widgets/learnt-questions-list/ui/learnt-questions/LearntQuestions";
 
 const LearntQuestionsPage = () => {
   return (
