@@ -1,25 +1,33 @@
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 import BaseLayout from "./layouts/BaseLayout";
 import MainPage from "../pages/main/ui/Page";
-import Quiz from "../pages/quiz/Page";
 import QuestionsPage from "../pages/questions/Page";
-import LearntQuestions from "../pages/learnt-questions/Page";
+import LearntQuestionsPage from "../pages/learnt-questions/Page";
+import QuizPage from "../pages/quiz/Page";
 
-const AppRouter = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<BaseLayout />}>
-        <Route index element={<MainPage />} />
-        <Route path="quiz" element={<Quiz />}>
-          <Route path="questions" element={<QuestionsPage />} />
-        </Route>
-        <Route path="learnt-questions" element={<LearntQuestions />} />
-        <Route path="answer-details" element={<div>Ответ на вопрос</div>} />
-        <Route path="*" element={<div>Страница не найдена</div>} />
-      </Route>
-    </Routes>
-  );
-};
-
-export default AppRouter;
+export const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <BaseLayout />,
+    children: [
+      { index: true, element: <MainPage /> },
+      {
+        path: "quiz",
+        element: <QuizPage />,
+        children: [
+          {
+            path: "questions",
+            element: <QuestionsPage />,
+            children: [
+              {
+                path: "learnt-questions",
+                element: <LearntQuestionsPage />,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]);

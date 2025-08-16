@@ -8,6 +8,7 @@ import { useState } from "react";
 import Image from "../../../../shared/ui/image/Image";
 import { NegativeMark, PositiveMark } from "../mark/Mark";
 import ProgressBar from "../../../../widgets/progress-bar/ProgressBar";
+import { Link } from "react-router";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -100,9 +101,11 @@ const Questions = () => {
           </div>
         </div>
         <div className="questions__btn-wrap">
-          <button className="questions__complete-btn body3-strong">
-            Завершить
-          </button>
+          <Link to="/learnt-questions">
+            <button className="questions__complete-btn body3-strong">
+              Завершить
+            </button>
+          </Link>
         </div>
       </div>
     </section>
