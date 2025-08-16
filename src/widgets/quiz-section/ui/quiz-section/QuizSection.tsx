@@ -22,7 +22,7 @@ const QuizSection = () => {
               <SkillsSelector />
               <DetailedSettings />
             </div>
-            <Link to="questions">
+            <Link to="/quiz/questions">
               <Button className="quiz__button">
                 {"Начать"} <img src={arrow} alt="arrow" />
               </Button>

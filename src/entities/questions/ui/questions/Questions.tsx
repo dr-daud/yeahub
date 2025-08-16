@@ -101,7 +101,7 @@ const Questions = () => {
           </div>
         </div>
         <div className="questions__btn-wrap">
-          <Link to="/learnt-questions">
+          <Link to="learnt-questions">
             <button className="questions__complete-btn body3-strong">
               Завершить
             </button>

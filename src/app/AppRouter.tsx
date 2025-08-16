@@ -15,18 +15,11 @@ export const appRouter = createBrowserRouter([
       {
         path: "quiz",
         element: <QuizPage />,
-        children: [
-          {
-            path: "questions",
-            element: <QuestionsPage />,
-            children: [
-              {
-                path: "learnt-questions",
-                element: <LearntQuestionsPage />,
-              },
-            ],
-          },
-        ],
+      },
+      { path: "quiz/questions", element: <QuestionsPage /> },
+      {
+        path: "quiz/questions/learnt-questions",
+        element: <LearntQuestionsPage />,
       },
     ],
   },
