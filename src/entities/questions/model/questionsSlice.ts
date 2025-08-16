@@ -5,12 +5,14 @@ interface State {
   selectedComplexities?: TComplexity[];
   limit: number;
   specialization: number | null;
+  learntQuestions: number[];
 }
 
 const initialState: State = {
   selectedComplexities: [],
   limit: 35,
   specialization: null,
+  learntQuestions: [],
 };
 
 export const questionsSlice = createSlice({
@@ -34,9 +36,26 @@ export const questionsSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
+    addLearntQuestion: (state, action: PayloadAction<number>) => {
+      state.learntQuestions = [...state.learntQuestions, action.payload];
+    },
+    removeLearntQuestion: (
+      state,
+      action: PayloadAction<number | undefined>
+    ) => {
+      state.learntQuestions = state.learntQuestions.filter(
+        (question) => question !== action.payload
+      );
+    },
   },
 });
 
-export const { addLimit, reduceLimit, addComplexity, removeComplexity } =
-  questionsSlice.actions;
+export const {
+  addLimit,
+  reduceLimit,
+  addComplexity,
+  removeComplexity,
+  addLearntQuestion,
+  removeLearntQuestion,
+} = questionsSlice.actions;
 export default questionsSlice.reducer;

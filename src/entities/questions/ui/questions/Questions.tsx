@@ -2,24 +2,30 @@ import "./questions.css";
 import left from "../../assets/chevrone_Left.svg";
 import right from "../../assets/chevrone_right.svg";
 import { useQuestionsQuery } from "../../api/api";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../../app/appStore";
 import { useState } from "react";
 import Image from "../../../../shared/ui/image/Image";
 import { NegativeMark, PositiveMark } from "../mark/Mark";
 import ProgressBar from "../../../../widgets/progress-bar/ProgressBar";
 import { Link } from "react-router";
+import {
+  addLearntQuestion,
+  removeLearntQuestion,
+} from "../../model/questionsSlice";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [learnt, setLearnt] = useState<number[]>([]);
+  // const [learnt, setLearnt] = useState<number[]>([]);
 
-  const { skills, limit, complexityArr, specialization } = useSelector(
+  const dispatch = useDispatch();
+  const { skills, limit, complexityArr, specialization, learnt } = useSelector(
     (state: RootState) => ({
       skills: state.skillsReducer.skills,
       limit: state.questionsReducer.limit,
       complexityArr: state.questionsReducer.selectedComplexities,
       specialization: state.specializationsReducer.spec,
+      learnt: state.questionsReducer.learntQuestions,
     })
   );
 
@@ -37,12 +43,12 @@ const Questions = () => {
   const addLearnt = (id?: number) => {
     if (!id) return;
     if (learnt.includes(id)) return;
-    setLearnt((prev) => [...prev, id]);
+    dispatch(addLearntQuestion(id));
   };
 
-  const removeLearnt = (id?: number) => {
-    setLearnt(learnt.filter((el) => el !== id));
-  };
+  // const removeLearnt = (id?: number) => {
+  //   setLearnt(learnt.filter((el) => el !== id));
+  // };
 
   const isNextQuestion =
     !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount);
@@ -86,7 +92,7 @@ const Questions = () => {
                 active={
                   currentData?.id ? learnt.includes(currentData?.id) : false
                 }
-                onClick={() => removeLearnt(currentData?.id)}
+                onClick={() => dispatch(removeLearntQuestion(currentData?.id))}
               />
               <PositiveMark
                 active={
