@@ -7,6 +7,7 @@ import type { RootState } from "../../../../app/appStore";
 import { useState } from "react";
 import Image from "../../../../shared/ui/image/Image";
 import { NegativeMark, PositiveMark } from "../mark/Mark";
+import ProgressBar from "../../../../widgets/progress-bar/ProgressBar";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -47,6 +48,10 @@ const Questions = () => {
 
   return (
     <section className="questions">
+      <ProgressBar
+        currentQuestion={currentQuestion}
+        totalAmount={data?.fullCount}
+      />
       <div className="container questions__wrap">
         <div className="questions__nav">
           <button
@@ -95,7 +100,7 @@ const Questions = () => {
           </div>
         </div>
         <div className="questions__btn-wrap">
-          <button className="questions__complete-btn .body3-strong">
+          <button className="questions__complete-btn body3-strong">
             Завершить
           </button>
         </div>
