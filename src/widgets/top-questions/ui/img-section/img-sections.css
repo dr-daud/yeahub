@@ -1,0 +1,70 @@
+.img {
+  border-radius: 20px;
+  position: relative;
+  @media (max-width: 1260px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &::before {
+    position: absolute;
+    left: -70px;
+    bottom: -85px;
+    content: url("../../assets/left-line.svg");
+    @media (max-width: 1260px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -45px;
+    content: url("../../assets/right-line.svg");
+    @media (max-width: 1260px) {
+      right: 50px;
+    }
+
+    @media (max-width: 730px) {
+      display: none;
+    }
+  }
+
+  .img__user {
+    max-width: 498px;
+    @media (max-width: 1260px) {
+      max-width: 566px;
+    }
+    @media (max-width: 730px) {
+      max-width: 328px;
+    }
+  }
+
+  .img__figma {
+    max-width: 152px;
+    position: absolute;
+    top: 22px;
+    left: -70px;
+    @media (max-width: 1260px) {
+      left: 0;
+    }
+
+    @media (max-width: 730px) {
+      max-width: 84px;
+    }
+  }
+
+  .img__progress {
+    max-width: 186px;
+    position: absolute;
+    top: 197px;
+    right: -66px;
+    @media (max-width: 1260px) {
+      right: 0;
+    }
+
+    @media (max-width: 730px) {
+      max-width: 164px;
+      top: 240px;
+    }
+  }
+}

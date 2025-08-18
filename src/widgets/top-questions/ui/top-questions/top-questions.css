@@ -1,0 +1,21 @@
+.top-questions {
+  padding-top: 60px;
+  @media (max-width: 1260px) {
+    padding-top: 85px;
+  }
+  @media (max-width: 1260px) {
+    padding-top: 18px;
+  }
+  .top-questions__flex {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 1260px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 730px) {
+      gap: 24px;
+    }
+  }
+}
