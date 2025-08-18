@@ -1,7 +1,12 @@
+import type { TQuestions } from "../../../entities/questions/model/types";
 import Image from "../../../shared/ui/image/Image";
 import "./answer-details-title.css";
 
-const AnswerDetailsTitle = () => {
+interface Props {
+  currentData?: TQuestions;
+}
+
+const AnswerDetailsTitle = ({ currentData }: Props) => {
   return (
     <section className="answer">
       <div className="answer__inner">
@@ -9,12 +14,8 @@ const AnswerDetailsTitle = () => {
           <Image />
         </div>
         <div className="answer__wrap">
-          <div className="answer__title body6-med">
-            Что такое Virtual DOM, и как он работает?
-          </div>
-          <div className="answer__descr body3">
-            Вопрос проверяет знание React под капотом
-          </div>
+          <div className="answer__title body6-med">{currentData?.title}</div>
+          <div className="answer__descr body3">{currentData?.description}</div>
         </div>
       </div>
     </section>

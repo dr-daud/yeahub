@@ -16,7 +16,6 @@ import {
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  // const [learnt, setLearnt] = useState<number[]>([]);
 
   const dispatch = useDispatch();
   const { skills, limit, complexityArr, specialization, learnt } = useSelector(
@@ -45,10 +44,6 @@ const Questions = () => {
     if (learnt.includes(id)) return;
     dispatch(addLearntQuestion(id));
   };
-
-  // const removeLearnt = (id?: number) => {
-  //   setLearnt(learnt.filter((el) => el !== id));
-  // };
 
   const isNextQuestion =
     !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount);
@@ -83,9 +78,11 @@ const Questions = () => {
               <div className="body5-med questions__title">
                 {currentData?.title}
               </div>
-              <a href="" className="body2 questions__link">
-                Посмотреть ответ
-              </a>
+              <Link to={`/quiz/questions/learnt-questions/${currentData?.id}`}>
+                <a href="" className="body2 questions__link">
+                  Посмотреть ответ
+                </a>
+              </Link>
             </div>
             <div className="questions__mark">
               <NegativeMark

@@ -7,6 +7,7 @@ import {
 import Image from "../../../../shared/ui/image/Image";
 import "./learnt-card.css";
 import type { RootState } from "../../../../app/appStore";
+import { Link } from "react-router";
 
 interface Props {
   question: TQuestions;
@@ -16,13 +17,18 @@ const LearntCard = ({ question }: Props) => {
   const { learntQuestions } = useSelector(
     (state: RootState) => state.questionsReducer
   );
+
+  console.log(question.id, "card");
+
   return (
     <div className="card">
       <div className="card__img">
         <Image image={question.imageSrc} />
       </div>
       <div className="card__wrap">
-        <div className="card__title">{question.title}</div>
+        <Link to={`${question.id}`} className="card__link">
+          <div className="card__title">{question.title}</div>
+        </Link>
         <div className="card__mark">
           {learntQuestions.includes(question.id) ? (
             <PositiveMark active />

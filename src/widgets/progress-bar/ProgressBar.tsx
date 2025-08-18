@@ -9,8 +9,6 @@ const ProgressBar = ({ currentQuestion, totalAmount }: Props) => {
   const progress =
     totalAmount && Math.round(((currentQuestion + 1) * 100) / totalAmount);
 
-  console.log(progress);
-
   return (
     <div className="container progress">
       <div className="progress__flex-wrap">

@@ -12,7 +12,7 @@ export type TQuestions = {
   keywords: string[];
   longAnswer: string;
   rate: number;
-  shortAnswer: number;
+  shortAnswer: string;
   title: string;
 };
 

@@ -23,7 +23,7 @@ export const appRouter = createBrowserRouter([
         element: <LearntQuestionsPage />,
       },
       {
-        path: "quiz/questions/learnt-questions/answer-details",
+        path: "quiz/questions/learnt-questions/:id",
         element: <AnswerDetails />,
       },
     ],
