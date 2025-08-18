@@ -5,7 +5,7 @@
     background-color: #fff;
     border-radius: 24px;
     margin-top: 20px;
-    box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
+    box-shadow: var(--box-shadow);
 
     .learnt__title {
       text-align: center;

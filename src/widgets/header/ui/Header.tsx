@@ -63,7 +63,7 @@ const Header = () => {
         </nav>
         <div className={styles.header__access}>
           <a href="" className={styles["header__access-link"]}>
-            вход
+            Вход
           </a>
           <Button style={{ width: "172px" }}>Регистрация</Button>
         </div>

@@ -4,6 +4,7 @@ import { useQuestionsQuery } from "../../../../entities/questions/api/api";
 import "./learnt-questions.css";
 import LearntCard from "../learnt-card/LearntCard";
 import Button from "../../../../shared/ui/button/Button";
+import { Link } from "react-router";
 
 const LearntQuestions = () => {
   const { skills, limit, complexityArr, specialization } = useSelector(
@@ -23,7 +24,6 @@ const LearntQuestions = () => {
     limit,
     specialization,
   });
-  console.log(data);
 
   return (
     <section className="learnt">
@@ -37,7 +37,9 @@ const LearntQuestions = () => {
           ))}
         </div>
         <div className="learnt__flex">
-          <Button className="learnt__button">Пройти занова</Button>
+          <Link to="/quiz/questions">
+            <Button className="learnt__button">Пройти заново</Button>
+          </Link>
         </div>
       </div>
     </section>

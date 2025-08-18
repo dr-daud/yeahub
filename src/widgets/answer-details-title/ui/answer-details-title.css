@@ -1,0 +1,20 @@
+.answer {
+  .answer__inner {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--box-shadow);
+
+    .answer__img-wrap {
+      min-width: 170px;
+    }
+
+    .answer__wrap {
+      .answer__descr {
+        margin-top: 8px;
+      }
+    }
+  }
+}

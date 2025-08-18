@@ -27,7 +27,7 @@
       .top-questions__light-button {
         margin-top: 37px;
         cursor: pointer;
-        background-color: var(--light-700);
+        background-color: var(--purple-100);
         color: var(--purple-700);
         font-size: 16px;
         font-weight: 500;

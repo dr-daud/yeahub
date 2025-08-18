@@ -28,6 +28,7 @@
   --red-200: #fbb1c4;
   --red-300: #f98ba6;
   --red-600: #f3164e;
+  --box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.2);
 }
 
 * {

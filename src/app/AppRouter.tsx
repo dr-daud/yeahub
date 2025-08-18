@@ -5,6 +5,7 @@ import MainPage from "../pages/main/ui/Page";
 import QuestionsPage from "../pages/questions/Page";
 import LearntQuestionsPage from "../pages/learnt-questions/Page";
 import QuizPage from "../pages/quiz/Page";
+import AnswerDetails from "../pages/answer-details/Page";
 
 export const appRouter = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "quiz/questions/learnt-questions",
         element: <LearntQuestionsPage />,
+      },
+      {
+        path: "quiz/questions/learnt-questions/answer-details",
+        element: <AnswerDetails />,
       },
     ],
   },
