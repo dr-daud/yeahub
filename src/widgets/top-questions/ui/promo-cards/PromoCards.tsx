@@ -1,21 +1,22 @@
+import {
+  Card,
+  CardDescr,
+  CardMedia,
+  CardText,
+} from "../../../../shared/ui/card/Card";
 import { cards } from "../../model/constants";
 import "./promo-cards.css";
 
 const PromoCards = () => {
   return (
-    <div className={"promo-cards"}>
+    <div className="promo-cards">
       {cards.map((card, i) => (
-        <div className={"promo-cards__wrap"} key={i}>
-          <div className="promo-cards__icon-wrap icon-wrap">
-            <img
-              src={card.icon}
-              alt="icon"
-              className="promo-cards__icon icon"
-            />
-          </div>
-          <p className="body5-med promo-cards__title">{card.title}</p>
-          <p className="body3 promo-cards__description">{card.description}</p>
-        </div>
+        <Card key={i} className="promo-card__wrap">
+          <CardMedia imageSrc={card.icon} className="promo-card__icon" />
+          <CardText title={card.title} className="promo-card__text">
+            <CardDescr descr={card.description} className="promo-card__descr" />
+          </CardText>
+        </Card>
       ))}
     </div>
   );

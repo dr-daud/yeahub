@@ -1,0 +1,14 @@
+.card {
+  border-radius: 12px;
+  padding: 24px;
+
+  .card__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 45px;
+    border-radius: 8px;
+    padding: 9.5px 8.5px;
+  }
+}
