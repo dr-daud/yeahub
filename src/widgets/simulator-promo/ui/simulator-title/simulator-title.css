@@ -1,0 +1,29 @@
+.simulator-title {
+  padding-top: 33.5px;
+  @media (max-width: 1260px) {
+    grid-row: 1/2;
+    justify-self: center;
+    padding-top: 0;
+  }
+
+  h2 {
+    @media (max-width: 730px) {
+      text-align: center;
+    }
+  }
+  .simulator-title__subtitle {
+    margin-top: 16px;
+    @media (max-width: 730px) {
+      display: none;
+    }
+  }
+  .simulator-title__subtitle_mob {
+    display: none;
+    @media (max-width: 730px) {
+      display: block;
+      margin-top: 16px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
