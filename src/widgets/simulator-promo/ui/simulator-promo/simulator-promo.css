@@ -27,5 +27,25 @@
       border-radius: 12px;
       padding: 24px 0;
     }
+
+    .simulator-promo__wrap {
+      padding-right: 40px;
+      align-self: start;
+
+      @media (max-width: 1260px) {
+        padding-right: 0;
+        justify-self: center;
+      }
+
+      .simulator-promo__button {
+        margin-top: 40px;
+        width: 240px;
+        @media (max-width: 1260px) {
+          display: block;
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+      }
+    }
   }
 }

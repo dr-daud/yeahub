@@ -1,25 +1,26 @@
-import { Link } from "react-router";
 import { SIMULATOR_CARDS } from "../../model/constants";
 import "./simulator-cards.css";
+import {
+  Card,
+  CardDescr,
+  CardMedia,
+  CardText,
+} from "../../../../shared/ui/card/Card";
 
 const SimulatorCards = () => {
   return (
     <div className="simulator-cards">
-      <div className="simulator-cards__wrap">
-        {SIMULATOR_CARDS.map((card) => (
-          <div className="simulator-cards__inner">
-            <div className="simulator-cards__icon-wrap icon-wrap">
-              <img src={card.icon} alt="graph up" />
-            </div>
-            <p className="body3 simulator-cards__text">{card.text}</p>
-          </div>
-        ))}
-      </div>
-      <Link to="/quiz">
-        <button className="button simulator-promo__button">
-          Начать обучение
-        </button>
-      </Link>
+      {SIMULATOR_CARDS.map((card, i) => (
+        <Card key={i} className="simulator-cards__wrap">
+          <CardMedia imageSrc={card.icon} className="simulator-cards__icon" />
+          <CardText className="simulator-cards__text">
+            <CardDescr
+              descr={card.description}
+              className="simulator-cards__descr"
+            />
+          </CardText>
+        </Card>
+      ))}
     </div>
   );
 };

@@ -57,6 +57,10 @@
         margin-top: 24px;
       }
 
+      @media (max-width: 730px) {
+        font-size: 16px;
+      }
+
       .promo-card__descr {
         margin-top: 8px;
         color: var(--black-700);
