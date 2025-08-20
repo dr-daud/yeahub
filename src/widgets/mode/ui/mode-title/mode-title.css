@@ -1,0 +1,12 @@
+.mode__title {
+  text-align: center;
+
+  @media (max-width: 1260px) {
+    max-width: 526px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 730px) {
+    max-width: 400px;
+  }
+}

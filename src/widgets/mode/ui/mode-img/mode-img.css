@@ -1,0 +1,38 @@
+.mode-img {
+  position: relative;
+  .mode-img__screenshot {
+    width: 701px;
+
+    @media (max-width: 730px) {
+      width: 328px;
+    }
+  }
+  @media (max-width: 1260px) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 90px;
+      background-color: var(--black-200);
+      bottom: -85px;
+      left: 25%;
+
+      @media (max-width: 730px) {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 126px;
+      background-color: var(--black-200);
+      bottom: -124px;
+      right: 25%;
+
+      @media (max-width: 730px) {
+        display: none;
+      }
+    }
+  }
+}
