@@ -1,0 +1,30 @@
+.header {
+  padding-top: 24px;
+  @media (max-width: 1260px) {
+    background-color: #fff;
+    padding-top: 0;
+  }
+  .header__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    @media (max-width: 730px) {
+      padding: 10px 0;
+    }
+    .header__access {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      @media (max-width: 1260px) {
+        display: none;
+      }
+
+      .header__button {
+        width: 172px;
+      }
+    }
+  }
+}

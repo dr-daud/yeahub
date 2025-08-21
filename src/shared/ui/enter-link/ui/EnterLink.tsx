@@ -3,7 +3,7 @@ import "./enter-link.css";
 const EnterLink = () => {
   return (
     <a href="" className="enter-link">
-      вход
+      Вход
     </a>
   );
 };

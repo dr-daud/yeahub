@@ -1,0 +1,37 @@
+.header-nav {
+  .header-nav__links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .header-nav__link-item {
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 140%;
+      font-weight: 500;
+      color: var(--black-text);
+
+      @media (max-width: 1260px) {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+
+      .header-nav__small-logo {
+        display: none;
+      }
+
+      @media (max-width: 730px) {
+        .header-nav__logo {
+          display: none;
+        }
+
+        .header-nav__small-logo {
+          display: inline;
+        }
+      }
+    }
+  }
+}
