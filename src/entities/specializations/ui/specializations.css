@@ -1,12 +1,14 @@
 .specializations {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 24px;
   .specializations__title {
     color: var(--black-700);
   }
 
   .specializations__button {
+    margin-top: 24px;
     width: 204px;
     align-self: flex-end;
   }

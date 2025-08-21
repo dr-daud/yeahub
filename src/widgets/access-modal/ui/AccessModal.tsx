@@ -21,7 +21,9 @@ const AccessModal = ({ setIsModalOpen }: Props) => {
     <div className="overlay">
       <div className="modal" ref={ref}>
         <EnterLink />
-        <Button style={{ width: "172px" }}>Регистрация</Button>
+        <a href="https://yeahub.ru/auth/register">
+          <Button style={{ width: "172px" }}>Регистрация </Button>
+        </a>
       </div>
     </div>
   );

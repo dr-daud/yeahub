@@ -13,6 +13,7 @@ import {
   addLearntQuestion,
   removeLearntQuestion,
 } from "../../model/questionsSlice";
+import Skeleton from "../../../../shared/ui/skeleton/Skeleton";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -30,7 +31,7 @@ const Questions = () => {
 
   const complexity = complexityArr?.map((el) => el.value).flat();
 
-  const { data } = useQuestionsQuery({
+  const { data, isLoading } = useQuestionsQuery({
     skills,
     complexity,
     limit,
@@ -51,6 +52,7 @@ const Questions = () => {
   return (
     <section className="questions">
       <ProgressBar
+        isLoading={isLoading}
         currentQuestion={currentQuestion}
         totalAmount={data?.fullCount}
       />
@@ -75,14 +77,22 @@ const Questions = () => {
         <div className="questions__main">
           <div className="questions__inner">
             <div>
-              <div className="body5-med questions__title">
-                {currentData?.title}
-              </div>
-              <Link to={`/quiz/questions/learnt-questions/${currentData?.id}`}>
-                <a href="" className="body2 questions__link">
-                  Посмотреть ответ
-                </a>
-              </Link>
+              {isLoading ? (
+                <Skeleton />
+              ) : (
+                <>
+                  <div className="body5-med questions__title">
+                    {currentData?.title}
+                  </div>
+                  <Link
+                    to={`/quiz/questions/learnt-questions/${currentData?.id}`}
+                  >
+                    <a href="" className="body2 questions__link">
+                      Посмотреть ответ
+                    </a>
+                  </Link>
+                </>
+              )}
             </div>
             <div className="questions__mark">
               <NegativeMark

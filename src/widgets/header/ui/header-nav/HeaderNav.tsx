@@ -18,8 +18,14 @@ const HeaderNav = () => {
             />
           </Link>
         </li>
-        <li className="header-nav__link-item">База вопросов</li>
-        <li className="header-nav__link-item">Тренажер</li>
+        <li className="header-nav__link-item">
+          <a href="https://yeahub.ru/questions?page=1&status=all&specialization=11">
+            База вопросов
+          </a>
+        </li>
+        <li className="header-nav__link-item">
+          <Link to={"quiz"}>Тренажер</Link>
+        </li>
         <HeaderDropdown />
       </ul>
     </nav>

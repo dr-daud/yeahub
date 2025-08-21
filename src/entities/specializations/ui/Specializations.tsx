@@ -6,13 +6,14 @@ import { useLazySkillsQuery } from "../../skills/api/api";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../app/appStore";
 import { setSpec } from "../model/specializationsSlice";
+import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
 }
 
 const Specializations = ({ setCurrentStep }: Props) => {
-  const { data } = useSpecializationsQuery({ page: 1, limit: 19 });
+  const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
   const [trigger] = useLazySkillsQuery();
   const { spec } = useSelector(
     (state: RootState) => state.specializationsReducer
@@ -28,15 +29,19 @@ const Specializations = ({ setCurrentStep }: Props) => {
     <div className="specializations">
       <p className="specializations__title body2">Специализация</p>
       <div>
-        {data?.data.map((arr) => (
-          <TransparentFrame
-            onClick={() => dispatch(setSpec(arr.id))}
-            key={arr.id}
-            className={arr.id === spec ? "active" : ""}
-          >
-            {arr.title}
-          </TransparentFrame>
-        ))}
+        {isLoading ? (
+          <FrameSkeleton quantity={30} />
+        ) : (
+          data?.data.map((arr) => (
+            <TransparentFrame
+              onClick={() => dispatch(setSpec(arr.id))}
+              key={arr.id}
+              className={arr.id === spec ? "active" : ""}
+            >
+              {arr.title}
+            </TransparentFrame>
+          ))
+        )}
       </div>
       <Button
         className="specializations__button"

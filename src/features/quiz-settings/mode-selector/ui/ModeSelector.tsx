@@ -7,7 +7,7 @@ const ModeSelector = () => {
   const [regime, setRegime] = useState(1);
 
   return (
-    <div className="mode">
+    <div className="mode-selector">
       <p className="black700-title body2">Выберите режим</p>
       {MODE.map((mode, index) => (
         <TransparentFrame

@@ -10,7 +10,7 @@ import "./answer-details.css";
 
 const AnswerDetails = () => {
   const { id } = useParams();
-  console.log(id, "Params");
+
   const { skills, limit, complexityArr, specialization } = useSelector(
     (state: RootState) => ({
       skills: state.skillsReducer.skills,

@@ -15,7 +15,9 @@ const Header = () => {
         <HeaderNav />
         <div className="header__access">
           <EnterLink />
-          <Button className="header__button">Регистрация</Button>
+          <a href="https://yeahub.ru/auth/register">
+            <Button className="header__button">Регистрация</Button>
+          </a>
         </div>
         <BurgerMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         {isModalOpen && <AccessModal setIsModalOpen={setIsModalOpen} />}

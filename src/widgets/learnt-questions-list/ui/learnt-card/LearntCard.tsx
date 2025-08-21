@@ -18,18 +18,16 @@ const LearntCard = ({ question }: Props) => {
     (state: RootState) => state.questionsReducer
   );
 
-  console.log(question.id, "card");
-
   return (
-    <div className="card">
-      <div className="card__img">
+    <div className="learnt-card">
+      <div className="learnt-card__img">
         <Image image={question.imageSrc} />
       </div>
-      <div className="card__wrap">
-        <Link to={`${question.id}`} className="card__link">
-          <div className="card__title">{question.title}</div>
+      <div className="learnt-card__wrap">
+        <Link to={`${question.id}`} className="learnt-card__link">
+          <div className="learnt-card__title">{question.title}</div>
         </Link>
-        <div className="card__mark">
+        <div className="learnt-card__mark">
           {learntQuestions.includes(question.id) ? (
             <PositiveMark active />
           ) : (
