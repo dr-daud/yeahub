@@ -6,9 +6,25 @@ import Button from "../../../../shared/ui/button/Button";
 import arrow from "../../assets/Arrow-Right.svg";
 import SkillsSelector from "../../../../features/quiz-settings/skills-selector/ui/SkillsSelector";
 import { Link } from "react-router";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../../../app/appStore";
 
 const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const { limit, skills, selectedComplexities } = useSelector(
+    (state: RootState) => ({
+      limit: state.questionsReducer.limit,
+      skills: state.skillsReducer.skills,
+      selectedComplexities: state.questionsReducer.selectedComplexities,
+    })
+  );
+
+  const isButtonDisabled = !!(
+    skills.length &&
+    selectedComplexities?.length &&
+    limit
+  );
+  console.log(isButtonDisabled);
 
   return (
     <section className="quiz">
@@ -19,11 +35,11 @@ const QuizSection = () => {
         ) : (
           <>
             <div className="quiz__flex">
-              <SkillsSelector />
+              <SkillsSelector skills={skills} />
               <DetailedSettings />
             </div>
             <Link to="/quiz/questions">
-              <Button className="quiz__button">
+              <Button className="quiz__button" disabled={!isButtonDisabled}>
                 {"Начать"} <img src={arrow} alt="arrow" />
               </Button>
             </Link>

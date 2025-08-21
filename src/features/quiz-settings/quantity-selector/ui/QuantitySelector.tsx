@@ -4,7 +4,10 @@ import minus from "../assets/Minus.svg";
 import plus from "../assets/Plus.svg";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../../app/appStore";
-import { addLimit } from "../../../../entities/questions/model/questionsSlice";
+import {
+  addLimit,
+  reduceLimit,
+} from "../../../../entities/questions/model/questionsSlice";
 
 const QuantitySelector = () => {
   const { limit } = useSelector((state: RootState) => state.questionsReducer);
@@ -18,7 +21,7 @@ const QuantitySelector = () => {
 
   const handleMinus = () => {
     if (limit > 1) {
-      dispatch(addLimit(limit));
+      dispatch(reduceLimit(limit));
     }
   };
 
