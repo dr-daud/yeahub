@@ -1,0 +1,22 @@
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+  color: var(--black-400);
+
+  @media (max-width: 1260px) {
+    margin-top: 17px;
+  }
+
+  .footer-copyright__text {
+    margin-right: 20px;
+  }
+
+  .footer-copyright__wrap {
+    display: flex;
+
+    .footer-copyright__icon {
+      margin-right: 8px;
+    }
+  }
+}

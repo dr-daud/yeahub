@@ -56,12 +56,3 @@ body {
     max-width: 360px;
   }
 }
-
-.icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 43px;
-  height: 45px;
-  border-radius: 8px;
-}
