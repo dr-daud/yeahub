@@ -24,7 +24,6 @@ const QuizSection = () => {
     selectedComplexities?.length &&
     limit
   );
-  console.log(isButtonDisabled);
 
   return (
     <section className="quiz">

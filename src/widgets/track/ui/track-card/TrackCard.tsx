@@ -10,8 +10,8 @@ import "./track-card.css";
 const TrackCard = () => {
   return (
     <>
-      {TRACK_CARDS.map((card) => (
-        <Card className="track-card">
+      {TRACK_CARDS.map((card, i) => (
+        <Card className="track-card" key={i}>
           <CardMedia imageSrc={card.icon} className="track-card__icon" />
           <CardText className="track-card__text">
             <CardDescr descr={card.descr} className="track-card__descr body3" />

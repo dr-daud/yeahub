@@ -10,8 +10,8 @@ import {
 const ModeCards = () => {
   return (
     <>
-      {MODE_CARDS.map((card) => (
-        <Card className="mode-card">
+      {MODE_CARDS.map((card, i) => (
+        <Card className="mode-card" key={i}>
           <CardMedia imageSrc={card.icon} className="mode-card__icon" />
           <CardText className="mode-card__text">
             <CardDescr descr={card.descr} className="mode-card__descr" />

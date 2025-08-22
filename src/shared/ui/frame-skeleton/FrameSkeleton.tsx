@@ -6,8 +6,8 @@ interface Props {
 const FrameSkeleton = ({ quantity }: Props) => {
   return (
     <div className="frame-skeleton">
-      {[...Array(quantity)].map(() => (
-        <div className="frame-skeleton__item"></div>
+      {[...Array(quantity)].map((_, i) => (
+        <div key={i} className="frame-skeleton__item"></div>
       ))}
     </div>
   );

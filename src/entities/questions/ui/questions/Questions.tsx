@@ -86,10 +86,9 @@ const Questions = () => {
                   </div>
                   <Link
                     to={`/quiz/questions/learnt-questions/${currentData?.id}`}
+                    className="body2 questions__link"
                   >
-                    <a href="" className="body2 questions__link">
-                      Посмотреть ответ
-                    </a>
+                    Посмотреть ответ
                   </Link>
                 </>
               )}
