@@ -14,6 +14,7 @@ export type TQuestions = {
   rate: number;
   shortAnswer: string;
   title: string;
+  questionSkills: { id: number; imageSrc: string; title: string }[];
 };
 
 export type TQuestionsArgs = {

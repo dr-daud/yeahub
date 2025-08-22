@@ -1,4 +1,5 @@
-import { UNITESLINKS } from "../../constants/constants";
+import { Link } from "react-router";
+import { UNITES_LINKS } from "../../constants/constants";
 import "./unites.css";
 
 const Unites = () => {
@@ -12,12 +13,12 @@ const Unites = () => {
         вместе с вами.
       </div>
       <div className="unites__wrap">
-        {UNITESLINKS.map((link) => (
-          <div className="unites__inner">
+        {UNITES_LINKS.map((link, i) => (
+          <div className="unites__inner" key={i}>
             <img src={link.icon} alt="" />
-            <a href="" className="unites__link">
+            <Link to="/" className="unites__link">
               {link.text}
-            </a>
+            </Link>
           </div>
         ))}
       </div>

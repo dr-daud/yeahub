@@ -40,7 +40,7 @@ const AnswerDetails = () => {
         <ShortAnswer shortAnswer={currentData?.shortAnswer} />
         <FullAnswer longAnswer={currentData?.longAnswer} />
       </div>
-      <AnswerInfo />
+      <AnswerInfo currentData={currentData} />
     </div>
   );
 };

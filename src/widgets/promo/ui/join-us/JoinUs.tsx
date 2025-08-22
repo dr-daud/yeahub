@@ -1,7 +1,8 @@
 import "./joins-us.css";
 import check from "../../assets/Icon_Button.svg";
-import { JOINUSLINKS } from "../../constants/constants";
+import { JOIN_US_LINKS } from "../../constants/constants";
 import arrow from "../../assets/Arrow Right.svg";
+import { Link } from "react-router";
 
 const JoinUs = () => {
   return (
@@ -16,31 +17,31 @@ const JoinUs = () => {
       </div>
       <div className="join-us__flex">
         <div className="join-us__links-wrap">
-          {JOINUSLINKS.left.map((link) => (
-            <div className="join-us__inner">
+          {JOIN_US_LINKS.left.map((link, i) => (
+            <div className="join-us__inner" key={i}>
               <img src={link.icon} alt="icon" />
-              <a href="" className="join-us__link body3">
+              <Link to="/" className="join-us__link body3">
                 {link.text}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
         <div className="join-us__links-wrap">
-          {JOINUSLINKS.right.map((link) => (
-            <div className="join-us__inner">
+          {JOIN_US_LINKS.right.map((link, i) => (
+            <div className="join-us__inner" key={i}>
               <img src={link.icon} alt="icon" />
-              <a href="" className="join-us__link body3">
+              <Link to="/" className="join-us__link body3">
                 {link.text}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
       </div>
       <div className="join-us__join-link-wrap">
-        <a href="" className="join-us__join-link">
+        <Link to="/" className="join-us__join-link">
           Стать членом сообщества
           <img src={arrow} alt="arrow" />
-        </a>
+        </Link>
       </div>
     </div>
   );

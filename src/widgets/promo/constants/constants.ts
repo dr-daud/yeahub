@@ -5,7 +5,7 @@ import board from "../assets/ClipboardText.svg";
 import megaphone from "../assets/Megaphone.svg";
 import chat from "../assets/Chat.svg";
 
-export const JOINUSLINKS = {
+export const JOIN_US_LINKS = {
   left: [
     { icon: user, text: "Тренажер собеседований" },
     { icon: trend, text: "Статистика и история обучения" },
@@ -16,7 +16,7 @@ export const JOINUSLINKS = {
   ],
 };
 
-export const UNITESLINKS = [
+export const UNITES_LINKS = [
   { icon: megaphone, text: "YeaHub: Главные новости и обновления платформы" },
   {
     icon: chat,

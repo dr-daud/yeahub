@@ -32,8 +32,8 @@ const LearntQuestions = () => {
           Список пройденных вопросов собеседования
         </div>
         <div className="learnt__list">
-          {data?.questions.map((question) => (
-            <LearntCard question={question} />
+          {data?.questions.map((question, i) => (
+            <LearntCard question={question} key={i} />
           ))}
         </div>
         <div className="learnt__flex">
