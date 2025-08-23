@@ -1,5 +1,8 @@
 .quantity {
   margin-top: 24px;
+  @media (max-width: 730px) {
+    margin-top: 16px;
+  }
   .quantity__wrap {
     display: flex;
     justify-content: space-between;

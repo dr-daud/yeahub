@@ -16,6 +16,11 @@
         flex-direction: column;
         gap: 43px;
       }
+
+      @media (max-width: 730px) {
+        margin-top: 16px;
+        gap: 16px;
+      }
     }
 
     .quiz__button {
@@ -26,6 +31,10 @@
       gap: 8px;
       margin-top: 48px;
       width: 170px;
+
+      @media (max-width: 730px) {
+        margin-top: 24px;
+      }
     }
   }
 }
