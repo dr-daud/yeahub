@@ -9,9 +9,9 @@
       line-height: 140%;
       font-weight: 500;
 
-      a {
+      &:nth-child(2),
+      &:nth-child(3) {
         padding: 7px;
-
         color: var(--black-text);
         &:hover {
           color: var(--purple-700);

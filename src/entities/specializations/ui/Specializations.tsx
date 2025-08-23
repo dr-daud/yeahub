@@ -7,12 +7,17 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../app/appStore";
 import { setSpec } from "../model/specializationsSlice";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
+import WatchMore from "../../../shared/ui/watch-more/WatchMore";
+import { useEffect, useState } from "react";
+import { useWindowWidth } from "../../../shared/hooks/useWindowWidth";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
 }
 
 const Specializations = ({ setCurrentStep }: Props) => {
+  const width = useWindowWidth();
+  const [isExpanded, setIsExpanded] = useState(true);
   const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
   const [trigger] = useLazySkillsQuery();
   const { spec } = useSelector(
@@ -25,14 +30,25 @@ const Specializations = ({ setCurrentStep }: Props) => {
     trigger({ page: 1, limit: 10, specializations: spec });
   };
 
+  useEffect(() => {
+    const mobileExpantion = () => {
+      if (width <= 730) {
+        setIsExpanded(false);
+      }
+    };
+    mobileExpantion();
+  }, [width]);
+
+  const shownSpecializations = isExpanded ? data?.data : data?.data.slice(0, 7);
+
   return (
     <div className="specializations">
       <p className="specializations__title body2">Специализация</p>
-      <div>
+      <div className="speacializations__wrap">
         {isLoading ? (
           <FrameSkeleton quantity={30} />
         ) : (
-          data?.data.map((arr) => (
+          shownSpecializations?.map((arr) => (
             <TransparentFrame
               onClick={() => dispatch(setSpec(arr.id))}
               key={arr.id}
@@ -41,6 +57,12 @@ const Specializations = ({ setCurrentStep }: Props) => {
               {arr.title}
             </TransparentFrame>
           ))
+        )}
+        {width <= 730 && (
+          <WatchMore
+            onClick={() => setIsExpanded(!isExpanded)}
+            isExpanded={isExpanded}
+          />
         )}
       </div>
       <Button

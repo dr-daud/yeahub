@@ -11,6 +11,11 @@
       display: flex;
       margin-top: 24px;
       gap: 138px;
+
+      @media (max-width: 1260px) {
+        flex-direction: column;
+        gap: 43px;
+      }
     }
 
     .quiz__button {

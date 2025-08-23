@@ -7,6 +7,10 @@
     color: var(--black-700);
   }
 
+  .speacializations__wrap {
+    position: relative;
+  }
+
   .specializations__button {
     margin-top: 24px;
     width: 204px;

@@ -5,6 +5,10 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 730px) {
+      padding-left: 16px;
+    }
+
     .breadcrumbs__list-item {
       display: flex;
       align-items: center;

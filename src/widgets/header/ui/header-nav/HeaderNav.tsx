@@ -19,9 +19,9 @@ const HeaderNav = () => {
           </Link>
         </li>
         <li className="header-nav__link-item">
-          <a href="https://yeahub.ru/questions?page=1&status=all&specialization=11">
+          <Link to="https://yeahub.ru/questions?page=1&status=all&specialization=11">
             База вопросов
-          </a>
+          </Link>
         </li>
         <li className="header-nav__link-item">
           <Link to={"quiz"}>Тренажер</Link>

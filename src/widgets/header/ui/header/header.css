@@ -11,7 +11,7 @@
     padding: 8px 0;
 
     @media (max-width: 730px) {
-      padding: 10px 0;
+      padding: 16px;
     }
     .header__access {
       display: flex;
