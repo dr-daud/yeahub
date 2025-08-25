@@ -75,41 +75,39 @@ const Questions = () => {
           </button>
         </div>
         <div className="questions__main">
-          <div className="questions__inner">
-            <div>
-              {isLoading ? (
-                <Skeleton />
-              ) : (
-                <>
-                  <div className="body5-med questions__title">
-                    {currentData?.title}
-                  </div>
-                  <Link
-                    to={`/quiz/questions/learnt-questions/${currentData?.id}`}
-                    className="body2 questions__link"
-                  >
-                    Посмотреть ответ
-                  </Link>
-                </>
-              )}
-            </div>
-            <div className="questions__mark">
-              <NegativeMark
-                active={
-                  currentData?.id ? learnt.includes(currentData?.id) : false
-                }
-                onClick={() => dispatch(removeLearntQuestion(currentData?.id))}
-              />
-              <PositiveMark
-                active={
-                  currentData?.id ? learnt.includes(currentData?.id) : false
-                }
-                onClick={() => addLearnt(currentData?.id)}
-              />
-            </div>
+          <div>
+            {isLoading ? (
+              <Skeleton />
+            ) : (
+              <>
+                <div className="body5-med questions__title">
+                  {currentData?.title}
+                </div>
+                <Link
+                  to={`/quiz/questions/learnt-questions/${currentData?.id}`}
+                  className="body2 questions__link"
+                >
+                  Посмотреть ответ
+                </Link>
+              </>
+            )}
           </div>
           <div className="questions__img">
             <Image image={currentData?.imageSrc} />
+          </div>
+          <div className="questions__mark">
+            <NegativeMark
+              active={
+                currentData?.id ? learnt.includes(currentData?.id) : false
+              }
+              onClick={() => dispatch(removeLearntQuestion(currentData?.id))}
+            />
+            <PositiveMark
+              active={
+                currentData?.id ? learnt.includes(currentData?.id) : false
+              }
+              onClick={() => addLearnt(currentData?.id)}
+            />
           </div>
         </div>
         <div className="questions__btn-wrap">
