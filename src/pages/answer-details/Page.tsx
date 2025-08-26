@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import AnswerDetailsTitle from "../../widgets/answer-details-title/ui/AnswerDetailsTitle";
-import AnswerInfo from "../../widgets/answer-info/AnswerInfo";
+import AnswerInfo from "../../widgets/answer-info/ui/AnswerInfo";
 import FullAnswer from "../../widgets/full-answer/ui/FullAnswer";
 import ShortAnswer from "../../widgets/short-answer/ui/ShortAnswer";
 import { useSelector } from "react-redux";

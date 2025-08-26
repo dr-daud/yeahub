@@ -6,7 +6,7 @@ interface Props {
 const FullAnswer = ({ longAnswer }: Props) => {
   return (
     <section className="full">
-      <div className="full__wrap">
+      <div className="container full__wrap">
         <div className="full__title body5-med">Развёрнутый ответ</div>
         <div
           className="full__answer body3"

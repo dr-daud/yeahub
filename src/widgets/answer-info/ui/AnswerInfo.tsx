@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import type { TQuestions } from "../../entities/questions/model/types";
-import TransparentFrame from "../../shared/ui/transparent-frame/ui/TransparentFrame";
+import type { TQuestions } from "../../../entities/questions/model/types";
+import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import "./answer-info.css";
 
 interface Props {

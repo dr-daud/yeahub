@@ -6,7 +6,7 @@ interface Props {
 const ShortAnswer = ({ shortAnswer }: Props) => {
   return (
     <section className="short">
-      <div className="container short__wrap">
+      <div className="short__wrap">
         <div className="short__title body5-med">Краткий ответ</div>
         <div
           className="short__answer body3"

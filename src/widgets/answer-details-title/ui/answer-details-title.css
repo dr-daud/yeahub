@@ -7,11 +7,37 @@
     padding: 24px;
     box-shadow: var(--box-shadow);
 
+    @media (max-width: 1260px) {
+      padding: 16px;
+    }
+
+    @media (max-width: 730px) {
+      flex-direction: column;
+      border: radius 12px;
+    }
+
     .answer__img-wrap {
       min-width: 170px;
     }
 
     .answer__wrap {
+      .answer__flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .answer__icon {
+          margin-top: 0;
+          display: none;
+          align-self: self-start;
+          padding: 8px;
+          border-radius: 8px;
+
+          @media (max-width: 1260px) {
+            display: flex;
+          }
+        }
+      }
       .answer__descr {
         margin-top: 8px;
       }
