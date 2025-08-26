@@ -1,0 +1,11 @@
+.details {
+  margin-top: 0;
+  display: none;
+  align-self: self-start;
+  padding: 8px;
+  border-radius: 8px;
+
+  @media (max-width: 1260px) {
+    display: flex;
+  }
+}

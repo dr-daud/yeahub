@@ -1,5 +1,8 @@
-import type { Props } from "../model/types";
 import "./transparent-frame.css";
+
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
 
 const TransparentFrame = ({ children, className, ...props }: Props) => {
   return (

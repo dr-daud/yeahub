@@ -36,8 +36,8 @@ const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
       </div>
       <div className="info__skills">
         Навыки:
-        {currentData?.questionSkills.map((skill) => (
-          <TransparentFrame className="info__frame">
+        {currentData?.questionSkills.map((skill, index) => (
+          <TransparentFrame className="info__frame" key={index}>
             <img src={skill.imageSrc} alt="" />
             {skill.title}
           </TransparentFrame>

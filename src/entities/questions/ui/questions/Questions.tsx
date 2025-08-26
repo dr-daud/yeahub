@@ -28,7 +28,6 @@ const Questions = () => {
       learnt: state.questionsReducer.learntQuestions,
     })
   );
-
   const complexity = complexityArr?.map((el) => el.value).flat();
 
   const { data, isLoading } = useQuestionsQuery({
