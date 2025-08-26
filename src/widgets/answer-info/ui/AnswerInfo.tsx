@@ -1,15 +1,30 @@
 import { Link } from "react-router";
 import type { TQuestions } from "../../../entities/questions/model/types";
 import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
+import cross from "../assets/Close Circle.svg";
 import "./answer-info.css";
+import { useRef } from "react";
+import { useOnClickOutside } from "../../../shared/hooks/useOnClickOutside";
 
 interface Props {
   currentData?: TQuestions;
+  setIsMenuOpen: (bool: boolean) => void;
 }
 
-const AnswerInfo = ({ currentData }: Props) => {
+const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
+  const ref = useRef(null);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useOnClickOutside(ref, closeMenu);
+
   return (
-    <section className="info">
+    <section className="info" ref={ref}>
+      <div className="info__cross" onClick={() => setIsMenuOpen(false)}>
+        <img src={cross} alt="cross" />
+      </div>
       <div className="info__level body3">Уровень:</div>
       <div className="info__wrap">
         <div className="info__inner">

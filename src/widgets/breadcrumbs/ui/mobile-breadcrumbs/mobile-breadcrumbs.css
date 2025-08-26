@@ -1,0 +1,8 @@
+.mobile {
+  .mobile__item {
+    display: flex;
+    align-items: center;
+    color: var(--purple-700);
+    gap: 4px;
+  }
+}

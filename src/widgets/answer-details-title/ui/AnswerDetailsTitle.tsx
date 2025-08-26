@@ -6,9 +6,10 @@ import TransparentFrame from "../../../shared/ui/transparent-frame/ui/Transparen
 
 interface Props {
   currentData?: TQuestions;
+  setIsMenuOpen: (bool: boolean) => void;
 }
 
-const AnswerDetailsTitle = ({ currentData }: Props) => {
+const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
   return (
     <section className="answer">
       <div className="answer__inner">
@@ -18,10 +19,12 @@ const AnswerDetailsTitle = ({ currentData }: Props) => {
         <div className="answer__wrap">
           <div className="answer__flex">
             <div className="answer__title body6-med">{currentData?.title}</div>
-            <TransparentFrame className="answer__icon">
+            <TransparentFrame
+              className="answer__icon"
+              onClick={() => setIsMenuOpen(true)}
+            >
               <img src={frame} alt="frame" />
             </TransparentFrame>
-            {/* <div className="answer__icon"></div> */}
           </div>
           <div className="answer__descr body3">{currentData?.description}</div>
         </div>

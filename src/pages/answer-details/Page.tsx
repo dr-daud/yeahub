@@ -7,8 +7,12 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../../app/appStore";
 import { useQuestionsQuery } from "../../entities/questions/api/api";
 import "./answer-details.css";
+import { useState } from "react";
+import { useWindowWidth } from "../../shared/hooks/useWindowWidth";
 
 const AnswerDetails = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const width = useWindowWidth();
   const { id } = useParams();
 
   const { skills, limit, complexityArr, specialization } = useSelector(
@@ -36,11 +40,16 @@ const AnswerDetails = () => {
   return (
     <div className="container wrap">
       <div>
-        <AnswerDetailsTitle currentData={currentData} />
+        <AnswerDetailsTitle
+          currentData={currentData}
+          setIsMenuOpen={setIsMenuOpen}
+        />
         <ShortAnswer shortAnswer={currentData?.shortAnswer} />
         <FullAnswer longAnswer={currentData?.longAnswer} />
       </div>
-      <AnswerInfo currentData={currentData} />
+      {isMenuOpen || width > 1260 ? (
+        <AnswerInfo currentData={currentData} setIsMenuOpen={setIsMenuOpen} />
+      ) : null}
     </div>
   );
 };

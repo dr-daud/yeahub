@@ -6,11 +6,25 @@
   box-shadow: var(--box-shadow);
 
   @media (max-width: 1260px) {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    border-radius: 0;
+  }
+
+  .info__cross {
     display: none;
+    @media (max-width: 1260px) {
+      display: flex;
+      justify-content: end;
+    }
   }
 
   .info__level {
     color: var(--black-700);
+    @media (max-width: 1260px) {
+      margin-top: 8px;
+    }
   }
 
   .info__wrap {
