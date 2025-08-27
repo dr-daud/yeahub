@@ -5,19 +5,18 @@ import DetailedSettings from "../detailed-settings/DetailedSettings";
 import Button from "../../../../shared/ui/button/Button";
 import arrow from "../../assets/Arrow-Right.svg";
 import SkillsSelector from "../../../../features/quiz-settings/skills-selector/ui/SkillsSelector";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../../app/appStore";
 
 const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const { limit, skills, selectedComplexities } = useSelector(
-    (state: RootState) => ({
-      limit: state.questionsReducer.limit,
-      skills: state.skillsReducer.skills,
-      selectedComplexities: state.questionsReducer.selectedComplexities,
-    })
-  );
+  const { limit, selectedComplexities } = useSelector((state: RootState) => ({
+    limit: state.questionsReducer.limit,
+    selectedComplexities: state.questionsReducer.selectedComplexities,
+  }));
+  const [searchParams] = useSearchParams();
+  const skills = searchParams.getAll("skills");
 
   const isButtonDisabled = !!(
     skills.length &&
@@ -34,7 +33,7 @@ const QuizSection = () => {
         ) : (
           <>
             <div className="quiz__flex">
-              <SkillsSelector skills={skills} />
+              <SkillsSelector />
               <DetailedSettings />
             </div>
             <Link to="/quiz/questions">

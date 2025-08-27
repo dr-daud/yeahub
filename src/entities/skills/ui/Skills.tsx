@@ -1,19 +1,18 @@
-import { useSelector } from "react-redux";
 import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import { useSkillsQuery } from "../api/api";
-import type { RootState } from "../../../app/appStore";
 import "./skills.css";
 import type { Props } from "../model/types";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
+import { useSearchParams } from "react-router";
 
 const Skills = ({ skills, handleClick }: Props) => {
-  const { spec } = useSelector(
-    (state: RootState) => state.specializationsReducer
-  );
+  const [searchParams] = useSearchParams();
+  const selectedSpec = searchParams.get("selectedSpec");
+
   const { data, isLoading } = useSkillsQuery({
     page: 1,
     limit: 10,
-    specializations: spec,
+    specializations: Number(selectedSpec),
   });
 
   return (

@@ -1,15 +1,13 @@
+import "./specializations.css";
 import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import { useSpecializationsQuery } from "../api/api";
 import Button from "../../../shared/ui/button/Button";
-import "./specializations.css";
 import { useLazySkillsQuery } from "../../skills/api/api";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../../app/appStore";
-import { setSpec } from "../model/specializationsSlice";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
 import WatchMore from "../../../shared/ui/watch-more/WatchMore";
 import { useEffect, useState } from "react";
 import { useWindowWidth } from "../../../shared/hooks/useWindowWidth";
+import { useSearchParams } from "react-router";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
@@ -20,14 +18,12 @@ const Specializations = ({ setCurrentStep }: Props) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
   const [trigger] = useLazySkillsQuery();
-  const { spec } = useSelector(
-    (state: RootState) => state.specializationsReducer
-  );
-  const dispatch = useDispatch();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedSpec = searchParams.get("selectedSpec");
 
   const handleClick = async () => {
     setCurrentStep(2);
-    trigger({ page: 1, limit: 10, specializations: spec });
+    trigger({ page: 1, limit: 10, specializations: Number(selectedSpec) });
   };
 
   useEffect(() => {
@@ -41,6 +37,10 @@ const Specializations = ({ setCurrentStep }: Props) => {
 
   const shownSpecializations = isExpanded ? data?.data : data?.data.slice(0, 7);
 
+  const setSelectedSpec = (questionId: number) => {
+    setSearchParams({ selectedSpec: questionId.toString() });
+  };
+
   return (
     <div className="specializations">
       <p className="specializations__title body2">Специализация</p>
@@ -48,13 +48,13 @@ const Specializations = ({ setCurrentStep }: Props) => {
         {isLoading ? (
           <FrameSkeleton quantity={30} />
         ) : (
-          shownSpecializations?.map((arr) => (
+          shownSpecializations?.map((spec) => (
             <TransparentFrame
-              onClick={() => dispatch(setSpec(arr.id))}
-              key={arr.id}
-              className={arr.id === spec ? "active" : ""}
+              onClick={() => setSelectedSpec(spec.id)}
+              key={spec.id}
+              className={spec.id === Number(selectedSpec) ? "active" : ""}
             >
-              {arr.title}
+              {spec.title}
             </TransparentFrame>
           ))
         )}
@@ -68,7 +68,7 @@ const Specializations = ({ setCurrentStep }: Props) => {
       <Button
         className="specializations__button"
         onClick={handleClick}
-        disabled={spec === null}
+        disabled={selectedSpec === null}
       >
         Перейти
       </Button>

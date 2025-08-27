@@ -1,23 +1,25 @@
+import { useSearchParams } from "react-router";
 import Skills from "../../../../entities/skills/ui/Skills";
-import { useDispatch } from "react-redux";
-import {
-  addSkills,
-  removeSkills,
-} from "../../../../entities/skills/model/skillsSlice";
 
-interface Props {
-  skills: string[];
-}
-
-const SkillsSelector = ({ skills }: Props) => {
-  const dispatch = useDispatch();
+const SkillsSelector = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const skills = searchParams.getAll("skills");
 
   const handleClick = (id: string) => {
-    if (skills?.includes(id)) {
-      dispatch(removeSkills(id));
+    const current = searchParams.getAll("skills");
+    let updated: string[];
+
+    if (current.includes(id)) {
+      updated = current.filter((skill) => skill !== id);
     } else {
-      dispatch(addSkills(id));
+      updated = [...current, id];
     }
+
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete("skills");
+    updated.forEach((skill) => newParams.append("skills", skill));
+
+    setSearchParams(newParams);
   };
 
   return <Skills skills={skills} handleClick={handleClick} />;
