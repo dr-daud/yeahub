@@ -36,7 +36,9 @@ export const questionsSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
-    addLearntQuestion: (state, action: PayloadAction<number>) => {
+    addLearntQuestion: (state, action: PayloadAction<number | undefined>) => {
+      if (!action.payload) return;
+      if (state.learntQuestions.includes(action.payload)) return;
       state.learntQuestions = [...state.learntQuestions, action.payload];
     },
     removeLearntQuestion: (

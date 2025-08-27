@@ -39,12 +39,6 @@ const Questions = () => {
 
   const currentData = data && data.questions[currentQuestion];
 
-  const addLearnt = (id?: number) => {
-    if (!id) return;
-    if (learnt.includes(id)) return;
-    dispatch(addLearntQuestion(id));
-  };
-
   const isNextQuestion =
     !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount);
 
@@ -105,7 +99,7 @@ const Questions = () => {
               active={
                 currentData?.id ? learnt.includes(currentData?.id) : false
               }
-              onClick={() => addLearnt(currentData?.id)}
+              onClick={() => dispatch(addLearntQuestion(currentData?.id))}
             />
           </div>
         </div>
