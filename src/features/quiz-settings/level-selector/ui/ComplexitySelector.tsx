@@ -1,25 +1,28 @@
 import TransparentFrame from "../../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import { LEVEL } from "../model/constants";
-import type { TComplexity } from "../model/types";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../../../app/appStore";
-import {
-  addComplexity,
-  removeComplexity,
-} from "../../../../entities/questions/model/questionsSlice";
+import { useSearchParams } from "react-router";
 
 const LevelSelector = () => {
-  const dispatch = useDispatch();
-  const { selectedComplexities } = useSelector(
-    (state: RootState) => state.questionsReducer
-  );
+  const [searchParams, setSearchParams] = useSearchParams();
+  const complexities = searchParams.getAll("complexities");
 
-  const handleClick = (obj: TComplexity) => {
-    if (selectedComplexities?.find((i) => i.id === obj.id)) {
-      dispatch(removeComplexity(obj.id));
+  const handleClick = (id: string) => {
+    const current = searchParams.getAll("complexities");
+    let updated: string[];
+
+    if (current.includes(id)) {
+      updated = current.filter((complexity) => complexity !== id);
     } else {
-      dispatch(addComplexity(obj));
+      updated = [...current, id];
     }
+
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete("complexities");
+    updated.forEach((complexity) =>
+      newParams.append("complexities", complexity)
+    );
+
+    setSearchParams(newParams);
   };
 
   return (
@@ -28,10 +31,8 @@ const LevelSelector = () => {
       {LEVEL.map((obj, index) => (
         <TransparentFrame
           key={index}
-          onClick={() => handleClick(obj)}
-          className={
-            selectedComplexities?.find((i) => i.id === obj.id) ? "active" : ""
-          }
+          onClick={() => handleClick(obj.id.toString())}
+          className={complexities?.includes(obj.id.toString()) ? "active" : ""}
         >
           {obj.label}
         </TransparentFrame>

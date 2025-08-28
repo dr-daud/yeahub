@@ -4,7 +4,7 @@ import { useQuestionsQuery } from "../../../../entities/questions/api/api";
 import "./learnt-questions.css";
 import LearntCard from "../learnt-card/LearntCard";
 import Button from "../../../../shared/ui/button/Button";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { useWindowWidth } from "../../../../shared/hooks/useWindowWidth";
 import { useEffect, useState } from "react";
 import WatchMore from "../../../../shared/ui/watch-more/WatchMore";
@@ -12,16 +12,16 @@ import WatchMore from "../../../../shared/ui/watch-more/WatchMore";
 const LearntQuestions = () => {
   const [isExpanded, setIsExpanded] = useState(true);
   const width = useWindowWidth();
-  const { skills, limit, complexityArr, specialization } = useSelector(
-    (state: RootState) => ({
-      skills: state.skillsReducer.skills,
-      limit: state.questionsReducer.limit,
-      complexityArr: state.questionsReducer.selectedComplexities,
-      specialization: state.specializationsReducer.spec,
-    })
-  );
+  const { limit } = useSelector((state: RootState) => ({
+    limit: state.questionsReducer.limit,
+  }));
 
-  const complexity = complexityArr?.map((el) => el.value).flat();
+  const [searchParams] = useSearchParams();
+  const skills = searchParams.getAll("skills");
+  const complexity = searchParams
+    .getAll("complexities")
+    .map((complexity) => Number(complexity));
+  const specialization = Number(searchParams.get("selectedSpec"));
 
   const { data } = useQuestionsQuery({
     skills,

@@ -13,27 +13,21 @@ const QuantitySelector = () => {
   const { limit } = useSelector((state: RootState) => state.questionsReducer);
   const dispatch = useDispatch();
 
-  const handlePlus = () => {
-    if (limit < 100) {
-      dispatch(addLimit(limit));
-    }
-  };
-
-  const handleMinus = () => {
-    if (limit > 1) {
-      dispatch(reduceLimit(limit));
-    }
-  };
-
   return (
     <div className="quantity">
       <p className="black700-title body2">Количество вопросов</p>
       <TransparentFrame className="quantity__wrap">
-        <button onClick={handleMinus} className="qunatity__button">
+        <button
+          onClick={() => dispatch(reduceLimit(limit))}
+          className="qunatity__button"
+        >
           <img src={minus} alt="minus" />
         </button>
         {limit}
-        <button onClick={handlePlus} className="qunatity__button">
+        <button
+          onClick={() => dispatch(addLimit(limit))}
+          className="qunatity__button"
+        >
           <img src={plus} alt="plus" />
         </button>
       </TransparentFrame>

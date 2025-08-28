@@ -14,21 +14,23 @@ import {
   removeLearntQuestion,
 } from "../../model/questionsSlice";
 import Skeleton from "../../../../shared/ui/skeleton/Skeleton";
+import { useSearchParams } from "react-router";
 
 const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const dispatch = useDispatch();
-  const { skills, limit, complexityArr, specialization, learnt } = useSelector(
-    (state: RootState) => ({
-      skills: state.skillsReducer.skills,
-      limit: state.questionsReducer.limit,
-      complexityArr: state.questionsReducer.selectedComplexities,
-      specialization: state.specializationsReducer.spec,
-      learnt: state.questionsReducer.learntQuestions,
-    })
-  );
-  const complexity = complexityArr?.map((el) => el.value).flat();
+  const [searchParams] = useSearchParams();
+  const skills = searchParams.getAll("skills");
+  const complexity = searchParams
+    .getAll("complexities")
+    .map((complexity) => Number(complexity));
+  const specialization = Number(searchParams.get("selectedSpec"));
+
+  const { limit, learnt } = useSelector((state: RootState) => ({
+    limit: state.questionsReducer.limit,
+    learnt: state.questionsReducer.learntQuestions,
+  }));
 
   const { data, isLoading } = useQuestionsQuery({
     skills,
@@ -104,7 +106,7 @@ const Questions = () => {
           </div>
         </div>
         <div className="questions__btn-wrap">
-          <Link to="learnt-questions">
+          <Link to={`learnt-questions?${searchParams}`}>
             <button className="questions__complete-btn body3-strong">
               Завершить
             </button>

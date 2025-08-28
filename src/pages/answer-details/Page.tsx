@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, useSearchParams } from "react-router";
 import AnswerDetailsTitle from "../../widgets/answer-details-title/ui/AnswerDetailsTitle";
 import AnswerInfo from "../../widgets/answer-info/ui/AnswerInfo";
 import FullAnswer from "../../widgets/full-answer/ui/FullAnswer";
@@ -15,16 +15,14 @@ const AnswerDetails = () => {
   const width = useWindowWidth();
   const { id } = useParams();
 
-  const { skills, limit, complexityArr, specialization } = useSelector(
-    (state: RootState) => ({
-      skills: state.skillsReducer.skills,
-      limit: state.questionsReducer.limit,
-      complexityArr: state.questionsReducer.selectedComplexities,
-      specialization: state.specializationsReducer.spec,
-    })
-  );
+  const [searchParams] = useSearchParams();
+  const skills = searchParams.getAll("skills");
+  const complexity = searchParams
+    .getAll("complexities")
+    .map((complexity) => Number(complexity));
+  const specialization = Number(searchParams.get("selectedSpec"));
 
-  const complexity = complexityArr?.map((el) => el.value).flat();
+  const { limit } = useSelector((state: RootState) => state.questionsReducer);
 
   const { data } = useQuestionsQuery({
     skills,

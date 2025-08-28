@@ -11,18 +11,14 @@ import type { RootState } from "../../../../app/appStore";
 
 const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const { limit, selectedComplexities } = useSelector((state: RootState) => ({
+  const { limit } = useSelector((state: RootState) => ({
     limit: state.questionsReducer.limit,
-    selectedComplexities: state.questionsReducer.selectedComplexities,
   }));
   const [searchParams] = useSearchParams();
   const skills = searchParams.getAll("skills");
+  const complexities = searchParams.getAll("complexities");
 
-  const isButtonDisabled = !!(
-    skills.length &&
-    selectedComplexities?.length &&
-    limit
-  );
+  const isButtonDisabled = !!(skills.length && complexities?.length && limit);
 
   return (
     <section className="quiz">
@@ -36,7 +32,7 @@ const QuizSection = () => {
               <SkillsSelector />
               <DetailedSettings />
             </div>
-            <Link to="/quiz/questions">
+            <Link to={`/quiz/questions?${searchParams}`}>
               <Button className="quiz__button" disabled={!isButtonDisabled}>
                 {"Начать"} <img src={arrow} alt="arrow" />
               </Button>

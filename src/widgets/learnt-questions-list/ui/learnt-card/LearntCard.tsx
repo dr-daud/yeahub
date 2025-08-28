@@ -7,7 +7,7 @@ import {
 import Image from "../../../../shared/ui/image/Image";
 import "./learnt-card.css";
 import type { RootState } from "../../../../app/appStore";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 
 interface Props {
   question: TQuestions;
@@ -17,6 +17,7 @@ const LearntCard = ({ question }: Props) => {
   const { learntQuestions } = useSelector(
     (state: RootState) => state.questionsReducer
   );
+  const [searchParams] = useSearchParams();
 
   return (
     <div className="learnt-card">
@@ -24,7 +25,10 @@ const LearntCard = ({ question }: Props) => {
         <Image image={question.imageSrc} />
       </div>
       <div className="learnt-card__wrap">
-        <Link to={`${question.id}`} className="learnt-card__link">
+        <Link
+          to={`${question.id}?${searchParams}`}
+          className="learnt-card__link"
+        >
           <div className="learnt-card__title">{question.title}</div>
         </Link>
         <div className="learnt-card__mark">

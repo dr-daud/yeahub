@@ -20,10 +20,14 @@ export const questionsSlice = createSlice({
   initialState,
   reducers: {
     addLimit: (state, action: PayloadAction<number>) => {
-      state.limit = action.payload + 1;
+      if (action.payload < 100) {
+        state.limit = action.payload + 1;
+      }
     },
     reduceLimit: (state, action: PayloadAction<number>) => {
-      state.limit = action.payload - 1;
+      if (action.payload > 1) {
+        state.limit = action.payload - 1;
+      }
     },
     addComplexity: (state, action: PayloadAction<TComplexity>) => {
       state.selectedComplexities = [
