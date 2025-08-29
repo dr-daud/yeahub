@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux";
 import type { TQuestions } from "../../../../entities/questions/model/types";
-import {
-  NegativeMark,
-  PositiveMark,
-} from "../../../../entities/questions/ui/mark/Mark";
+import { NegativeMark, PositiveMark } from "../../../../shared/ui/mark/Mark";
 import Image from "../../../../shared/ui/image/Image";
 import "./learnt-card.css";
 import type { RootState } from "../../../../app/appStore";

@@ -1,9 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./questions-mark.css";
-import {
-  NegativeMark,
-  PositiveMark,
-} from "../../../../entities/questions/ui/mark/Mark";
+import { NegativeMark, PositiveMark } from "../../../../shared/ui/mark/Mark";
 import {
   addLearntQuestion,
   removeLearntQuestion,
