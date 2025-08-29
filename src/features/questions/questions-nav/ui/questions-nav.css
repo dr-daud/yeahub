@@ -1,0 +1,18 @@
+.questions__nav {
+  display: flex;
+  justify-content: space-between;
+
+  .questions__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--purple-700);
+
+    &:disabled {
+      color: grey;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.questions__mark {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}

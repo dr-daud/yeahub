@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import "./breadcrumbs.css";
 import rightArr from "../../assets/CaretRight.svg";
 import MobileBreadcrumbs from "../mobile-breadcrumbs/MobileBreadcrumbs";
@@ -13,6 +13,7 @@ const Breadcrumbs = () => {
     ["learnt questions"]: "Пройденные вопросы",
   };
   const width = useWindowWidth();
+  const [searchParams] = useSearchParams();
 
   const location = useLocation();
 
@@ -39,7 +40,7 @@ const Breadcrumbs = () => {
                 {isLast ? (
                   <span>{label}</span>
                 ) : (
-                  <Link to={routeTo}>{label}</Link>
+                  <Link to={`${routeTo}?${searchParams}`}>{label}</Link>
                 )}
               </li>
             );
