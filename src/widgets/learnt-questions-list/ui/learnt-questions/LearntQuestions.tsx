@@ -5,16 +5,15 @@ import "./learnt-questions.css";
 import LearntCard from "../learnt-card/LearntCard";
 import Button from "../../../../shared/ui/button/Button";
 import { Link, useSearchParams } from "react-router";
-import { useWindowWidth } from "../../../../shared/hooks/useWindowWidth";
-import { useEffect, useState } from "react";
 import WatchMore from "../../../../shared/ui/watch-more/WatchMore";
+import useExpantionHook from "../../../../shared/hooks/useExpantionHook";
 
 const LearntQuestions = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
-  const width = useWindowWidth();
   const { limit } = useSelector((state: RootState) => ({
     limit: state.questionsReducer.limit,
   }));
+
+  const { isExpanded, setIsExpanded, width } = useExpantionHook(1260);
 
   const [searchParams] = useSearchParams();
   const skills = searchParams.getAll("skills");
@@ -29,15 +28,6 @@ const LearntQuestions = () => {
     limit,
     specialization,
   });
-
-  useEffect(() => {
-    const mobileExpantion = () => {
-      if (width <= 1260) {
-        setIsExpanded(false);
-      }
-    };
-    mobileExpantion();
-  }, [width]);
 
   const shownQuestions = isExpanded
     ? data?.questions

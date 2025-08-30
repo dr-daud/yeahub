@@ -5,17 +5,14 @@ import Button from "../../../shared/ui/button/Button";
 import { useLazySkillsQuery } from "../../skills/api/api";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
 import WatchMore from "../../../shared/ui/watch-more/WatchMore";
-import { useEffect, useState } from "react";
-import { useWindowWidth } from "../../../shared/hooks/useWindowWidth";
 import { useSearchParams } from "react-router";
+import useExpantionHook from "../../../shared/hooks/useExpantionHook";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
 }
 
 const Specializations = ({ setCurrentStep }: Props) => {
-  const width = useWindowWidth();
-  const [isExpanded, setIsExpanded] = useState(true);
   const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
   const [trigger] = useLazySkillsQuery();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,14 +23,7 @@ const Specializations = ({ setCurrentStep }: Props) => {
     trigger({ page: 1, limit: 10, specializations: Number(selectedSpec) });
   };
 
-  useEffect(() => {
-    const mobileExpantion = () => {
-      if (width <= 730) {
-        setIsExpanded(false);
-      }
-    };
-    mobileExpantion();
-  }, [width]);
+  const { isExpanded, setIsExpanded, width } = useExpantionHook(730);
 
   const shownSpecializations = isExpanded ? data?.data : data?.data.slice(0, 7);
 
