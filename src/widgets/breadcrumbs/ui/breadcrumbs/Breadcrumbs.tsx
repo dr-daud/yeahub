@@ -1,8 +1,9 @@
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./breadcrumbs.css";
 import rightArr from "../../assets/CaretRight.svg";
 import MobileBreadcrumbs from "../mobile-breadcrumbs/MobileBreadcrumbs";
 import { useWindowWidth } from "../../../../shared/hooks/useWindowWidth";
+import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
 
 type ReplacedKey = "quiz" | "questions" | "learnt questions";
 
@@ -13,7 +14,7 @@ const Breadcrumbs = () => {
     ["learnt questions"]: "Пройденные вопросы",
   };
   const width = useWindowWidth();
-  const [searchParams] = useSearchParams();
+  const { searchParams } = useGetSearchParams();
 
   const location = useLocation();
 

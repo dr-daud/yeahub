@@ -4,7 +4,8 @@ import { NegativeMark, PositiveMark } from "../../../../shared/ui/mark/Mark";
 import Image from "../../../../shared/ui/image/Image";
 import "./learnt-card.css";
 import type { RootState } from "../../../../app/appStore";
-import { Link, useSearchParams } from "react-router";
+import { Link } from "react-router";
+import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
 
 interface Props {
   question: TQuestions;
@@ -14,7 +15,7 @@ const LearntCard = ({ question }: Props) => {
   const { learntQuestions } = useSelector(
     (state: RootState) => state.questionsReducer
   );
-  const [searchParams] = useSearchParams();
+  const { searchParams } = useGetSearchParams();
 
   return (
     <div className="learnt-card">

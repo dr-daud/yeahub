@@ -1,15 +1,15 @@
-import { useSearchParams } from "react-router";
 import { useQuestionsQuery } from "../../entities/questions/api/api";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../app/appStore";
 import "./questions-page.css";
 import QuestionsMain from "../../widgets/questions-stepper/questions-main/QuestionsMain";
+import { useGetSearchParams } from "../../shared/hooks/useGetSearchParams";
 
 const QuestionsPage = () => {
-  const [searchParams] = useSearchParams();
+  const { getAllParams, searchParams } = useGetSearchParams();
 
-  const skills = searchParams.getAll("skills");
-  const complexities = searchParams.getAll("complexities").map(Number);
+  const skills = getAllParams("skills");
+  const complexities = getAllParams("complexities").map(Number);
   const specialization = Number(searchParams.get("selectedSpec"));
 
   const { limit } = useSelector((state: RootState) => ({

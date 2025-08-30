@@ -3,11 +3,11 @@ import { useSkillsQuery } from "../api/api";
 import "./skills.css";
 import type { Props } from "../model/types";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
-import { useSearchParams } from "react-router";
+import { useGetSearchParams } from "../../../shared/hooks/useGetSearchParams";
 
 const Skills = ({ skills, handleClick }: Props) => {
-  const [searchParams] = useSearchParams();
-  const selectedSpec = searchParams.get("selectedSpec");
+  const { getParam } = useGetSearchParams();
+  const selectedSpec = getParam("selectedSpec");
 
   const { data, isLoading } = useSkillsQuery({
     page: 1,

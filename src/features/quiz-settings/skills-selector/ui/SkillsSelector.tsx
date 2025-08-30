@@ -1,26 +1,12 @@
-import { useSearchParams } from "react-router";
 import Skills from "../../../../entities/skills/ui/Skills";
+import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
+import { useSaveOldParams } from "../../../../shared/hooks/useSaveOldParams";
 
 const SkillsSelector = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const skills = searchParams.getAll("skills");
+  const { getAllParams } = useGetSearchParams();
 
-  const handleClick = (id: string) => {
-    const current = searchParams.getAll("skills");
-    let updated: string[];
-
-    if (current.includes(id)) {
-      updated = current.filter((skill) => skill !== id);
-    } else {
-      updated = [...current, id];
-    }
-
-    const newParams = new URLSearchParams(searchParams);
-    newParams.delete("skills");
-    updated.forEach((skill) => newParams.append("skills", skill));
-
-    setSearchParams(newParams);
-  };
+  const skills = getAllParams("skills");
+  const { handleClick } = useSaveOldParams("skills");
 
   return <Skills skills={skills} handleClick={handleClick} />;
 };

@@ -5,8 +5,8 @@ import Button from "../../../shared/ui/button/Button";
 import { useLazySkillsQuery } from "../../skills/api/api";
 import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
 import WatchMore from "../../../shared/ui/watch-more/WatchMore";
-import { useSearchParams } from "react-router";
 import useExpantionHook from "../../../shared/hooks/useExpantionHook";
+import { useGetSearchParams } from "../../../shared/hooks/useGetSearchParams";
 
 interface Props {
   setCurrentStep: (currentStep: number) => void;
@@ -15,10 +15,11 @@ interface Props {
 const Specializations = ({ setCurrentStep }: Props) => {
   const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
   const [trigger] = useLazySkillsQuery();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const selectedSpec = searchParams.get("selectedSpec");
+  const { getParam, setSearchParams } = useGetSearchParams();
 
-  const handleClick = async () => {
+  const selectedSpec = getParam("selectedSpec");
+
+  const handleClick = () => {
     setCurrentStep(2);
     trigger({ page: 1, limit: 10, specializations: Number(selectedSpec) });
   };

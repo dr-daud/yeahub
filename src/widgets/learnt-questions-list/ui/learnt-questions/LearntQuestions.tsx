@@ -1,12 +1,13 @@
+import "./learnt-questions.css";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../../app/appStore";
 import { useQuestionsQuery } from "../../../../entities/questions/api/api";
-import "./learnt-questions.css";
 import LearntCard from "../learnt-card/LearntCard";
 import Button from "../../../../shared/ui/button/Button";
-import { Link, useSearchParams } from "react-router";
+import { Link } from "react-router";
 import WatchMore from "../../../../shared/ui/watch-more/WatchMore";
 import useExpantionHook from "../../../../shared/hooks/useExpantionHook";
+import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
 
 const LearntQuestions = () => {
   const { limit } = useSelector((state: RootState) => ({
@@ -15,12 +16,12 @@ const LearntQuestions = () => {
 
   const { isExpanded, setIsExpanded, width } = useExpantionHook(1260);
 
-  const [searchParams] = useSearchParams();
-  const skills = searchParams.getAll("skills");
-  const complexity = searchParams
-    .getAll("complexities")
-    .map((complexity) => Number(complexity));
-  const specialization = Number(searchParams.get("selectedSpec"));
+  const { getAllParams, getParam } = useGetSearchParams();
+  const skills = getAllParams("skills");
+  const complexity = getAllParams("complexities").map((complexity) =>
+    Number(complexity)
+  );
+  const specialization = Number(getParam("selectedSpec"));
 
   const { data } = useQuestionsQuery({
     skills,

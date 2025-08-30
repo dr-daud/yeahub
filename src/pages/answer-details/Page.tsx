@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router";
+import { useParams } from "react-router";
 import AnswerDetailsTitle from "../../widgets/answer-details-title/ui/AnswerDetailsTitle";
 import AnswerInfo from "../../widgets/answer-info/ui/AnswerInfo";
 import FullAnswer from "../../widgets/full-answer/ui/FullAnswer";
@@ -9,14 +9,16 @@ import { useQuestionsQuery } from "../../entities/questions/api/api";
 import "./answer-details.css";
 import { useState } from "react";
 import { useWindowWidth } from "../../shared/hooks/useWindowWidth";
+import { useGetSearchParams } from "../../shared/hooks/useGetSearchParams";
 
 const AnswerDetails = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const width = useWindowWidth();
   const { id } = useParams();
 
-  const [searchParams] = useSearchParams();
-  const skills = searchParams.getAll("skills");
+  const { getAllParams, searchParams } = useGetSearchParams();
+
+  const skills = getAllParams("skills");
   const complexity = searchParams
     .getAll("complexities")
     .map((complexity) => Number(complexity));

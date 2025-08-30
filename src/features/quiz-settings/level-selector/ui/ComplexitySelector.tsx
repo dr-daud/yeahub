@@ -1,29 +1,13 @@
+import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
+import { useSaveOldParams } from "../../../../shared/hooks/useSaveOldParams";
 import TransparentFrame from "../../../../shared/ui/transparent-frame/ui/TransparentFrame";
 import { LEVEL } from "../model/constants";
-import { useSearchParams } from "react-router";
 
 const LevelSelector = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const complexities = searchParams.getAll("complexities");
+  const { getAllParams } = useGetSearchParams();
+  const complexities = getAllParams("complexities");
 
-  const handleClick = (id: string) => {
-    const current = searchParams.getAll("complexities");
-    let updated: string[];
-
-    if (current.includes(id)) {
-      updated = current.filter((complexity) => complexity !== id);
-    } else {
-      updated = [...current, id];
-    }
-
-    const newParams = new URLSearchParams(searchParams);
-    newParams.delete("complexities");
-    updated.forEach((complexity) =>
-      newParams.append("complexities", complexity)
-    );
-
-    setSearchParams(newParams);
-  };
+  const { handleClick } = useSaveOldParams("complexities");
 
   return (
     <div className="level">
