@@ -4,15 +4,14 @@
   "printWidth": 80,
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
-    "^react",
+    "^react$",
     "<THIRD_PARTY_MODULES>",
-    "^@repo/ui(.*)$",
-    "^@/components/(.*)$",
-    "^@/lib/(.*)$",
-
-    "^#components/(.*)$",
-    "^#lib/(.*)$",
-    "^#(.*)$",
+    "^@shared/(.*)$",
+    "^@entities/(.*)$",
+    "^@features/(.*)$",
+    "^@widgets/(.*)$",
+    "^@pages/(.*)$",
+    "^@app/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,

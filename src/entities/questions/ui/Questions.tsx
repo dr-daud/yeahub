@@ -1,12 +1,13 @@
-import "./questions.css";
-import { Link } from "react-router";
-import Image from "../../../shared/ui/image/Image";
-import Skeleton from "../../../shared/ui/skeleton/Skeleton";
-import type { TQuestions } from "../model/types";
+import { Link } from 'react-router'
+
+import Image from '../../../shared/ui/image/Image'
+import Skeleton from '../../../shared/ui/skeleton/Skeleton'
+import type { TQuestions } from '../model/types'
+import './questions.css'
 
 interface Props {
-  isLoading: boolean;
-  currentData?: TQuestions;
+  isLoading: boolean
+  currentData?: TQuestions
 }
 
 const Questions = ({ isLoading, currentData }: Props) => {
@@ -33,7 +34,7 @@ const Questions = ({ isLoading, currentData }: Props) => {
         <Image image={currentData?.imageSrc} />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Questions;
+export default Questions
