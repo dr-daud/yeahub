@@ -3,9 +3,9 @@ import {
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
-import { cards } from "../../model/constants";
-import "./promo-cards.css";
+} from '../../../../shared/ui/card/Card'
+import { cards } from '../../model/constants'
+import './promo-cards.css'
 
 const PromoCards = () => {
   return (
@@ -19,7 +19,7 @@ const PromoCards = () => {
         </Card>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default PromoCards;
+export default PromoCards

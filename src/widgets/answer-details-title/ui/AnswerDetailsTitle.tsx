@@ -1,11 +1,11 @@
-import type { TQuestions } from "../../../entities/questions/model/types";
-import Image from "../../../shared/ui/image/Image";
-import "./answer-details-title.css";
-import DetailsIcon from "../../../shared/ui/details-icon/ui/DetailsIcon";
+import type { TQuestions } from '../../../entities/questions/model/types'
+import DetailsIcon from '../../../shared/ui/details-icon/ui/DetailsIcon'
+import Image from '../../../shared/ui/image/Image'
+import './answer-details-title.css'
 
 interface Props {
-  currentData?: TQuestions;
-  setIsMenuOpen: (bool: boolean) => void;
+  currentData?: TQuestions
+  setIsMenuOpen: (bool: boolean) => void
 }
 
 const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
@@ -24,7 +24,7 @@ const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AnswerDetailsTitle;
+export default AnswerDetailsTitle

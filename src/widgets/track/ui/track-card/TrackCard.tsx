@@ -3,9 +3,9 @@ import {
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
-import { TRACK_CARDS } from "../../model/constants";
-import "./track-card.css";
+} from '../../../../shared/ui/card/Card'
+import { TRACK_CARDS } from '../../model/constants'
+import './track-card.css'
 
 const TrackCard = () => {
   return (
@@ -19,7 +19,7 @@ const TrackCard = () => {
         </Card>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default TrackCard;
+export default TrackCard

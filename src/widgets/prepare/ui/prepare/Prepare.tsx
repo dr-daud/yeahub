@@ -1,9 +1,10 @@
-import Button from "../../../../shared/ui/button/Button";
-import { Link } from "react-router";
-import "./prepare.css";
-import PrepareHeader from "../prepare-header/PrepareHeader";
-import PreparePromo from "../prepare-promo/PreparePromo";
-import PrepareFilters from "../prepare-filters/PrepareFilters";
+import { Link } from 'react-router'
+
+import Button from '../../../../shared/ui/button/Button'
+import PrepareFilters from '../prepare-filters/PrepareFilters'
+import PrepareHeader from '../prepare-header/PrepareHeader'
+import PreparePromo from '../prepare-promo/PreparePromo'
+import './prepare.css'
 
 const Prepare = () => {
   return (
@@ -19,7 +20,7 @@ const Prepare = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Prepare;
+export default Prepare

@@ -1,6 +1,6 @@
-import JoinUs from "../join-us/JoinUs";
-import Unites from "../unites/Unites";
-import "./promo.css";
+import JoinUs from '../join-us/JoinUs'
+import Unites from '../unites/Unites'
+import './promo.css'
 
 const Promo = () => {
   return (
@@ -8,7 +8,7 @@ const Promo = () => {
       <JoinUs />
       <Unites />
     </div>
-  );
-};
+  )
+}
 
-export default Promo;
+export default Promo

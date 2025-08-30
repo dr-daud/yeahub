@@ -1,11 +1,11 @@
-import { SIMULATOR_CARDS } from "../../model/constants";
-import "./simulator-cards.css";
 import {
   Card,
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
+} from '../../../../shared/ui/card/Card'
+import { SIMULATOR_CARDS } from '../../model/constants'
+import './simulator-cards.css'
 
 const SimulatorCards = () => {
   return (
@@ -22,7 +22,7 @@ const SimulatorCards = () => {
         </Card>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SimulatorCards;
+export default SimulatorCards

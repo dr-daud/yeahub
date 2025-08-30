@@ -1,13 +1,14 @@
-import { useState } from "react";
-import "./header.css";
-import BurgerMenu from "../../../../shared/ui/burger-menu/BurgerMenu";
-import Button from "../../../../shared/ui/button/Button";
-import AccessModal from "../../../access-modal/ui/AccessModal";
-import HeaderNav from "../header-nav/HeaderNav";
-import EnterLink from "../../../../shared/ui/enter-link/ui/EnterLink";
+import { useState } from 'react'
+
+import BurgerMenu from '../../../../shared/ui/burger-menu/BurgerMenu'
+import Button from '../../../../shared/ui/button/Button'
+import EnterLink from '../../../../shared/ui/enter-link/ui/EnterLink'
+import AccessModal from '../../../access-modal/ui/AccessModal'
+import HeaderNav from '../header-nav/HeaderNav'
+import './header.css'
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <header className="header">
@@ -23,7 +24,7 @@ const Header = () => {
         {isModalOpen && <AccessModal setIsModalOpen={setIsModalOpen} />}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

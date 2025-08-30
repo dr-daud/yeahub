@@ -1,5 +1,5 @@
-import "./footer-copyright.css";
-import { bottomIcons } from "../../model/constants";
+import { bottomIcons } from '../../model/constants'
+import './footer-copyright.css'
 
 const FooterCopyright = () => {
   return (
@@ -17,7 +17,7 @@ const FooterCopyright = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FooterCopyright;
+export default FooterCopyright

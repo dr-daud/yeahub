@@ -1,8 +1,9 @@
-import "./header-nav.css";
-import HeaderDropdown from "../header-dropdown/HeaderDropdown";
-import yeahub_logo from "../../../../shared/assets/yeahub_logo.svg";
-import yeahub_logo_small from "../../../../shared/assets/yeahub_small_logo.svg";
-import { Link } from "react-router";
+import { Link } from 'react-router'
+
+import yeahub_logo from '../../../../shared/assets/yeahub_logo.svg'
+import yeahub_logo_small from '../../../../shared/assets/yeahub_small_logo.svg'
+import HeaderDropdown from '../header-dropdown/HeaderDropdown'
+import './header-nav.css'
 
 const HeaderNav = () => {
   return (
@@ -24,12 +25,12 @@ const HeaderNav = () => {
           </Link>
         </li>
         <li className="header-nav__link-item">
-          <Link to={"quiz"}>Тренажер</Link>
+          <Link to={'quiz'}>Тренажер</Link>
         </li>
         <HeaderDropdown />
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default HeaderNav;
+export default HeaderNav

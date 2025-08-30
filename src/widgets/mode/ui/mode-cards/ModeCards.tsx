@@ -1,11 +1,11 @@
-import "./mode-cards.css";
-import { MODE_CARDS } from "../../model/constants";
 import {
   Card,
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
+} from '../../../../shared/ui/card/Card'
+import { MODE_CARDS } from '../../model/constants'
+import './mode-cards.css'
 
 const ModeCards = () => {
   return (
@@ -19,7 +19,7 @@ const ModeCards = () => {
         </Card>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default ModeCards;
+export default ModeCards

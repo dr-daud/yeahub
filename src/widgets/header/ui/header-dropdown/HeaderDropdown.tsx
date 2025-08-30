@@ -1,17 +1,18 @@
-import { useRef, useState } from "react";
-import "./header-dropdown.css";
-import { useOnClickOutside } from "../../../../shared/hooks/useOnClickOutside";
-import arrow from "../../assets/icons/Alt Arrow Down.svg";
+import { useRef, useState } from 'react'
+
+import { useOnClickOutside } from '../../../../shared/hooks/useOnClickOutside'
+import arrow from '../../assets/icons/Alt Arrow Down.svg'
+import './header-dropdown.css'
 
 const HeaderDropdown = () => {
-  const [isDropdownOpen, setIsDropdowOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const [isDropdownOpen, setIsDropdowOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   const closeDropdown = () => {
-    setIsDropdowOpen(false);
-  };
+    setIsDropdowOpen(false)
+  }
 
-  useOnClickOutside(ref, closeDropdown);
+  useOnClickOutside(ref, closeDropdown)
   return (
     <li className="dropdown">
       <div
@@ -32,7 +33,7 @@ const HeaderDropdown = () => {
         </div>
       )}
     </li>
-  );
-};
+  )
+}
 
-export default HeaderDropdown;
+export default HeaderDropdown

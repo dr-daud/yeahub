@@ -1,6 +1,7 @@
-import { Link } from "react-router";
-import { UNITES_LINKS } from "../../constants/constants";
-import "./unites.css";
+import { Link } from 'react-router'
+
+import { UNITES_LINKS } from '../../constants/constants'
+import './unites.css'
 
 const Unites = () => {
   return (
@@ -23,7 +24,7 @@ const Unites = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Unites;
+export default Unites

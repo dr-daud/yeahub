@@ -1,6 +1,7 @@
-import "./short-answer.css";
+import './short-answer.css'
+
 interface Props {
-  shortAnswer?: string;
+  shortAnswer?: string
 }
 
 const ShortAnswer = ({ shortAnswer }: Props) => {
@@ -10,11 +11,11 @@ const ShortAnswer = ({ shortAnswer }: Props) => {
         <div className="short__title body5-med">Краткий ответ</div>
         <div
           className="short__answer body3"
-          dangerouslySetInnerHTML={{ __html: shortAnswer || "" }}
+          dangerouslySetInnerHTML={{ __html: shortAnswer || '' }}
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ShortAnswer;
+export default ShortAnswer

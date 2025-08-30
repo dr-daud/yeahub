@@ -1,9 +1,10 @@
-import { useNavigate } from "react-router";
-import leftArr from "../../assets/CaretLeft.svg";
-import "./mobile-breadcrumbs.css";
+import { useNavigate } from 'react-router'
+
+import leftArr from '../../assets/CaretLeft.svg'
+import './mobile-breadcrumbs.css'
 
 const MobileBreadcrumbs = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <ol className="mobile">
@@ -12,7 +13,7 @@ const MobileBreadcrumbs = () => {
         Назад
       </li>
     </ol>
-  );
-};
+  )
+}
 
-export default MobileBreadcrumbs;
+export default MobileBreadcrumbs

@@ -1,7 +1,7 @@
-import "./track.css";
-import TrackImg from "../track-img/TrackImg";
-import TrackHeader from "../track-header/TrackHeader";
-import TrackCard from "../track-card/TrackCard";
+import TrackCard from '../track-card/TrackCard'
+import TrackHeader from '../track-header/TrackHeader'
+import TrackImg from '../track-img/TrackImg'
+import './track.css'
 
 const Track = () => {
   return (
@@ -14,7 +14,7 @@ const Track = () => {
         <TrackImg />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Track;
+export default Track

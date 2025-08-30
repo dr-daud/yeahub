@@ -1,24 +1,25 @@
-import { Link } from "react-router";
-import type { TQuestions } from "../../../entities/questions/model/types";
-import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
-import cross from "../assets/Close Circle.svg";
-import "./answer-info.css";
-import { useRef } from "react";
-import { useOnClickOutside } from "../../../shared/hooks/useOnClickOutside";
+import { useRef } from 'react'
+import { Link } from 'react-router'
+
+import type { TQuestions } from '../../../entities/questions/model/types'
+import { useOnClickOutside } from '../../../shared/hooks/useOnClickOutside'
+import TransparentFrame from '../../../shared/ui/transparent-frame/ui/TransparentFrame'
+import cross from '../assets/Close Circle.svg'
+import './answer-info.css'
 
 interface Props {
-  currentData?: TQuestions;
-  setIsMenuOpen: (bool: boolean) => void;
+  currentData?: TQuestions
+  setIsMenuOpen: (bool: boolean) => void
 }
 
 const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
-  useOnClickOutside(ref, closeMenu);
+  useOnClickOutside(ref, closeMenu)
 
   return (
     <section className="info" ref={ref}>
@@ -54,7 +55,7 @@ const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AnswerInfo;
+export default AnswerInfo

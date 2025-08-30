@@ -1,12 +1,12 @@
-import "./prepare-filters.css";
-import filtersScreen from "../../assets/filters example.png";
-import filterIcon from "../../assets/icons/Filter.svg";
 import {
   Card,
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
+} from '../../../../shared/ui/card/Card'
+import filtersScreen from '../../assets/filters example.png'
+import filterIcon from '../../assets/icons/Filter.svg'
+import './prepare-filters.css'
 
 const PrepareFilters = () => {
   return (
@@ -27,7 +27,7 @@ const PrepareFilters = () => {
         </CardText>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default PrepareFilters;
+export default PrepareFilters

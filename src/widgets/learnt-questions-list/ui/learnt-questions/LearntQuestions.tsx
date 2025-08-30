@@ -1,38 +1,39 @@
-import "./learnt-questions.css";
-import { useSelector } from "react-redux";
-import type { RootState } from "../../../../app/appStore";
-import { useQuestionsQuery } from "../../../../entities/questions/api/api";
-import LearntCard from "../learnt-card/LearntCard";
-import Button from "../../../../shared/ui/button/Button";
-import { Link } from "react-router";
-import WatchMore from "../../../../shared/ui/watch-more/WatchMore";
-import useExpantionHook from "../../../../shared/hooks/useExpantionHook";
-import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router'
+
+import type { RootState } from '../../../../app/appStore'
+import { useQuestionsQuery } from '../../../../entities/questions/api/api'
+import useExpantionHook from '../../../../shared/hooks/useExpantionHook'
+import { useGetSearchParams } from '../../../../shared/hooks/useGetSearchParams'
+import Button from '../../../../shared/ui/button/Button'
+import WatchMore from '../../../../shared/ui/watch-more/WatchMore'
+import LearntCard from '../learnt-card/LearntCard'
+import './learnt-questions.css'
 
 const LearntQuestions = () => {
   const { limit } = useSelector((state: RootState) => ({
     limit: state.questionsReducer.limit,
-  }));
+  }))
 
-  const { isExpanded, setIsExpanded, width } = useExpantionHook(1260);
+  const { isExpanded, setIsExpanded, width } = useExpantionHook(1260)
 
-  const { getAllParams, getParam } = useGetSearchParams();
-  const skills = getAllParams("skills");
-  const complexity = getAllParams("complexities").map((complexity) =>
-    Number(complexity)
-  );
-  const specialization = Number(getParam("selectedSpec"));
+  const { getAllParams, getParam } = useGetSearchParams()
+  const skills = getAllParams('skills')
+  const complexity = getAllParams('complexities').map((complexity) =>
+    Number(complexity),
+  )
+  const specialization = Number(getParam('selectedSpec'))
 
   const { data } = useQuestionsQuery({
     skills,
     complexity,
     limit,
     specialization,
-  });
+  })
 
   const shownQuestions = isExpanded
     ? data?.questions
-    : data?.questions.slice(0, 7);
+    : data?.questions.slice(0, 7)
 
   return (
     <section className="learnt">
@@ -58,7 +59,7 @@ const LearntQuestions = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LearntQuestions;
+export default LearntQuestions

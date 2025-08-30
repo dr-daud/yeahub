@@ -1,7 +1,7 @@
-import "./mode.css";
-import ModeCards from "../mode-cards/ModeCards";
-import ModeImg from "../mode-img/ModeImg";
-import ModeTitle from "../mode-title/ModeTitle";
+import ModeCards from '../mode-cards/ModeCards'
+import ModeImg from '../mode-img/ModeImg'
+import ModeTitle from '../mode-title/ModeTitle'
+import './mode.css'
 
 const Mode = () => {
   return (
@@ -17,7 +17,7 @@ const Mode = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Mode;
+export default Mode

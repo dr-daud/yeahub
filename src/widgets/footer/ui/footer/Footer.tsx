@@ -1,7 +1,7 @@
-import logo from "../../assets/image.png";
-import FooterCopyright from "../footer-copyright/FooterCopyright";
-import FooterIcons from "../footer-icons/FooterIcons";
-import "./footer.css";
+import logo from '../../assets/image.png'
+import FooterCopyright from '../footer-copyright/FooterCopyright'
+import FooterIcons from '../footer-icons/FooterIcons'
+import './footer.css'
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
         <FooterCopyright />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

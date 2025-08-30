@@ -1,25 +1,25 @@
-import { useState } from "react";
-import ProgressBar from "../progress-bar/ProgressBar";
-import type { TQuestionsResponse } from "../../../entities/questions/model/types";
-import QuestionsNav from "../../../features/questions/questions-nav/ui/QuestionsNav";
-import Questions from "../../../entities/questions/ui/questions/Questions";
-import { Link } from "react-router";
-import "./questions-main.css";
-import QusetionsMark from "../../../features/questions/questions-mark/ui/QuestionsMark";
-import { useGetSearchParams } from "../../../shared/hooks/useGetSearchParams";
+import { useState } from 'react'
+import { Link } from 'react-router'
+
+import type { TQuestionsResponse } from '../../../entities/questions/model/types'
+import Questions from '../../../entities/questions/ui/Questions'
+import QusetionsMark from '../../../features/questions/questions-mark/ui/QuestionsMark'
+import QuestionsNav from '../../../features/questions/questions-nav/ui/QuestionsNav'
+import { useGetSearchParams } from '../../../shared/hooks/useGetSearchParams'
+import ProgressBar from '../progress-bar/ProgressBar'
+import './questions-main.css'
 
 interface Props {
-  data?: TQuestionsResponse;
-  isLoading: boolean;
+  data?: TQuestionsResponse
+  isLoading: boolean
 }
 
 const QuestionsMain = ({ data, isLoading }: Props) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const currentData = data && data.questions[currentQuestion];
-  const { searchParams } = useGetSearchParams();
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const currentData = data && data.questions[currentQuestion]
+  const { searchParams } = useGetSearchParams()
 
-  const hasNext =
-    !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount);
+  const hasNext = !!data?.fullCount && !!(currentQuestion + 2 > data?.fullCount)
 
   return (
     <>
@@ -47,7 +47,7 @@ const QuestionsMain = ({ data, isLoading }: Props) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default QuestionsMain;
+export default QuestionsMain

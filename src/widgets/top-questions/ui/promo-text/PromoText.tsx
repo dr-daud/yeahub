@@ -1,6 +1,7 @@
-import { Link } from "react-router";
-import Button from "../../../../shared/ui/button/Button";
-import "./promo-text.css";
+import { Link } from 'react-router'
+
+import Button from '../../../../shared/ui/button/Button'
+import './promo-text.css'
 
 const PromoText = () => {
   return (
@@ -19,7 +20,7 @@ const PromoText = () => {
         <Button className="promo-text__button">Присоединиться</Button>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default PromoText;
+export default PromoText

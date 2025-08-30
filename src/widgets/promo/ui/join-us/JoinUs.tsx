@@ -1,8 +1,9 @@
-import "./joins-us.css";
-import check from "../../assets/Icon_Button.svg";
-import { JOIN_US_LINKS } from "../../constants/constants";
-import arrow from "../../assets/Arrow Right.svg";
-import { Link } from "react-router";
+import { Link } from 'react-router'
+
+import arrow from '../../assets/Arrow Right.svg'
+import check from '../../assets/Icon_Button.svg'
+import { JOIN_US_LINKS } from '../../constants/constants'
+import './joins-us.css'
 
 const JoinUs = () => {
   return (
@@ -44,7 +45,7 @@ const JoinUs = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default JoinUs;
+export default JoinUs

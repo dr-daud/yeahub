@@ -1,14 +1,14 @@
-import "./progress-bar.css";
+import './progress-bar.css'
 
 interface Props {
-  currentQuestion: number;
-  totalAmount?: number;
-  isLoading: boolean;
+  currentQuestion: number
+  totalAmount?: number
+  isLoading: boolean
 }
 
 const ProgressBar = ({ currentQuestion, totalAmount, isLoading }: Props) => {
   const progress =
-    totalAmount && Math.round(((currentQuestion + 1) * 100) / totalAmount);
+    totalAmount && Math.round(((currentQuestion + 1) * 100) / totalAmount)
 
   return (
     <div className="container progress">
@@ -29,7 +29,7 @@ const ProgressBar = ({ currentQuestion, totalAmount, isLoading }: Props) => {
         ></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProgressBar;
+export default ProgressBar

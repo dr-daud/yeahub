@@ -1,21 +1,22 @@
-import { useSelector } from "react-redux";
-import type { TQuestions } from "../../../../entities/questions/model/types";
-import { NegativeMark, PositiveMark } from "../../../../shared/ui/mark/Mark";
-import Image from "../../../../shared/ui/image/Image";
-import "./learnt-card.css";
-import type { RootState } from "../../../../app/appStore";
-import { Link } from "react-router";
-import { useGetSearchParams } from "../../../../shared/hooks/useGetSearchParams";
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router'
+
+import type { RootState } from '../../../../app/appStore'
+import type { TQuestions } from '../../../../entities/questions/model/types'
+import { useGetSearchParams } from '../../../../shared/hooks/useGetSearchParams'
+import Image from '../../../../shared/ui/image/Image'
+import { NegativeMark, PositiveMark } from '../../../../shared/ui/mark/Mark'
+import './learnt-card.css'
 
 interface Props {
-  question: TQuestions;
+  question: TQuestions
 }
 
 const LearntCard = ({ question }: Props) => {
   const { learntQuestions } = useSelector(
-    (state: RootState) => state.questionsReducer
-  );
-  const { searchParams } = useGetSearchParams();
+    (state: RootState) => state.questionsReducer,
+  )
+  const { searchParams } = useGetSearchParams()
 
   return (
     <div className="learnt-card">
@@ -38,7 +39,7 @@ const LearntCard = ({ question }: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LearntCard;
+export default LearntCard

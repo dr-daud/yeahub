@@ -1,5 +1,5 @@
-import "./simulator-example.css";
-import questionsList from "../../assets/question_list.jpg";
+import questionsList from '../../assets/question_list.jpg'
+import './simulator-example.css'
 
 const SimulatorExample = () => {
   return (
@@ -15,7 +15,7 @@ const SimulatorExample = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SimulatorExample;
+export default SimulatorExample

@@ -1,4 +1,4 @@
-import "./prepare-header.css";
+import './prepare-header.css'
 
 const PrepareHeader = () => {
   return (
@@ -11,7 +11,7 @@ const PrepareHeader = () => {
         процессом.
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default PrepareHeader;
+export default PrepareHeader

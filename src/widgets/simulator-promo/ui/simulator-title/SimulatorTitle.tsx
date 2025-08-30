@@ -1,4 +1,4 @@
-import "./simulator-title.css";
+import './simulator-title.css'
 
 const SimulatorTitle = () => {
   return (
@@ -11,7 +11,7 @@ const SimulatorTitle = () => {
         В YeaHub каждый найдёт новые возможности для обучения.
       </h4>
     </div>
-  );
-};
+  )
+}
 
-export default SimulatorTitle;
+export default SimulatorTitle

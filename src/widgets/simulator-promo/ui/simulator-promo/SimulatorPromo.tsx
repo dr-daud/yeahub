@@ -1,9 +1,10 @@
-import "./simulator-promo.css";
-import "../../../../shared/ui/index.css";
-import SimulatorTitle from "../simulator-title/SimulatorTitle";
-import SimulatorExample from "../simulator-example/SimulatorExample";
-import SimulatorCards from "../simulator-cards/SimulatorCards";
-import { Link } from "react-router";
+import { Link } from 'react-router'
+
+import '../../../../shared/ui/index.css'
+import SimulatorCards from '../simulator-cards/SimulatorCards'
+import SimulatorExample from '../simulator-example/SimulatorExample'
+import SimulatorTitle from '../simulator-title/SimulatorTitle'
+import './simulator-promo.css'
 
 const SimulatorPromo = () => {
   return (
@@ -21,7 +22,7 @@ const SimulatorPromo = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SimulatorPromo;
+export default SimulatorPromo

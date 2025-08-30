@@ -1,4 +1,5 @@
-import "./track-header.css";
+import './track-header.css'
+
 const TrackHeader = () => {
   return (
     <div className="track-header">
@@ -8,7 +9,7 @@ const TrackHeader = () => {
         обучения.
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default TrackHeader;
+export default TrackHeader

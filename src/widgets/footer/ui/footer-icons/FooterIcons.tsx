@@ -1,5 +1,5 @@
-import "./footer-icons.css";
-import { topIcons } from "../../model/constants";
+import { topIcons } from '../../model/constants'
+import './footer-icons.css'
 
 const FooterIcons = () => {
   return (
@@ -8,7 +8,7 @@ const FooterIcons = () => {
         <img key={icon} src={icon} alt={icon} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default FooterIcons;
+export default FooterIcons

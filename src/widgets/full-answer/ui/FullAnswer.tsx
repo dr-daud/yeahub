@@ -1,6 +1,7 @@
-import "./full-answer.css";
+import './full-answer.css'
+
 interface Props {
-  longAnswer?: string;
+  longAnswer?: string
 }
 
 const FullAnswer = ({ longAnswer }: Props) => {
@@ -10,11 +11,11 @@ const FullAnswer = ({ longAnswer }: Props) => {
         <div className="full__title body5-med">Развёрнутый ответ</div>
         <div
           className="full__answer body3"
-          dangerouslySetInnerHTML={{ __html: longAnswer || "" }}
+          dangerouslySetInnerHTML={{ __html: longAnswer || '' }}
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default FullAnswer;
+export default FullAnswer

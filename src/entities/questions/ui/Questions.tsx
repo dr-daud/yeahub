@@ -1,8 +1,8 @@
 import "./questions.css";
-import Image from "../../../../shared/ui/image/Image";
 import { Link } from "react-router";
-import Skeleton from "../../../../shared/ui/skeleton/Skeleton";
-import type { TQuestions } from "../../model/types";
+import Image from "../../../shared/ui/image/Image";
+import Skeleton from "../../../shared/ui/skeleton/Skeleton";
+import type { TQuestions } from "../model/types";
 
 interface Props {
   isLoading: boolean;

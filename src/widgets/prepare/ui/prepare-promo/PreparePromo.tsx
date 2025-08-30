@@ -1,12 +1,12 @@
-import "./prepare-promo.css";
-import newSquare from "../../assets/Pen New Square.svg";
-import accordeon from "../../assets/question accordeon.png";
 import {
   Card,
   CardDescr,
   CardMedia,
   CardText,
-} from "../../../../shared/ui/card/Card";
+} from '../../../../shared/ui/card/Card'
+import newSquare from '../../assets/Pen New Square.svg'
+import accordeon from '../../assets/question accordeon.png'
+import './prepare-promo.css'
 
 const PreparePromo = () => {
   return (
@@ -23,7 +23,7 @@ const PreparePromo = () => {
       </Card>
       <img src={accordeon} alt="accordion" className="prepare-promo__img" />
     </div>
-  );
-};
+  )
+}
 
-export default PreparePromo;
+export default PreparePromo
