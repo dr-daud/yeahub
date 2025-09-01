@@ -5,7 +5,7 @@ import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
 import { MODE } from '../model/constants'
 import './mode-selector.css'
 
-const ModeSelector = () => {
+export const ModeSelector = () => {
   const [regime, setRegime] = useState(1)
 
   return (
@@ -23,5 +23,3 @@ const ModeSelector = () => {
     </div>
   )
 }
-
-export default ModeSelector

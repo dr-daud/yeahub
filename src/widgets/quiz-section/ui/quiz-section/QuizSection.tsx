@@ -6,9 +6,9 @@ import { Link } from 'react-router'
 import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
 import Button from '@shared/ui/button/Button'
 
-import Specializations from '@entities/specializations/ui/Specializations'
+import { Specializations } from '@entities/specializations'
 
-import SkillsSelector from '@features/quiz-settings/skills-selector/ui/SkillsSelector'
+import { SkillsSelector } from '@features/quiz-settings'
 
 import type { RootState } from '@app/appStore'
 

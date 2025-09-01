@@ -1,6 +1,8 @@
-import LevelSelector from '@features/quiz-settings/level-selector/ui/ComplexitySelector'
-import ModeSelector from '@features/quiz-settings/mode-selector/ui/ModeSelector'
-import QuantitySelector from '@features/quiz-settings/quantity-selector/ui/QuantitySelector'
+import {
+  LevelSelector,
+  ModeSelector,
+  QuantitySelector,
+} from '@features/quiz-settings'
 
 const DetailedSettings = () => {
   return (

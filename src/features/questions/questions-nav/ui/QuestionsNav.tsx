@@ -1,14 +1,14 @@
-import left from "../assets/chevrone_Left.svg";
-import right from "../assets/chevrone_right.svg";
-import "./questions-nav.css";
+import left from '../assets/chevrone_Left.svg'
+import right from '../assets/chevrone_right.svg'
+import './questions-nav.css'
 
 interface Props {
-  setCurrentQuestion: (currentQuestion: number) => void;
-  currentQuestion: number;
-  hasNext: boolean;
+  setCurrentQuestion: (currentQuestion: number) => void
+  currentQuestion: number
+  hasNext: boolean
 }
 
-const QuestionsNav = ({
+export const QuestionsNav = ({
   setCurrentQuestion,
   currentQuestion,
   hasNext,
@@ -31,7 +31,5 @@ const QuestionsNav = ({
         <img src={right} alt="right arrow" />
       </button>
     </div>
-  );
-};
-
-export default QuestionsNav;
+  )
+}

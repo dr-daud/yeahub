@@ -16,7 +16,7 @@ interface Props {
   currentData?: TQuestions
 }
 
-const QusetionsMark = ({ currentData }: Props) => {
+export const QusetionsMark = ({ currentData }: Props) => {
   const dispatch = useDispatch()
 
   const { learntQuestions } = useSelector(
@@ -39,5 +39,3 @@ const QusetionsMark = ({ currentData }: Props) => {
     </div>
   )
 }
-
-export default QusetionsMark

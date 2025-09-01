@@ -7,8 +7,7 @@ import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
 import { Questions } from '@entities/questions'
 import type { TQuestionsResponse } from '@entities/questions/model/types'
 
-import QusetionsMark from '@features/questions/questions-mark/ui/QuestionsMark'
-import QuestionsNav from '@features/questions/questions-nav/ui/QuestionsNav'
+import { QuestionsNav, QusetionsMark } from '@features/questions'
 
 import ProgressBar from '../progress-bar/ProgressBar'
 import './questions-main.css'

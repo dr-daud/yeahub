@@ -10,7 +10,7 @@ import minus from '../assets/Minus.svg'
 import plus from '../assets/Plus.svg'
 import './quantity-selector.css'
 
-const QuantitySelector = () => {
+export const QuantitySelector = () => {
   const { limit } = useSelector((state: RootState) => state.questionsReducer)
   const dispatch = useDispatch()
 
@@ -35,5 +35,3 @@ const QuantitySelector = () => {
     </div>
   )
 }
-
-export default QuantitySelector

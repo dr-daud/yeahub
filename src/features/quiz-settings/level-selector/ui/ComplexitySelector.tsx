@@ -4,7 +4,7 @@ import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
 
 import { LEVEL } from '../model/constants'
 
-const LevelSelector = () => {
+export const LevelSelector = () => {
   const { getAllParams } = useGetSearchParams()
   const complexities = getAllParams('complexities')
 
@@ -25,5 +25,3 @@ const LevelSelector = () => {
     </div>
   )
 }
-
-export default LevelSelector
