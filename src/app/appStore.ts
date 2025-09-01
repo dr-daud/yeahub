@@ -1,13 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { baseApi } from "../shared/api/baseApi";
-import specializationsReducer from "../entities/specializations/model/specializationsSlice";
-import questionsReducer from "../entities/questions/model/questionsSlice";
-import skillsReducer from "../entities/skills/model/skillsSlice";
+import { configureStore } from '@reduxjs/toolkit'
 import {
+  type TypedUseSelectorHook,
   useDispatch,
   useSelector,
-  type TypedUseSelectorHook,
-} from "react-redux";
+} from 'react-redux'
+
+import { baseApi } from '@shared/api/baseApi'
+
+import questionsReducer from '@entities/questions/model/questionsSlice'
+import skillsReducer from '@entities/skills/model/skillsSlice'
+import specializationsReducer from '@entities/specializations/model/specializationsSlice'
 
 const store = configureStore({
   reducer: {
@@ -18,12 +20,12 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),
-});
+})
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 
-export const useAppDispatch: () => AppDispatch = useDispatch;
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+export const useAppDispatch: () => AppDispatch = useDispatch
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
-export default store;
+export default store
