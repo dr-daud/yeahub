@@ -1,7 +1,7 @@
-import QuizSection from "../../widgets/quiz-section/ui/quiz-section/QuizSection";
+import QuizSection from '@widgets/quiz-section/ui/quiz-section/QuizSection'
 
 const QuizPage = () => {
-  return <QuizSection />;
-};
+  return <QuizSection />
+}
 
-export default QuizPage;
+export default QuizPage

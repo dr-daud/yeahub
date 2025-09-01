@@ -1,5 +1,5 @@
-import Promo from "../../widgets/promo/ui/promo/Promo";
-import LearntQuestions from "../../widgets/learnt-questions-list/ui/learnt-questions/LearntQuestions";
+import LearntQuestions from '@widgets/learnt-questions-list/ui/learnt-questions/LearntQuestions'
+import Promo from '@widgets/promo/ui/promo/Promo'
 
 const LearntQuestionsPage = () => {
   return (
@@ -7,7 +7,7 @@ const LearntQuestionsPage = () => {
       <Promo />
       <LearntQuestions />
     </>
-  );
-};
+  )
+}
 
-export default LearntQuestionsPage;
+export default LearntQuestionsPage
