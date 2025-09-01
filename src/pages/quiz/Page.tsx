@@ -1,4 +1,4 @@
-import QuizSection from '@widgets/quiz-section/ui/quiz-section/QuizSection'
+import { QuizSection } from '@widgets/index'
 
 export const QuizPage = () => {
   return <QuizSection />

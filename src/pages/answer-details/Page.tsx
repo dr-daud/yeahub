@@ -7,10 +7,12 @@ import { useGetSearchParams, useWindowWidth } from '@shared/index'
 
 import { useQuestionsQuery } from '@entities/questions/api/api'
 
-import AnswerDetailsTitle from '@widgets/answer-details-title/ui/AnswerDetailsTitle'
-import AnswerInfo from '@widgets/answer-info/ui/AnswerInfo'
-import FullAnswer from '@widgets/full-answer/ui/FullAnswer'
-import ShortAnswer from '@widgets/short-answer/ui/ShortAnswer'
+import {
+  AnswerDetailsTitle,
+  AnswerInfo,
+  FullAnswer,
+  ShortAnswer,
+} from '@widgets/index'
 
 import type { RootState } from '@app/appStore'
 

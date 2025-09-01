@@ -7,7 +7,7 @@ import PrepareHeader from '../prepare-header/PrepareHeader'
 import PreparePromo from '../prepare-promo/PreparePromo'
 import './prepare.css'
 
-const Prepare = () => {
+export const Prepare = () => {
   return (
     <section className="prepare">
       <div className="container">
@@ -23,5 +23,3 @@ const Prepare = () => {
     </section>
   )
 }
-
-export default Prepare

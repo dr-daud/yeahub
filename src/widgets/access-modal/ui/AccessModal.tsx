@@ -8,7 +8,7 @@ interface Props {
   setIsModalOpen: (isModalOpen: boolean) => void
 }
 
-const AccessModal = ({ setIsModalOpen }: Props) => {
+export const AccessModal = ({ setIsModalOpen }: Props) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const closeModal = () => {
@@ -28,5 +28,3 @@ const AccessModal = ({ setIsModalOpen }: Props) => {
     </div>
   )
 }
-
-export default AccessModal

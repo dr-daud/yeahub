@@ -4,7 +4,7 @@ interface Props {
   longAnswer?: string
 }
 
-const FullAnswer = ({ longAnswer }: Props) => {
+export const FullAnswer = ({ longAnswer }: Props) => {
   return (
     <section className="full">
       <div className="container full__wrap">
@@ -17,5 +17,3 @@ const FullAnswer = ({ longAnswer }: Props) => {
     </section>
   )
 }
-
-export default FullAnswer

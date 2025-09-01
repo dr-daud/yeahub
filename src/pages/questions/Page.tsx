@@ -4,7 +4,7 @@ import { useGetSearchParams } from '@shared/index'
 
 import { useQuestionsQuery } from '@entities/questions/api/api'
 
-import QuestionsMain from '@widgets/questions-stepper/questions-main/QuestionsMain'
+import { QuestionsMain } from '@widgets/index'
 
 import type { RootState } from '@app/appStore'
 

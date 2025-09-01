@@ -3,7 +3,7 @@ import TrackHeader from '../track-header/TrackHeader'
 import TrackImg from '../track-img/TrackImg'
 import './track.css'
 
-const Track = () => {
+export const Track = () => {
   return (
     <section className="track">
       <div className="container track__grid">
@@ -16,5 +16,3 @@ const Track = () => {
     </section>
   )
 }
-
-export default Track

@@ -15,7 +15,7 @@ import type { RootState } from '@app/appStore'
 import LearntCard from '../learnt-card/LearntCard'
 import './learnt-questions.css'
 
-const LearntQuestions = () => {
+export const LearntQuestions = () => {
   const { limit } = useSelector((state: RootState) => ({
     limit: state.questionsReducer.limit,
   }))
@@ -66,5 +66,3 @@ const LearntQuestions = () => {
     </section>
   )
 }
-
-export default LearntQuestions

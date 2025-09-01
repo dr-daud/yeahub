@@ -9,7 +9,7 @@ interface Props {
   setIsMenuOpen: (bool: boolean) => void
 }
 
-const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
+export const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
   return (
     <section className="answer">
       <div className="answer__inner">
@@ -27,5 +27,3 @@ const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
     </section>
   )
 }
-
-export default AnswerDetailsTitle

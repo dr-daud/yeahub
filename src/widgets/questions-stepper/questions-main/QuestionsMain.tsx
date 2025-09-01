@@ -17,7 +17,7 @@ interface Props {
   isLoading: boolean
 }
 
-const QuestionsMain = ({ data, isLoading }: Props) => {
+export const QuestionsMain = ({ data, isLoading }: Props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const currentData = data && data.questions[currentQuestion]
   const { searchParams } = useGetSearchParams()
@@ -52,5 +52,3 @@ const QuestionsMain = ({ data, isLoading }: Props) => {
     </>
   )
 }
-
-export default QuestionsMain

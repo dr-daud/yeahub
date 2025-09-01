@@ -3,7 +3,7 @@ import FooterCopyright from '../footer-copyright/FooterCopyright'
 import FooterIcons from '../footer-icons/FooterIcons'
 import './footer.css'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <section className="footer">
       <div className="container">
@@ -24,5 +24,3 @@ const Footer = () => {
     </section>
   )
 }
-
-export default Footer

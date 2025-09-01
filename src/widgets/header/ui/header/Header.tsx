@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 import { BurgerMenu, Button, EnterLink } from '@shared/index'
 
-import AccessModal from '../../../access-modal/ui/AccessModal'
+import { AccessModal } from '@widgets/index'
+
 import HeaderNav from '../header-nav/HeaderNav'
 import './header.css'
 
-const Header = () => {
+export const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
@@ -25,5 +26,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

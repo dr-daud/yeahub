@@ -4,7 +4,7 @@ interface Props {
   shortAnswer?: string
 }
 
-const ShortAnswer = ({ shortAnswer }: Props) => {
+export const ShortAnswer = ({ shortAnswer }: Props) => {
   return (
     <section className="short">
       <div className="short__wrap">
@@ -17,5 +17,3 @@ const ShortAnswer = ({ shortAnswer }: Props) => {
     </section>
   )
 }
-
-export default ShortAnswer

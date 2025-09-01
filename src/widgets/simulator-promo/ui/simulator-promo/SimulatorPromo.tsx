@@ -7,7 +7,7 @@ import SimulatorExample from '../simulator-example/SimulatorExample'
 import SimulatorTitle from '../simulator-title/SimulatorTitle'
 import './simulator-promo.css'
 
-const SimulatorPromo = () => {
+export const SimulatorPromo = () => {
   return (
     <section className="simulator-promo">
       <div className="container simulator-promo__grid-container">
@@ -25,5 +25,3 @@ const SimulatorPromo = () => {
     </section>
   )
 }
-
-export default SimulatorPromo

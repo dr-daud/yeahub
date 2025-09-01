@@ -14,7 +14,7 @@ interface Props {
   setIsMenuOpen: (bool: boolean) => void
 }
 
-const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
+export const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
   const ref = useRef(null)
 
   const closeMenu = () => {
@@ -59,5 +59,3 @@ const AnswerInfo = ({ currentData, setIsMenuOpen }: Props) => {
     </section>
   )
 }
-
-export default AnswerInfo

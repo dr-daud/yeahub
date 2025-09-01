@@ -3,7 +3,7 @@ import ModeImg from '../mode-img/ModeImg'
 import ModeTitle from '../mode-title/ModeTitle'
 import './mode.css'
 
-const Mode = () => {
+export const Mode = () => {
   return (
     <section className="mode">
       <ModeTitle />
@@ -19,5 +19,3 @@ const Mode = () => {
     </section>
   )
 }
-
-export default Mode

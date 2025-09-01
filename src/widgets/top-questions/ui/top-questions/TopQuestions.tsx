@@ -3,7 +3,7 @@ import PromoCards from '../promo-cards/PromoCards'
 import PromoText from '../promo-text/PromoText'
 import './top-questions.css'
 
-const TopQuestions = () => {
+export const TopQuestions = () => {
   return (
     <section className="top-questions">
       <div className="container">
@@ -16,5 +16,3 @@ const TopQuestions = () => {
     </section>
   )
 }
-
-export default TopQuestions

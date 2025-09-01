@@ -8,7 +8,7 @@ import './breadcrumbs.css'
 
 type ReplacedKey = 'quiz' | 'questions' | 'learnt questions'
 
-const Breadcrumbs = () => {
+export const Breadcrumbs = () => {
   const replacedNames: Record<ReplacedKey, string> = {
     quiz: 'Квиз',
     questions: 'Вопросы',
@@ -54,5 +54,3 @@ const Breadcrumbs = () => {
     </nav>
   ) : null
 }
-
-export default Breadcrumbs

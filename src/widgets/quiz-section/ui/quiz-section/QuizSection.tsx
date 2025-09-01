@@ -15,7 +15,7 @@ import arrow from '../../assets/Arrow-Right.svg'
 import DetailedSettings from '../detailed-settings/DetailedSettings'
 import './quiz-section.css'
 
-const QuizSection = () => {
+export const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1)
   const { limit } = useSelector((state: RootState) => ({
     limit: state.questionsReducer.limit,
@@ -50,5 +50,3 @@ const QuizSection = () => {
     </section>
   )
 }
-
-export default QuizSection

@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router-dom'
 
-import Breadcrumbs from '@widgets/breadcrumbs/ui/breadcrumbs/Breadcrumbs'
-import Footer from '@widgets/footer/ui/footer/Footer'
-import Header from '@widgets/header/ui/header/Header'
+import { Breadcrumbs, Footer, Header } from '@widgets/index'
 
 const BaseLayout = () => {
   return (
