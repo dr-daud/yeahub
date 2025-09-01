@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 
-import { useOnClickOutside } from '../../../shared/hooks/useOnClickOutside'
-import Button from '../../../shared/ui/button/Button'
-import EnterLink from '../../../shared/ui/enter-link/ui/EnterLink'
+import { useOnClickOutside } from '@shared/hooks/useOnClickOutside'
+import Button from '@shared/ui/button/Button'
+import EnterLink from '@shared/ui/enter-link/ui/EnterLink'
+
 import './access-modal.css'
 
 interface Props {

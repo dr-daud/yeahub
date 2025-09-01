@@ -1,12 +1,15 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 
-import type { RootState } from '../../../../app/appStore'
-import { useQuestionsQuery } from '../../../../entities/questions/api/api'
-import useExpantionHook from '../../../../shared/hooks/useExpantionHook'
-import { useGetSearchParams } from '../../../../shared/hooks/useGetSearchParams'
-import Button from '../../../../shared/ui/button/Button'
-import WatchMore from '../../../../shared/ui/watch-more/WatchMore'
+import useExpantionHook from '@shared/hooks/useExpantionHook'
+import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import Button from '@shared/ui/button/Button'
+import WatchMore from '@shared/ui/watch-more/WatchMore'
+
+import { useQuestionsQuery } from '@entities/questions/api/api'
+
+import type { RootState } from '@app/appStore'
+
 import LearntCard from '../learnt-card/LearntCard'
 import './learnt-questions.css'
 

@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 
-import { useOnClickOutside } from '../../../../shared/hooks/useOnClickOutside'
+import { useOnClickOutside } from '@shared/hooks/useOnClickOutside'
+
 import arrow from '../../assets/icons/Alt Arrow Down.svg'
 import './header-dropdown.css'
 

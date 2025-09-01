@@ -1,11 +1,15 @@
 import { useState } from 'react'
+
 import { Link } from 'react-router'
 
-import type { TQuestionsResponse } from '../../../entities/questions/model/types'
-import Questions from '../../../entities/questions/ui/Questions'
-import QusetionsMark from '../../../features/questions/questions-mark/ui/QuestionsMark'
-import QuestionsNav from '../../../features/questions/questions-nav/ui/QuestionsNav'
-import { useGetSearchParams } from '../../../shared/hooks/useGetSearchParams'
+import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+
+import type { TQuestionsResponse } from '@entities/questions/model/types'
+import Questions from '@entities/questions/ui/Questions'
+
+import QusetionsMark from '@features/questions/questions-mark/ui/QuestionsMark'
+import QuestionsNav from '@features/questions/questions-nav/ui/QuestionsNav'
+
 import ProgressBar from '../progress-bar/ProgressBar'
 import './questions-main.css'
 

@@ -1,6 +1,8 @@
-import type { TQuestions } from '../../../entities/questions/model/types'
-import DetailsIcon from '../../../shared/ui/details-icon/ui/DetailsIcon'
-import Image from '../../../shared/ui/image/Image'
+import DetailsIcon from '@shared/ui/details-icon/ui/DetailsIcon'
+import Image from '@shared/ui/image/Image'
+
+import type { TQuestions } from '@entities/questions/model/types'
+
 import './answer-details-title.css'
 
 interface Props {

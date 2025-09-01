@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
-import Button from '../../../../shared/ui/button/Button'
+import Button from '@shared/ui/button/Button'
+
 import PrepareFilters from '../prepare-filters/PrepareFilters'
 import PrepareHeader from '../prepare-header/PrepareHeader'
 import PreparePromo from '../prepare-promo/PreparePromo'

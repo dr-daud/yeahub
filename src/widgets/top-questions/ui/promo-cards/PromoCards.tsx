@@ -1,9 +1,5 @@
-import {
-  Card,
-  CardDescr,
-  CardMedia,
-  CardText,
-} from '../../../../shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+
 import { cards } from '../../model/constants'
 import './promo-cards.css'
 

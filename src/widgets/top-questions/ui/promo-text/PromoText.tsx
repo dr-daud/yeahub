@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
-import Button from '../../../../shared/ui/button/Button'
+import Button from '@shared/ui/button/Button'
+
 import './promo-text.css'
 
 const PromoText = () => {

@@ -1,12 +1,17 @@
 import { useState } from 'react'
+
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 
-import type { RootState } from '../../../../app/appStore'
-import Specializations from '../../../../entities/specializations/ui/Specializations'
-import SkillsSelector from '../../../../features/quiz-settings/skills-selector/ui/SkillsSelector'
-import { useGetSearchParams } from '../../../../shared/hooks/useGetSearchParams'
-import Button from '../../../../shared/ui/button/Button'
+import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import Button from '@shared/ui/button/Button'
+
+import Specializations from '@entities/specializations/ui/Specializations'
+
+import SkillsSelector from '@features/quiz-settings/skills-selector/ui/SkillsSelector'
+
+import type { RootState } from '@app/appStore'
+
 import arrow from '../../assets/Arrow-Right.svg'
 import DetailedSettings from '../detailed-settings/DetailedSettings'
 import './quiz-section.css'

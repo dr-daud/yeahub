@@ -1,7 +1,8 @@
 import { Link } from 'react-router'
 
-import yeahub_logo from '../../../../shared/assets/yeahub_logo.svg'
-import yeahub_logo_small from '../../../../shared/assets/yeahub_small_logo.svg'
+import yeahub_logo from '@shared/assets/yeahub_logo.svg'
+import yeahub_logo_small from '@shared/assets/yeahub_small_logo.svg'
+
 import HeaderDropdown from '../header-dropdown/HeaderDropdown'
 import './header-nav.css'
 

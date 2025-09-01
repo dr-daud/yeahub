@@ -1,9 +1,5 @@
-import {
-  Card,
-  CardDescr,
-  CardMedia,
-  CardText,
-} from '../../../../shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+
 import { TRACK_CARDS } from '../../model/constants'
 import './track-card.css'
 

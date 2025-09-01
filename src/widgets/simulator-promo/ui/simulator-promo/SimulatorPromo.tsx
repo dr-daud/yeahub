@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
-import '../../../../shared/ui/index.css'
+import '@shared/ui/index.css'
+
 import SimulatorCards from '../simulator-cards/SimulatorCards'
 import SimulatorExample from '../simulator-example/SimulatorExample'
 import SimulatorTitle from '../simulator-title/SimulatorTitle'

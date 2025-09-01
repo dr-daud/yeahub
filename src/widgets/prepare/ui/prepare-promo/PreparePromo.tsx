@@ -1,9 +1,5 @@
-import {
-  Card,
-  CardDescr,
-  CardMedia,
-  CardText,
-} from '../../../../shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+
 import newSquare from '../../assets/Pen New Square.svg'
 import accordeon from '../../assets/question accordeon.png'
 import './prepare-promo.css'
