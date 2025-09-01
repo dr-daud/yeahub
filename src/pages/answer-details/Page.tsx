@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import { useWindowWidth } from '@shared/hooks/useWindowWidth'
+import { useGetSearchParams, useWindowWidth } from '@shared/index'
 
 import { useQuestionsQuery } from '@entities/questions/api/api'
 

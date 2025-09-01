@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 
-import { NegativeMark, PositiveMark } from '@shared/ui/mark/Mark'
+import { NegativeMark, PositiveMark } from '@shared/index'
 
 import {
   addLearntQuestion,

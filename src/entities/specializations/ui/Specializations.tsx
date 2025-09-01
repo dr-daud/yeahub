@@ -1,9 +1,11 @@
-import useExpantionHook from '@shared/hooks/useExpantionHook'
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import Button from '@shared/ui/button/Button'
-import FrameSkeleton from '@shared/ui/frame-skeleton/FrameSkeleton'
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
-import WatchMore from '@shared/ui/watch-more/WatchMore'
+import {
+  Button,
+  FrameSkeleton,
+  TransparentFrame,
+  WatchMore,
+  useExpantionHook,
+  useGetSearchParams,
+} from '@shared/index'
 
 import { useLazySkillsQuery } from '../../skills/api/api'
 import { useSpecializationsQuery } from '../api/api'

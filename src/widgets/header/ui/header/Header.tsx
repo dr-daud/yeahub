@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
-import BurgerMenu from '@shared/ui/burger-menu/BurgerMenu'
-import Button from '@shared/ui/button/Button'
-import EnterLink from '@shared/ui/enter-link/ui/EnterLink'
+import { BurgerMenu, Button, EnterLink } from '@shared/index'
 
 import AccessModal from '../../../access-modal/ui/AccessModal'
 import HeaderNav from '../header-nav/HeaderNav'

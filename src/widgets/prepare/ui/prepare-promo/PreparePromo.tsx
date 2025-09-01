@@ -1,4 +1,4 @@
-import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/index'
 
 import newSquare from '../../assets/Pen New Square.svg'
 import accordeon from '../../assets/question accordeon.png'

@@ -1,4 +1,4 @@
-import { baseApi } from '@shared/api/baseApi'
+import { baseApi } from '@shared/index'
 
 import type { TSkills, TSkillsArgs } from '../model/types'
 

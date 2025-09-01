@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import { useGetSearchParams } from '@shared/index'
 
 import { useQuestionsQuery } from '@entities/questions/api/api'
 

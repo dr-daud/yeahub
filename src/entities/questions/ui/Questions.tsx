@@ -1,7 +1,6 @@
 import { Link } from 'react-router'
 
-import Image from '@shared/ui/image/Image'
-import Skeleton from '@shared/ui/skeleton/Skeleton'
+import { Image, Skeleton } from '@shared/index'
 
 import type { TQuestions } from '../model/types'
 import './questions.css'

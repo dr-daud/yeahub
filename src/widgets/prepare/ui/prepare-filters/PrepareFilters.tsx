@@ -1,4 +1,4 @@
-import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/index'
 
 import filtersScreen from '../../assets/filters example.png'
 import filterIcon from '../../assets/icons/Filter.svg'

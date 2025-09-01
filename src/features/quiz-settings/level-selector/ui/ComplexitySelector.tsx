@@ -1,6 +1,8 @@
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import { useSaveOldParams } from '@shared/hooks/useSaveOldParams'
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import {
+  TransparentFrame,
+  useGetSearchParams,
+  useSaveOldParams,
+} from '@shared/index'
 
 import { LEVEL } from '../model/constants'
 

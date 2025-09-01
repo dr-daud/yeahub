@@ -1,15 +1,13 @@
-import "./button.css";
+import './button.css'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-const Button = ({ children, className, ...props }: Props) => {
+export const Button = ({ children, className, ...props }: Props) => {
   return (
     <button {...props} className={`button ${className}`}>
       {children}
     </button>
-  );
-};
-
-export default Button;
+  )
+}

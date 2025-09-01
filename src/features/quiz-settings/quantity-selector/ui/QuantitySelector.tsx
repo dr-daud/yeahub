@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import { TransparentFrame } from '@shared/index'
 
 import { addLimit, reduceLimit } from '@entities/questions/model/questionsSlice'
 

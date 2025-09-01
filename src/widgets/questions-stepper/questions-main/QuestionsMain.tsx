@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { Link } from 'react-router'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import { useGetSearchParams } from '@shared/index'
 
 import { Questions } from '@entities/questions'
 import type { TQuestionsResponse } from '@entities/questions/model/types'

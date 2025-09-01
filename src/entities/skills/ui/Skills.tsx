@@ -1,6 +1,8 @@
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import FrameSkeleton from '@shared/ui/frame-skeleton/FrameSkeleton'
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import {
+  FrameSkeleton,
+  TransparentFrame,
+  useGetSearchParams,
+} from '@shared/index'
 
 import { useSkillsQuery } from '../api/api'
 import type { Props } from '../model/types'

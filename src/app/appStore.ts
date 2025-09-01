@@ -5,7 +5,7 @@ import {
   useSelector,
 } from 'react-redux'
 
-import { baseApi } from '@shared/api/baseApi'
+import { baseApi } from '@shared/index'
 
 import questionsReducer from '@entities/questions/model/questionsSlice'
 import skillsReducer from '@entities/skills/model/skillsSlice'

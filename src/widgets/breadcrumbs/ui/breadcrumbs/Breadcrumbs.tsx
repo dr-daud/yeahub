@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import { useWindowWidth } from '@shared/hooks/useWindowWidth'
+import { useGetSearchParams, useWindowWidth } from '@shared/index'
 
 import rightArr from '../../assets/CaretRight.svg'
 import MobileBreadcrumbs from '../mobile-breadcrumbs/MobileBreadcrumbs'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import { TransparentFrame } from '@shared/index'
 
 import { MODE } from '../model/constants'
 import './mode-selector.css'

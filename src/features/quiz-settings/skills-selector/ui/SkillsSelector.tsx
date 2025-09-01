@@ -1,5 +1,4 @@
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import { useSaveOldParams } from '@shared/hooks/useSaveOldParams'
+import { useGetSearchParams, useSaveOldParams } from '@shared/index'
 
 import { Skills } from '@entities/skills'
 

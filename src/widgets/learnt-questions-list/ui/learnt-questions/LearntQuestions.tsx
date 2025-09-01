@@ -1,10 +1,12 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 
-import useExpantionHook from '@shared/hooks/useExpantionHook'
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import Button from '@shared/ui/button/Button'
-import WatchMore from '@shared/ui/watch-more/WatchMore'
+import {
+  Button,
+  WatchMore,
+  useExpantionHook,
+  useGetSearchParams,
+} from '@shared/index'
 
 import { useQuestionsQuery } from '@entities/questions/api/api'
 

@@ -1,11 +1,9 @@
-import "./enter-link.css";
+import './enter-link.css'
 
-const EnterLink = () => {
+export const EnterLink = () => {
   return (
     <a href="https://yeahub.ru/auth/login" className="enter-link">
       Вход
     </a>
-  );
-};
-
-export default EnterLink;
+  )
+}

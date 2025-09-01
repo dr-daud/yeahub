@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import Button from '@shared/ui/button/Button'
+import { Button, useGetSearchParams } from '@shared/index'
 
 import { Specializations } from '@entities/specializations'
 

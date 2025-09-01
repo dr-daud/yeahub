@@ -1,4 +1,4 @@
-import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/index'
 
 import { MODE_CARDS } from '../../model/constants'
 import './mode-cards.css'

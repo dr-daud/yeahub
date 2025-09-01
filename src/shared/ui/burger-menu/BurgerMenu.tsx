@@ -1,24 +1,22 @@
-import "./burger-menu.css";
+import './burger-menu.css'
 
 interface Props {
-  isModalOpen: boolean;
-  setIsModalOpen: (isModalOpen: boolean) => void;
+  isModalOpen: boolean
+  setIsModalOpen: (isModalOpen: boolean) => void
 }
 
-const BurgerMenu = ({ isModalOpen, setIsModalOpen }: Props) => {
+export const BurgerMenu = ({ isModalOpen, setIsModalOpen }: Props) => {
   return (
     <div className="burger" onClick={() => setIsModalOpen(true)}>
       <span
-        className={`${"burger__line"} ${isModalOpen && "burger__line--top"}`}
+        className={`${'burger__line'} ${isModalOpen && 'burger__line--top'}`}
       ></span>
       <span
-        className={`${"burger__line"} ${isModalOpen && "burger__line--middle"}`}
+        className={`${'burger__line'} ${isModalOpen && 'burger__line--middle'}`}
       ></span>
       <span
-        className={`${"burger__line"} ${isModalOpen && "burger__line--bottom"}`}
+        className={`${'burger__line'} ${isModalOpen && 'burger__line--bottom'}`}
       ></span>
     </div>
-  );
-};
-
-export default BurgerMenu;
+  )
+}

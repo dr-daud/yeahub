@@ -1,9 +1,12 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 
-import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
-import Image from '@shared/ui/image/Image'
-import { NegativeMark, PositiveMark } from '@shared/ui/mark/Mark'
+import {
+  Image,
+  NegativeMark,
+  PositiveMark,
+  useGetSearchParams,
+} from '@shared/index'
 
 import type { TQuestions } from '@entities/questions/model/types'
 

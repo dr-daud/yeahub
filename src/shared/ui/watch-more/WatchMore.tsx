@@ -1,21 +1,19 @@
-import "./watch-more.css";
-import arrowDown from "../../assets/chevron-down.svg";
+import arrowDown from '../../assets/chevron-down.svg'
+import './watch-more.css'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  isExpanded: boolean;
+  isExpanded: boolean
 }
 
-const WatchMore = ({ isExpanded, ...props }: Props) => {
+export const WatchMore = ({ isExpanded, ...props }: Props) => {
   return (
     <div className="watch" {...props}>
-      {isExpanded ? "Свернуть" : "Развернуть"}
+      {isExpanded ? 'Свернуть' : 'Развернуть'}
       <img
         src={arrowDown}
         alt="arrow down"
-        className={isExpanded ? "up" : ""}
+        className={isExpanded ? 'up' : ''}
       />
     </div>
-  );
-};
-
-export default WatchMore;
+  )
+}

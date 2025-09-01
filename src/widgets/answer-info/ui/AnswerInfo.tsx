@@ -2,8 +2,7 @@ import { useRef } from 'react'
 
 import { Link } from 'react-router'
 
-import { useOnClickOutside } from '@shared/hooks/useOnClickOutside'
-import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import { TransparentFrame, useOnClickOutside } from '@shared/index'
 
 import type { TQuestions } from '@entities/questions/model/types'
 

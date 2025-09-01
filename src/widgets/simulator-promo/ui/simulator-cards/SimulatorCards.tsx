@@ -1,4 +1,4 @@
-import { Card, CardDescr, CardMedia, CardText } from '@shared/ui/card/Card'
+import { Card, CardDescr, CardMedia, CardText } from '@shared/index'
 
 import { SIMULATOR_CARDS } from '../../model/constants'
 import './simulator-cards.css'
