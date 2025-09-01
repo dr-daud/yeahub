@@ -1,4 +1,4 @@
-import { DetailsIcon, Image } from '@shared/index'
+import { DetailsIcon, Image, useWindowWidth } from '@shared/index'
 
 import type { TQuestions } from '@entities/questions/model/types'
 
@@ -10,6 +10,8 @@ interface Props {
 }
 
 export const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
+  const width = useWindowWidth()
+
   return (
     <section className="answer">
       <div className="answer__inner">
@@ -19,7 +21,9 @@ export const AnswerDetailsTitle = ({ currentData, setIsMenuOpen }: Props) => {
         <div className="answer__wrap">
           <div className="answer__flex">
             <div className="answer__title body6-med">{currentData?.title}</div>
-            <DetailsIcon onClick={() => setIsMenuOpen(true)} />
+            {width < 1260 && (
+              <DetailsIcon onClick={() => setIsMenuOpen(true)} />
+            )}
           </div>
           <div className="answer__descr body3">{currentData?.description}</div>
         </div>
