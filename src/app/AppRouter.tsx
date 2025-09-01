@@ -1,10 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import AnswerDetails from '@pages/answer-details/Page'
-import LearntQuestionsPage from '@pages/learnt-questions/Page'
-import MainPage from '@pages/main/ui/Page'
-import QuestionsPage from '@pages/questions/Page'
-import QuizPage from '@pages/quiz/Page'
+import {
+  AnswerDetails,
+  LearntQuestionsPage,
+  MainPage,
+  QuestionsPage,
+  QuizPage,
+} from '@pages/index'
 
 import BaseLayout from './layouts/BaseLayout'
 

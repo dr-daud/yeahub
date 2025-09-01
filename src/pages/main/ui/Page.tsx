@@ -4,7 +4,7 @@ import SimulatorPromo from '@widgets/simulator-promo/ui/simulator-promo/Simulato
 import TopQuestions from '@widgets/top-questions/ui/top-questions/TopQuestions'
 import Track from '@widgets/track/ui/track/Track'
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <main>
       <TopQuestions />
@@ -15,5 +15,3 @@ const MainPage = () => {
     </main>
   )
 }
-
-export default MainPage

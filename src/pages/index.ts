@@ -1,0 +1,5 @@
+export { AnswerDetails } from '@pages/answer-details/Page'
+export { LearntQuestionsPage } from '@pages/learnt-questions/Page'
+export { MainPage } from '@pages/main/ui/Page'
+export { QuestionsPage } from '@pages/questions/Page'
+export { QuizPage } from '@pages/quiz/Page'

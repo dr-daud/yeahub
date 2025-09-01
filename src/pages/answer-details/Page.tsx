@@ -17,7 +17,7 @@ import type { RootState } from '@app/appStore'
 
 import './answer-details.css'
 
-const AnswerDetails = () => {
+export const AnswerDetails = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const width = useWindowWidth()
   const { id } = useParams()
@@ -59,5 +59,3 @@ const AnswerDetails = () => {
     </div>
   )
 }
-
-export default AnswerDetails

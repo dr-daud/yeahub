@@ -10,7 +10,7 @@ import type { RootState } from '@app/appStore'
 
 import './questions-page.css'
 
-const QuestionsPage = () => {
+export const QuestionsPage = () => {
   const { getAllParams, searchParams } = useGetSearchParams()
 
   const skills = getAllParams('skills')
@@ -35,5 +35,3 @@ const QuestionsPage = () => {
     </section>
   )
 }
-
-export default QuestionsPage
