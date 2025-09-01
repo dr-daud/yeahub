@@ -1,36 +1,37 @@
-import "./specializations.css";
-import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
-import { useSpecializationsQuery } from "../api/api";
-import Button from "../../../shared/ui/button/Button";
-import { useLazySkillsQuery } from "../../skills/api/api";
-import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
-import WatchMore from "../../../shared/ui/watch-more/WatchMore";
-import useExpantionHook from "../../../shared/hooks/useExpantionHook";
-import { useGetSearchParams } from "../../../shared/hooks/useGetSearchParams";
+import useExpantionHook from '@shared/hooks/useExpantionHook'
+import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import Button from '@shared/ui/button/Button'
+import FrameSkeleton from '@shared/ui/frame-skeleton/FrameSkeleton'
+import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+import WatchMore from '@shared/ui/watch-more/WatchMore'
+
+import { useLazySkillsQuery } from '../../skills/api/api'
+import { useSpecializationsQuery } from '../api/api'
+import './specializations.css'
 
 interface Props {
-  setCurrentStep: (currentStep: number) => void;
+  setCurrentStep: (currentStep: number) => void
 }
 
 const Specializations = ({ setCurrentStep }: Props) => {
-  const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 });
-  const [trigger] = useLazySkillsQuery();
-  const { getParam, setSearchParams } = useGetSearchParams();
+  const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 })
+  const [trigger] = useLazySkillsQuery()
+  const { getParam, setSearchParams } = useGetSearchParams()
 
-  const selectedSpec = getParam("selectedSpec");
+  const selectedSpec = getParam('selectedSpec')
 
   const handleClick = () => {
-    setCurrentStep(2);
-    trigger({ page: 1, limit: 10, specializations: Number(selectedSpec) });
-  };
+    setCurrentStep(2)
+    trigger({ page: 1, limit: 10, specializations: Number(selectedSpec) })
+  }
 
-  const { isExpanded, setIsExpanded, width } = useExpantionHook(730);
+  const { isExpanded, setIsExpanded, width } = useExpantionHook(730)
 
-  const shownSpecializations = isExpanded ? data?.data : data?.data.slice(0, 7);
+  const shownSpecializations = isExpanded ? data?.data : data?.data.slice(0, 7)
 
   const setSelectedSpec = (questionId: number) => {
-    setSearchParams({ selectedSpec: questionId.toString() });
-  };
+    setSearchParams({ selectedSpec: questionId.toString() })
+  }
 
   return (
     <div className="specializations">
@@ -43,7 +44,7 @@ const Specializations = ({ setCurrentStep }: Props) => {
             <TransparentFrame
               onClick={() => setSelectedSpec(spec.id)}
               key={spec.id}
-              className={spec.id === Number(selectedSpec) ? "active" : ""}
+              className={spec.id === Number(selectedSpec) ? 'active' : ''}
             >
               {spec.title}
             </TransparentFrame>
@@ -64,7 +65,7 @@ const Specializations = ({ setCurrentStep }: Props) => {
         Перейти
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default Specializations;
+export default Specializations

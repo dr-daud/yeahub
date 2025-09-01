@@ -1,19 +1,20 @@
-import TransparentFrame from "../../../shared/ui/transparent-frame/ui/TransparentFrame";
-import { useSkillsQuery } from "../api/api";
-import "./skills.css";
-import type { Props } from "../model/types";
-import FrameSkeleton from "../../../shared/ui/frame-skeleton/FrameSkeleton";
-import { useGetSearchParams } from "../../../shared/hooks/useGetSearchParams";
+import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
+import FrameSkeleton from '@shared/ui/frame-skeleton/FrameSkeleton'
+import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+
+import { useSkillsQuery } from '../api/api'
+import type { Props } from '../model/types'
+import './skills.css'
 
 const Skills = ({ skills, handleClick }: Props) => {
-  const { getParam } = useGetSearchParams();
-  const selectedSpec = getParam("selectedSpec");
+  const { getParam } = useGetSearchParams()
+  const selectedSpec = getParam('selectedSpec')
 
   const { data, isLoading } = useSkillsQuery({
     page: 1,
     limit: 10,
     specializations: Number(selectedSpec),
-  });
+  })
 
   return (
     <div className="skills">
@@ -26,7 +27,7 @@ const Skills = ({ skills, handleClick }: Props) => {
             <TransparentFrame
               onClick={() => handleClick(String(skill.id))}
               key={skill.id}
-              className={skills.includes(String(skill.id)) ? "active" : ""}
+              className={skills.includes(String(skill.id)) ? 'active' : ''}
             >
               <div className="skills__wrap">
                 {skill.imageSrc ? (
@@ -43,7 +44,7 @@ const Skills = ({ skills, handleClick }: Props) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

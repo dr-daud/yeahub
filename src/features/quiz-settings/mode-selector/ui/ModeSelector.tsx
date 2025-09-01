@@ -1,10 +1,12 @@
-import { useState } from "react";
-import TransparentFrame from "../../../../shared/ui/transparent-frame/ui/TransparentFrame";
-import { MODE } from "../model/constants";
-import "./mode-selector.css";
+import { useState } from 'react'
+
+import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+
+import { MODE } from '../model/constants'
+import './mode-selector.css'
 
 const ModeSelector = () => {
-  const [regime, setRegime] = useState(1);
+  const [regime, setRegime] = useState(1)
 
   return (
     <div className="mode-selector">
@@ -13,13 +15,13 @@ const ModeSelector = () => {
         <TransparentFrame
           key={index}
           onClick={() => setRegime(index + 1)}
-          className={regime === index + 1 ? "active" : ""}
+          className={regime === index + 1 ? 'active' : ''}
         >
           {mode}
         </TransparentFrame>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default ModeSelector;
+export default ModeSelector

@@ -1,17 +1,18 @@
-import TransparentFrame from "../../../../shared/ui/transparent-frame/ui/TransparentFrame";
-import "./quantity-selector.css";
-import minus from "../assets/Minus.svg";
-import plus from "../assets/Plus.svg";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../../../app/appStore";
-import {
-  addLimit,
-  reduceLimit,
-} from "../../../../entities/questions/model/questionsSlice";
+import { useDispatch, useSelector } from 'react-redux'
+
+import TransparentFrame from '@shared/ui/transparent-frame/ui/TransparentFrame'
+
+import { addLimit, reduceLimit } from '@entities/questions/model/questionsSlice'
+
+import type { RootState } from '@app/appStore'
+
+import minus from '../assets/Minus.svg'
+import plus from '../assets/Plus.svg'
+import './quantity-selector.css'
 
 const QuantitySelector = () => {
-  const { limit } = useSelector((state: RootState) => state.questionsReducer);
-  const dispatch = useDispatch();
+  const { limit } = useSelector((state: RootState) => state.questionsReducer)
+  const dispatch = useDispatch()
 
   return (
     <div className="quantity">
@@ -32,7 +33,7 @@ const QuantitySelector = () => {
         </button>
       </TransparentFrame>
     </div>
-  );
-};
+  )
+}
 
-export default QuantitySelector;
+export default QuantitySelector
