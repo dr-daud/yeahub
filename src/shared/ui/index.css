@@ -1,4 +1,4 @@
-@import url(./variables.css);
+@import url(./typography.css);
 
 :root {
   --purple-100: #f0e7ff;
@@ -41,7 +41,7 @@
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: var(--background-color-main);
 }
 

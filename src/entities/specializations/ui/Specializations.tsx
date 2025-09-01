@@ -13,7 +13,7 @@ interface Props {
   setCurrentStep: (currentStep: number) => void
 }
 
-const Specializations = ({ setCurrentStep }: Props) => {
+export const Specializations = ({ setCurrentStep }: Props) => {
   const { data, isLoading } = useSpecializationsQuery({ page: 1, limit: 19 })
   const [trigger] = useLazySkillsQuery()
   const { getParam, setSearchParams } = useGetSearchParams()
@@ -67,5 +67,3 @@ const Specializations = ({ setCurrentStep }: Props) => {
     </div>
   )
 }
-
-export default Specializations

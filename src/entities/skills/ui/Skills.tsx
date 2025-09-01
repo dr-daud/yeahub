@@ -6,7 +6,7 @@ import { useSkillsQuery } from '../api/api'
 import type { Props } from '../model/types'
 import './skills.css'
 
-const Skills = ({ skills, handleClick }: Props) => {
+export const Skills = ({ skills, handleClick }: Props) => {
   const { getParam } = useGetSearchParams()
   const selectedSpec = getParam('selectedSpec')
 
@@ -46,5 +46,3 @@ const Skills = ({ skills, handleClick }: Props) => {
     </div>
   )
 }
-
-export default Skills

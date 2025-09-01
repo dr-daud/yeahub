@@ -11,7 +11,7 @@ interface Props {
   currentData?: TQuestions
 }
 
-const Questions = ({ isLoading, currentData }: Props) => {
+export const Questions = ({ isLoading, currentData }: Props) => {
   return (
     <>
       <div>
@@ -37,5 +37,3 @@ const Questions = ({ isLoading, currentData }: Props) => {
     </>
   )
 }
-
-export default Questions

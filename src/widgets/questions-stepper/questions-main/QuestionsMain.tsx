@@ -4,8 +4,8 @@ import { Link } from 'react-router'
 
 import { useGetSearchParams } from '@shared/hooks/useGetSearchParams'
 
+import { Questions } from '@entities/questions'
 import type { TQuestionsResponse } from '@entities/questions/model/types'
-import Questions from '@entities/questions/ui/Questions'
 
 import QusetionsMark from '@features/questions/questions-mark/ui/QuestionsMark'
 import QuestionsNav from '@features/questions/questions-nav/ui/QuestionsNav'
