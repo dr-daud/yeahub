@@ -17,9 +17,7 @@ import './quiz-section.css'
 
 export const QuizSection = () => {
   const [currentStep, setCurrentStep] = useState(1)
-  const { limit } = useSelector((state: RootState) => ({
-    limit: state.questionsReducer.limit,
-  }))
+  const { limit } = useSelector((state: RootState) => state.questionsReducer)
   const { getAllParams, searchParams } = useGetSearchParams()
 
   const skills = getAllParams('skills')

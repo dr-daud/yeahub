@@ -17,10 +17,7 @@ export const QuestionsPage = () => {
   const complexities = getAllParams('complexities').map(Number)
   const specialization = Number(searchParams.get('selectedSpec'))
 
-  const { limit } = useSelector((state: RootState) => ({
-    limit: state.questionsReducer.limit,
-    learnt: state.questionsReducer.learntQuestions,
-  }))
+  const { limit } = useSelector((state: RootState) => state.questionsReducer)
 
   const { data, isLoading } = useQuestionsQuery({
     skills,

@@ -16,9 +16,7 @@ import LearntCard from '../learnt-card/LearntCard'
 import './learnt-questions.css'
 
 export const LearntQuestions = () => {
-  const { limit } = useSelector((state: RootState) => ({
-    limit: state.questionsReducer.limit,
-  }))
+  const { limit } = useSelector((state: RootState) => state.questionsReducer)
 
   const { isExpanded, setIsExpanded, width } = useExpantionHook(1260)
 
